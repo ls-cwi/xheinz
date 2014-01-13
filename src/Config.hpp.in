@@ -1,0 +1,12 @@
+#ifndef xHeinz_Config_HPP
+#define xHeinz_Config_HPP
+
+#define XHEINZ_VERSION @XHEINZ_VERSION@
+
+namespace xHeinz {
+
+	static const double epsilon = @XHEINZ_EPSILON@;
+
+} // namespace xHeinz
+
+#endif // xHeinz_Config_HPP

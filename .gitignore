@@ -1,3 +1,13 @@
+# Qt creator stuff
+*.creator.user
+*.creator.user.*
+*.user
+
+# CMake generated files
+build
+build*
+src/Config.hpp
+
 # Compiled Object files
 *.slo
 *.lo
@@ -11,3 +21,19 @@
 *.lai
 *.la
 *.a
+
+# clang_complete config file
+.clang_complete
+.ycm_extra_conf.*
+.Rproj.user
+
+# latex stuff
+doc/*.pdf
+doc/*.log
+doc/*.aux
+doc/*.bbl
+doc/*.blg
+
+# MAC
+.DS_Store
+
