@@ -1,0 +1,9 @@
+alpha time_point specie tag fdr_thr score
+1.0 0.5h hsa  0.001 OSM SOCS3 800
+1.0 0.5h hsa  0.001 SOCS1 CISH 900
+1.0 0.5h hsa  0.001 SOCS1 SOCS3 900
+1.0 0.5h hsa  0.001 CISH SOCS3 906
+1.0 0.5h mmus  0.001 Socs1 Cish 900
+1.0 0.5h mmus  0.001 Socs1 Socs3 900
+1.0 0.5h mmus  0.001 Osm Socs3 359
+1.0 0.5h mmus  0.001 Cish Socs3 900

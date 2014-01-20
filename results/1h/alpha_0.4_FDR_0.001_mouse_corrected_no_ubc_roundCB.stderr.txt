@@ -1,0 +1,66 @@
+Warning: Control callbacks may disable some MIP features.
+Lazy constraint(s) or lazy constraint callback is present.
+    Disabling dual reductions (CPX_PARAM_REDUCE) in presolve.
+Clique table members: 119780.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 15.06 sec. (3122.73 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0     5044.0069    23                   5044.0069    15798         
+      0     0     5007.5437    27                 LiftProj: 3    15818         
+      0     0     5007.2459    24                 LiftProj: 1    15819         
+      0     2     5007.2459    24                   5007.2414    15819                                 0             0
+Elapsed time = 25.04 sec. (8190.66 ticks, tree = 0.00 MB, solutions = 0)
+*     1+    1                         4987.1519     5007.2414    15831    0.40%
+      1     3     5001.0153     7     4987.1519     5007.0806    15831    0.40%x_ENSMUSP0000003 D      1      0      1
+      2     4     5000.9570     5     4987.1519     5001.0151    15887    0.28%x_ENSMUSP0000003 U      2      0      1
+      3     5     4998.7215     2     4987.1519     5001.0151    15894    0.28%x_ENSMUSP0000006 D      3      2      2
+      4     6     4998.4404    11     4987.1519     5001.0151    15897    0.28%x_ENSP0000035642 U      4      3      3
+      5     7     4996.9648     4     4987.1519     5001.0151    15902    0.28%x_ENSMUSP0000002 U      5      4      4
+      6     8     4996.8028    15     4987.1519     5001.0151    15903    0.28%x_ENSMUSP0000005 U      6      5      5
+      7     9     4995.9399    15     4987.1519     5001.0151    15908    0.28%x_ENSMUSP0000005 D      7      5      5
+*     8+    8                         4994.2153     5001.0151    15909    0.14%
+      8    10     4996.6448     6     4994.2153     5001.0151    15909    0.14%x_ENSMUSP0000003 D      8      6      6
+      9    11     4996.6413     4     4994.2153     5001.0151    15912    0.14%mm_ENSP000003585 D      9      8      7
+*    10     6      integral     0     4996.6195     5001.0151    15923    0.09%x_ENSP0000030107 D     10      9      8
+Elapsed time = 35.05 sec. (14990.86 ticks, tree = 0.18 MB, solutions = 3)
+     15    11     4999.2514     6     4996.6195     5001.0073    15954    0.09%x_ENSMUSP0000010 U     15     13      5
+*    17     6      integral     0     4999.8276     5001.0073    15960    0.02%x_ENSP0000030065 D     17     16      7
+
+Lift and project cuts applied:  4
+User cuts applied:  222
+
+Root node processing (before b&c):
+  Real time             =   25.03 sec. (8185.06 ticks)
+Sequential b&c:
+  Real time             =   13.42 sec. (9046.15 ticks)
+                          ------------
+Total (root+branch&cut) =   38.46 sec. (17231.21 ticks)
+Solved in 38.5267s
+	Command being timed: "timeout 3000s /home/thume/Work/xheinz/build/xHeinz -n1 1h/human_corrected_ensp_induced_0.001.tsv -n2 1h/mouse_corrected_ensp_induced_0.001.tsv -e1 /home/thume/Work/xheinz/data/Th17/STRING/hsa-no_UBC_no_SUMO2.txt -e2 /home/thume/Work/xheinz/data/Th17/STRING/mmu-no_UBC.txt -t 2500 -cog data/ensembl_cog_ALL.tsv -a 0.4"
+	User time (seconds): 80.88
+	System time (seconds): 1.17
+	Percent of CPU this job got: 136%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:00.05
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1522668
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 372002
+	Voluntary context switches: 208
+	Involuntary context switches: 3325
+	Swaps: 0
+	File system inputs: 1328
+	File system outputs: 48
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

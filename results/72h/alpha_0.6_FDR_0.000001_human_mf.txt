@@ -1,0 +1,50 @@
+GO:0005102,receptor binding,1093,40,10.36,1.6e-14
+GO:0005126,cytokine receptor binding,208,19,1.97,7.2e-14
+GO:0005125,cytokine activity,191,13,1.81,2.9e-08
+GO:0004871,signal transducer activity,1294,33,12.26,6.9e-08
+GO:0060089,molecular transducer activity,1294,33,12.26,6.9e-08
+GO:0070851,growth factor receptor binding,92,8,0.87,2.4e-06
+GO:0000975,regulatory region DNA binding,332,14,3.15,3.0e-06
+GO:0001067,regulatory region nucleic acid binding,332,14,3.15,3.0e-06
+GO:0004879,ligand-activated sequence-specific DNA b...,44,6,0.42,3.3e-06
+GO:0000981,sequence-specific DNA binding RNA polyme...,245,12,2.32,3.5e-06
+GO:0004896,cytokine receptor activity,79,7,0.75,9.4e-06
+GO:0005515,protein binding,8523,101,80.76,1.1e-05
+GO:0044212,transcription regulatory region DNA bind...,324,13,3.07,1.2e-05
+GO:0019955,cytokine binding,68,6,0.64,4.3e-05
+GO:0019899,enzyme binding,1059,24,10.03,4.6e-05
+GO:0038023,signaling receptor activity,996,23,9.44,5.1e-05
+GO:0004872,receptor activity,1164,25,11.03,7.4e-05
+GO:0043565,sequence-specific DNA binding,624,17,5.91,7.8e-05
+GO:0002020,protease binding,58,5,0.55,0.00022
+GO:0004974,leukotriene receptor activity,3,2,0.03,0.00027
+GO:0032403,protein complex binding,328,11,3.11,0.00028
+GO:0003700,sequence-specific DNA binding transcript...,837,19,7.93,0.00031
+GO:0001071,nucleic acid binding transcription facto...,838,19,7.94,0.00032
+GO:0030545,receptor regulator activity,35,4,0.33,0.00032
+GO:0031730,CCR5 chemokine receptor binding,4,2,0.04,0.00053
+GO:0043125,ErbB-3 class receptor binding,4,2,0.04,0.00053
+GO:0008134,transcription factor binding,426,12,4.04,0.00071
+GO:0030234,enzyme regulator activity,823,18,7.8,0.00071
+GO:0005134,interleukin-2 receptor binding,5,2,0.05,0.00087
+GO:0043548,phosphatidylinositol 3-kinase binding,22,3,0.21,0.00112
+GO:0003707,steroid hormone receptor activity,50,4,0.47,0.00126
+GO:0003705,RNA polymerase II distal enhancer sequen...,90,5,0.85,0.00162
+GO:0019901,protein kinase binding,346,10,3.28,0.00164
+GO:0000982,RNA polymerase II core promoter proximal...,94,5,0.89,0.00197
+GO:0046332,SMAD binding,59,4,0.56,0.00233
+GO:0030547,receptor inhibitor activity,8,2,0.08,0.00240
+GO:0048019,receptor antagonist activity,8,2,0.08,0.00240
+GO:0005072,transforming growth factor beta receptor...,9,2,0.09,0.00307
+GO:0001077,RNA polymerase II core promoter proximal...,65,4,0.62,0.00332
+GO:0019902,phosphatase binding,108,5,1.02,0.00360
+GO:0019900,kinase binding,386,10,3.66,0.00363
+GO:0003777,microtubule motor activity,70,4,0.66,0.00434
+GO:0004955,prostaglandin receptor activity,11,2,0.1,0.00463
+GO:0005149,interleukin-1 receptor binding,11,2,0.1,0.00463
+GO:0016493,C-C chemokine receptor activity,11,2,0.1,0.00463
+GO:0005164,tumor necrosis factor receptor binding,36,3,0.34,0.00471
+GO:0001228,RNA polymerase II transcription regulato...,72,4,0.68,0.00480
+GO:0004888,transmembrane signaling receptor activit...,903,17,8.56,0.00488
+GO:0019903,protein phosphatase binding,74,4,0.7,0.00529
+GO:0004953,icosanoid receptor activity,12,2,0.11,0.00552

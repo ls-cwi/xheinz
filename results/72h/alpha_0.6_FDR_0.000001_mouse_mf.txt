@@ -1,0 +1,50 @@
+GO:0005102,receptor binding,844,33,7.29,2.3e-14
+GO:0005125,cytokine activity,139,16,1.2,3.8e-14
+GO:0005126,cytokine receptor binding,162,16,1.4,4.3e-13
+GO:0005515,protein binding,5763,75,49.8,7.5e-09
+GO:0004871,signal transducer activity,1014,24,8.76,3.2e-06
+GO:0060089,molecular transducer activity,1014,24,8.76,3.2e-06
+GO:0070851,growth factor receptor binding,81,7,0.7,5.9e-06
+GO:0044212,transcription regulatory region DNA bind...,277,11,2.39,2.5e-05
+GO:0004896,cytokine receptor activity,69,6,0.6,2.7e-05
+GO:0000975,regulatory region DNA binding,284,11,2.45,3.1e-05
+GO:0001067,regulatory region nucleic acid binding,284,11,2.45,3.1e-05
+GO:0002020,protease binding,46,5,0.4,4.5e-05
+GO:0031730,CCR5 chemokine receptor binding,2,2,0.02,7.4e-05
+GO:0005488,binding,7819,81,67.56,0.00015
+GO:0043125,ErbB-3 class receptor binding,3,2,0.03,0.00022
+GO:0004879,ligand-activated sequence-specific DNA b...,37,4,0.32,0.00028
+GO:0042379,chemokine receptor binding,37,4,0.32,0.00028
+GO:0000981,sequence-specific DNA binding RNA polyme...,200,8,1.73,0.00032
+GO:0001664,G-protein coupled receptor binding,157,7,1.36,0.00040
+GO:0019899,enzyme binding,797,17,6.89,0.00040
+GO:0043565,sequence-specific DNA binding,512,13,4.42,0.00042
+GO:0004974,leukotriene receptor activity,4,2,0.03,0.00044
+GO:0008083,growth factor activity,119,6,1.03,0.00056
+GO:0005134,interleukin-2 receptor binding,5,2,0.04,0.00073
+GO:0030545,receptor regulator activity,21,3,0.18,0.00074
+GO:0001047,core promoter binding,49,4,0.42,0.00082
+GO:0019955,cytokine binding,49,4,0.42,0.00082
+GO:0003700,sequence-specific DNA binding transcript...,622,14,5.37,0.00083
+GO:0001071,nucleic acid binding transcription facto...,623,14,5.38,0.00085
+GO:0000979,RNA polymerase II core promoter sequence...,23,3,0.2,0.00097
+GO:0005164,tumor necrosis factor receptor binding,23,3,0.2,0.00097
+GO:0004872,receptor activity,943,18,8.15,0.00100
+GO:0019903,protein phosphatase binding,53,4,0.46,0.00110
+GO:0001077,RNA polymerase II core promoter proximal...,54,4,0.47,0.00118
+GO:0032813,tumor necrosis factor receptor superfami...,28,3,0.24,0.00175
+GO:0001228,RNA polymerase II transcription regulato...,60,4,0.52,0.00176
+GO:0038023,signaling receptor activity,837,16,7.23,0.00196
+GO:0016303,1-phosphatidylinositol-3-kinase activity,8,2,0.07,0.00200
+GO:0001046,core promoter sequence-specific DNA bind...,31,3,0.27,0.00235
+GO:0035004,phosphatidylinositol 3-kinase activity,9,2,0.08,0.00255
+GO:0048020,CCR chemokine receptor binding,9,2,0.08,0.00255
+GO:0008009,chemokine activity,32,3,0.28,0.00258
+GO:0052742,phosphatidylinositol kinase activity,10,2,0.09,0.00318
+GO:0070696,transmembrane receptor protein serine/th...,10,2,0.09,0.00318
+GO:0000987,core promoter proximal region sequence-s...,36,3,0.31,0.00362
+GO:0001159,core promoter proximal region DNA bindin...,36,3,0.31,0.00362
+GO:0000989,transcription factor binding transcripti...,292,8,2.52,0.00366
+GO:0033612,receptor serine/threonine kinase binding,11,2,0.1,0.00386
+GO:0051879,Hsp90 protein binding,11,2,0.1,0.00386
+GO:0000988,protein binding transcription factor act...,301,8,2.6,0.00440

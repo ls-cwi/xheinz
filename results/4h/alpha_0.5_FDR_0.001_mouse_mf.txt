@@ -1,0 +1,50 @@
+GO:0003700,sequence-specific DNA binding transcript...,622,13,2.26,1.3e-07
+GO:0001071,nucleic acid binding transcription facto...,623,13,2.26,1.3e-07
+GO:0043565,sequence-specific DNA binding,512,11,1.86,1.2e-06
+GO:0005515,protein binding,5763,34,20.94,2.7e-06
+GO:0000975,regulatory region DNA binding,284,7,1.03,6.1e-05
+GO:0001067,regulatory region nucleic acid binding,284,7,1.03,6.1e-05
+GO:0003677,DNA binding,1326,14,4.82,0.00012
+GO:0019901,protein kinase binding,262,6,0.95,0.00033
+GO:0019899,enzyme binding,797,10,2.9,0.00040
+GO:0044212,transcription regulatory region DNA bind...,277,6,1.01,0.00044
+GO:0019900,kinase binding,285,6,1.04,0.00051
+GO:0005488,binding,7819,36,28.41,0.00068
+GO:0004896,cytokine receptor activity,69,3,0.25,0.00196
+GO:0005126,cytokine receptor binding,162,4,0.59,0.00271
+GO:0043566,structure-specific DNA binding,165,4,0.6,0.00289
+GO:0031490,chromatin DNA binding,24,2,0.09,0.00337
+GO:0046875,ephrin receptor binding,24,2,0.09,0.00337
+GO:0004883,glucocorticoid receptor activity,1,1,0,0.00363
+GO:0004923,leukemia inhibitory factor receptor acti...,1,1,0,0.00363
+GO:0070491,repressing transcription factor binding,32,2,0.12,0.00595
+GO:0004392,heme oxygenase (decyclizing) activity,2,1,0.01,0.00725
+GO:0004630,phospholipase D activity,2,1,0.01,0.00725
+GO:0004911,interleukin-2 receptor activity,2,1,0.01,0.00725
+GO:0004915,interleukin-6 receptor activity,2,1,0.01,0.00725
+GO:0004921,interleukin-11 receptor activity,2,1,0.01,0.00725
+GO:0019970,interleukin-11 binding,2,1,0.01,0.00725
+GO:0019976,interleukin-2 binding,2,1,0.01,0.00725
+GO:0019981,interleukin-6 binding,2,1,0.01,0.00725
+GO:0031730,CCR5 chemokine receptor binding,2,1,0.01,0.00725
+GO:0042289,MHC class II protein binding,2,1,0.01,0.00725
+GO:0042610,CD8 receptor binding,2,1,0.01,0.00725
+GO:0003676,nucleic acid binding,1988,14,7.22,0.00736
+GO:0004871,signal transducer activity,1014,9,3.68,0.00888
+GO:0060089,molecular transducer activity,1014,9,3.68,0.00888
+GO:0005102,receptor binding,844,8,3.07,0.00955
+GO:0004924,oncostatin-M receptor activity,3,1,0.01,0.01086
+GO:0008432,JUN kinase binding,3,1,0.01,0.01086
+GO:0001047,core promoter binding,49,2,0.18,0.01357
+GO:0019955,cytokine binding,49,2,0.18,0.01357
+GO:0042826,histone deacetylase binding,49,2,0.18,0.01357
+GO:0004897,ciliary neurotrophic factor receptor act...,4,1,0.01,0.01446
+GO:0005127,ciliary neurotrophic factor receptor bin...,4,1,0.01,0.01446
+GO:0005138,interleukin-6 receptor binding,4,1,0.01,0.01446
+GO:0005212,structural constituent of eye lens,4,1,0.01,0.01446
+GO:0042608,T cell receptor binding,4,1,0.01,0.01446
+GO:0042609,CD4 receptor binding,4,1,0.01,0.01446
+GO:0005134,interleukin-2 receptor binding,5,1,0.02,0.01804
+GO:0016494,C-X-C chemokine receptor activity,7,1,0.03,0.02516
+GO:0035259,glucocorticoid receptor binding,7,1,0.03,0.02516
+GO:0050700,CARD domain binding,7,1,0.03,0.02516

@@ -1,0 +1,50 @@
+GO:0071944,cell periphery,3496,62,33.09,1.4e-08
+GO:0005886,plasma membrane,3419,61,32.36,1.7e-08
+GO:0009986,cell surface,454,19,4.3,4.6e-08
+GO:0005615,extracellular space,731,23,6.92,2.8e-07
+GO:0044421,extracellular region part,950,26,8.99,6.3e-07
+GO:0009897,external side of plasma membrane,182,11,1.72,1.2e-06
+GO:0044459,plasma membrane part,1680,35,15.9,3.2e-06
+GO:0005576,extracellular region,1512,31,14.31,2.0e-05
+GO:0005887,integral to plasma membrane,1021,24,9.66,2.5e-05
+GO:0031226,intrinsic to plasma membrane,1058,24,10.01,4.4e-05
+GO:0002193,MAML1-RBP-Jkappa- ICN1 complex,3,2,0.03,0.00026
+GO:0070062,extracellular vesicular exosome,64,5,0.61,0.00034
+GO:0043230,extracellular organelle,65,5,0.62,0.00037
+GO:0065010,extracellular membrane-bounded organelle,65,5,0.62,0.00037
+GO:0016020,membrane,5593,71,52.93,0.00053
+GO:0043235,receptor complex,165,7,1.56,0.00096
+GO:0008305,integrin complex,27,3,0.26,0.00205
+GO:0030027,lamellipodium,111,5,1.05,0.00403
+GO:0031982,vesicle,913,17,8.64,0.00538
+GO:0030118,clathrin coat,40,3,0.38,0.00633
+GO:0005667,transcription factor complex,294,8,2.78,0.00678
+GO:0044425,membrane part,4107,52,38.87,0.00722
+GO:0042383,sarcolemma,83,4,0.79,0.00789
+GO:0005912,adherens junction,187,6,1.77,0.00866
+GO:0005582,collagen type XV,1,1,0.01,0.00946
+GO:0034751,aryl hydrocarbon receptor complex,1,1,0.01,0.00946
+GO:0034752,cytosolic aryl hydrocarbon receptor comp...,1,1,0.01,0.00946
+GO:0016323,basolateral plasma membrane,139,5,1.32,0.01026
+GO:0031988,membrane-bounded vesicle,839,15,7.94,0.01263
+GO:0005654,nucleoplasm,1506,23,14.25,0.01326
+GO:0070161,anchoring junction,206,6,1.95,0.01351
+GO:0031012,extracellular matrix,337,8,3.19,0.01466
+GO:0005829,cytosol,2326,32,22.01,0.01487
+GO:0005871,kinesin complex,20,2,0.19,0.01510
+GO:0030140,trans-Golgi network transport vesicle,22,2,0.21,0.01813
+GO:0005943,1-phosphatidylinositol-4-phosphate 3-kin...,2,1,0.02,0.01884
+GO:0072536,interleukin-23 receptor complex,2,1,0.02,0.01884
+GO:0044433,cytoplasmic vesicle part,424,9,4.01,0.01916
+GO:0045121,membrane raft,168,5,1.59,0.02164
+GO:0019898,extrinsic to membrane,113,4,1.07,0.02230
+GO:0033017,sarcoplasmic reticulum membrane,25,2,0.24,0.02312
+GO:0055037,recycling endosome,65,3,0.62,0.02360
+GO:0031410,cytoplasmic vesicle,835,14,7.9,0.02598
+GO:0031252,cell leading edge,240,6,2.27,0.02643
+GO:0005589,collagen type VI,3,1,0.03,0.02813
+GO:0014802,terminal cisterna,3,1,0.03,0.02813
+GO:0016533,cyclin-dependent protein kinase 5 holoen...,3,1,0.03,0.02813
+GO:0071438,invadopodium membrane,3,1,0.03,0.02813
+GO:0005875,microtubule associated complex,123,4,1.16,0.02928
+GO:0005925,focal adhesion,123,4,1.16,0.02928

@@ -1,0 +1,20 @@
+-- Parsed 4h/human_corrected_ensp_induced_0.001.tsv: |V| = 8660 (77 positive), |E| = 80069, # components = 856
+-- Parsed 4h/mouse_corrected_ensp_induced_0.001.tsv: |V| = 6738 (73 positive), |E| = 57851, # components = 536
+-- Parsed data/ensembl_cog_ALL.tsv: |V_1| = 4880, |V_2| = 4888, |E| = 4919
+-- Solver configuration:
+-- alpha      = 0.7
+-- omega      = 0 (Sum mapped nodes)
+-- size       = -1
+-- time limit = 3000
+-- # threads  = 1
+-- # components in link graph: 4853
+-- Parsing warm solution in "4h/alpha_0.7_FDR_0.001_mouse_corrected_no_ubc_roundCB.stdout.txt" (graph: 0, 1)
+-- Solution:
+-- Alpha       = 1
+-- Total Score = 14.1019 (-5.21636, 19.3182)
+#0 graph nodes:
+ENSP00000266427	0.597142	*
+ENSP00000268638	-5.8135	*
+#1 graph nodes:
+ENSMUSP00000079818	11.5988	*
+ENSMUSP00000040245	7.71939	*

@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="utf-8"?><gexf version="1.1" xmlns="http://www.gexf.net/1.1draft" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+  <graph defaultedgetype="undirected" mode="static">
+    <attributes class="edge" mode="static">
+      <attribute id="11" title="score" type="integer" />
+    </attributes>
+    <attributes class="node" mode="static">
+      <attribute id="0" title="logCPM" type="double" />
+      <attribute id="1" title="between_centrality" type="double" />
+      <attribute id="2" title="degree" type="integer" />
+      <attribute id="3" title="symbol" type="string" />
+      <attribute id="4" title="ensembl_protein_id" type="string" />
+      <attribute id="5" title="ensembl_gene_id" type="string" />
+      <attribute id="6" title="conserved" type="boolean" />
+      <attribute id="7" title="score" type="double" />
+      <attribute id="8" title="FDR" type="double" />
+      <attribute id="9" title="is_relevant" type="boolean" />
+      <attribute id="10" title="logFC" type="double" />
+    </attributes>
+    <nodes>
+      <node id="Casp6" label="Casp6">
+        <attvalues>
+          <attvalue for="0" value="5.14019355697" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="Casp6" />
+          <attvalue for="4" value="ENSMUSP00000029626" />
+          <attvalue for="5" value="ENSMUSG00000027997" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="11.7846471405" />
+          <attvalue for="8" value="1.96033150684e-126" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="2.69067820832" />
+        </attvalues>
+      </node>
+      <node id="Socs1" label="Socs1">
+        <attvalues>
+          <attvalue for="0" value="7.89536379635" />
+          <attvalue for="1" value="0.0772357723577" />
+          <attvalue for="2" value="7" />
+          <attvalue for="3" value="Socs1" />
+          <attvalue for="4" value="ENSMUSP00000038121" />
+          <attvalue for="5" value="ENSMUSG00000038037" />
+          <attvalue for="6" value="False" />
+          <attvalue for="7" value="1.17847054669" />
+          <attvalue for="8" value="1.29702055032e-59" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="2.0427273655" />
+        </attvalues>
+      </node>
+      <node id="Socs3" label="Socs3">
+        <attvalues>
+          <attvalue for="0" value="5.37793283391" />
+          <attvalue for="1" value="0.0318089430894" />
+          <attvalue for="2" value="7" />
+          <attvalue for="3" value="Socs3" />
+          <attvalue for="4" value="ENSMUSP00000059129" />
+          <attvalue for="5" value="ENSMUSG00000053113" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="6.67905708406" />
+          <attvalue for="8" value="3.43440999571e-117" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="3.71124053676" />
+        </attvalues>
+      </node>
+      <node id="Cd274" label="Cd274">
+        <attvalues>
+          <attvalue for="0" value="7.90372115977" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="2" />
+          <attvalue for="3" value="Cd274" />
+          <attvalue for="4" value="ENSMUSP00000016640" />
+          <attvalue for="5" value="ENSMUSG00000016496" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-7.32742419391" />
+          <attvalue for="8" value="0.00374903968617" />
+          <attvalue for="9" value="False" />
+          <attvalue for="10" value="-0.315138377318" />
+        </attvalues>
+      </node>
+      <node id="Gpr65" label="Gpr65">
+        <attvalues>
+          <attvalue for="0" value="7.21570896482" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="Gpr65" />
+          <attvalue for="4" value="ENSMUSP00000074581" />
+          <attvalue for="5" value="ENSMUSG00000021886" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="0.899074205163" />
+          <attvalue for="8" value="7.39891094094e-59" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="1.20241702991" />
+        </attvalues>
+      </node>
+      <node id="Fasl" label="Fasl">
+        <attvalues>
+          <attvalue for="0" value="3.82841881478" />
+          <attvalue for="1" value="0.0105691056911" />
+          <attvalue for="2" value="3" />
+          <attvalue for="3" value="Fasl" />
+          <attvalue for="4" value="ENSMUSP00000000834" />
+          <attvalue for="5" value="ENSMUSG00000000817" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-2.8333223264" />
+          <attvalue for="8" value="1.14768218265e-25" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="-1.9370081591" />
+        </attvalues>
+      </node>
+      <node id="Pim2" label="Pim2">
+        <attvalues>
+          <attvalue for="0" value="4.39023774881" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="Pim2" />
+          <attvalue for="4" value="ENSMUSP00000033495" />
+          <attvalue for="5" value="ENSMUSG00000031155" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-8.55946288444" />
+          <attvalue for="8" value="0.516826746385" />
+          <attvalue for="9" value="False" />
+          <attvalue for="10" value="0.118768899024" />
+        </attvalues>
+      </node>
+      <node id="Furin" label="Furin">
+        <attvalues>
+          <attvalue for="0" value="9.21357812188" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="Furin" />
+          <attvalue for="4" value="ENSMUSP00000113370" />
+          <attvalue for="5" value="ENSMUSG00000030530" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-6.53091633636" />
+          <attvalue for="8" value="4.61402410559e-05" />
+          <attvalue for="9" value="False" />
+          <attvalue for="10" value="-0.401191698676" />
+        </attvalues>
+      </node>
+      <node id="Ctla4" label="Ctla4">
+        <attvalues>
+          <attvalue for="0" value="4.29937302534" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="2" />
+          <attvalue for="3" value="Ctla4" />
+          <attvalue for="4" value="ENSMUSP00000027164" />
+          <attvalue for="5" value="ENSMUSG00000026011" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-1.87738003099" />
+          <attvalue for="8" value="3.84508510863e-35" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="2.64348130623" />
+        </attvalues>
+      </node>
+      <node id="Irf1" label="Irf1">
+        <attvalues>
+          <attvalue for="0" value="5.55425175916" />
+          <attvalue for="1" value="0.448780487805" />
+          <attvalue for="2" value="4" />
+          <attvalue for="3" value="Irf1" />
+          <attvalue for="4" value="ENSMUSP00000104548" />
+          <attvalue for="5" value="ENSMUSG00000018899" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-7.78763619969" />
+          <attvalue for="8" value="0.0359532142157" />
+          <attvalue for="9" value="False" />
+          <attvalue for="10" value="0.316155408966" />
+        </attvalues>
+      </node>
+      <node id="Etv6" label="Etv6">
+        <attvalues>
+          <attvalue for="0" value="5.62627915502" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="Etv6" />
+          <attvalue for="4" value="ENSMUSP00000079818" />
+          <attvalue for="5" value="ENSMUSG00000030199" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="11.5988316771" />
+          <attvalue for="8" value="3.27744988226e-147" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="2.529756941" />
+        </attvalues>
+      </node>
+      <node id="Smc3" label="Smc3">
+        <attvalues>
+          <attvalue for="0" value="7.64942898156" />
+          <attvalue for="1" value="0.184146341463" />
+          <attvalue for="2" value="3" />
+          <attvalue for="3" value="Smc3" />
+          <attvalue for="4" value="ENSMUSP00000025930" />
+          <attvalue for="5" value="ENSMUSG00000024974" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-7.80095315628" />
+          <attvalue for="8" value="0.0389719676644" />
+          <attvalue for="9" value="False" />
+          <attvalue for="10" value="-0.183184702007" />
+        </attvalues>
+      </node>
+      <node id="Irf8" label="Irf8">
+        <attvalues>
+          <attvalue for="0" value="8.62905227644" />
+          <attvalue for="1" value="0.0487804878049" />
+          <attvalue for="2" value="2" />
+          <attvalue for="3" value="Irf8" />
+          <attvalue for="4" value="ENSMUSP00000040245" />
+          <attvalue for="5" value="ENSMUSG00000041515" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="7.71938828337" />
+          <attvalue for="8" value="3.19618062549e-236" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="3.45533267432" />
+        </attvalues>
+      </node>
+      <node id="Notch1" label="Notch1">
+        <attvalues>
+          <attvalue for="0" value="9.93601268642" />
+          <attvalue for="1" value="0.0508130081301" />
+          <attvalue for="2" value="3" />
+          <attvalue for="3" value="Notch1" />
+          <attvalue for="4" value="ENSMUSP00000028288" />
+          <attvalue for="5" value="ENSMUSG00000026923" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="14.137667655" />
+          <attvalue for="8" value="8.95790411618e-180" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="2.13726241404" />
+        </attvalues>
+      </node>
+      <node id="Hif1a" label="Hif1a">
+        <attvalues>
+          <attvalue for="0" value="9.88811838131" />
+          <attvalue for="1" value="0.0308943089431" />
+          <attvalue for="2" value="2" />
+          <attvalue for="3" value="Hif1a" />
+          <attvalue for="4" value="ENSMUSP00000021530" />
+          <attvalue for="5" value="ENSMUSG00000021109" />
+          <attvalue for="6" value="False" />
+          <attvalue for="7" value="2.68170580698" />
+          <attvalue for="8" value="2.12536014851e-73" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="1.30150366759" />
+        </attvalues>
+      </node>
+      <node id="Il21" label="Il21">
+        <attvalues>
+          <attvalue for="0" value="4.64154106819" />
+          <attvalue for="1" value="0.0219512195122" />
+          <attvalue for="2" value="2" />
+          <attvalue for="3" value="Il21" />
+          <attvalue for="4" value="ENSMUSP00000029273" />
+          <attvalue for="5" value="ENSMUSG00000027718" />
+          <attvalue for="6" value="False" />
+          <attvalue for="7" value="12.7794613756" />
+          <attvalue for="8" value="5.94289463282e-123" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="5.82523312555" />
+        </attvalues>
+      </node>
+      <node id="C80913" label="C80913">
+        <attvalues>
+          <attvalue for="0" value="6.04276092076" />
+          <attvalue for="1" value="0.0487804878049" />
+          <attvalue for="2" value="2" />
+          <attvalue for="3" value="C80913" />
+          <attvalue for="4" value="ENSMUSP00000082646" />
+          <attvalue for="5" value="ENSMUSG00000030421" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-6.0824025975" />
+          <attvalue for="8" value="2.29561314258e-06" />
+          <attvalue for="9" value="False" />
+          <attvalue for="10" value="-0.425650098406" />
+        </attvalues>
+      </node>
+      <node id="Lck" label="Lck">
+        <attvalues>
+          <attvalue for="0" value="9.61422543501" />
+          <attvalue for="1" value="0.110772357724" />
+          <attvalue for="2" value="6" />
+          <attvalue for="3" value="Lck" />
+          <attvalue for="4" value="ENSMUSP00000066209" />
+          <attvalue for="5" value="ENSMUSG00000000409" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-5.93432459553" />
+          <attvalue for="8" value="7.59291157483e-07" />
+          <attvalue for="9" value="False" />
+          <attvalue for="10" value="0.379494285639" />
+        </attvalues>
+      </node>
+      <node id="Bcl3" label="Bcl3">
+        <attvalues>
+          <attvalue for="0" value="5.91941213949" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="2" />
+          <attvalue for="3" value="Bcl3" />
+          <attvalue for="4" value="ENSMUSP00000113851" />
+          <attvalue for="5" value="ENSMUSG00000053175" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="2.84818750199" />
+          <attvalue for="8" value="1.99235606344e-73" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="1.88339613636" />
+        </attvalues>
+      </node>
+      <node id="Il2rb" label="Il2rb">
+        <attvalues>
+          <attvalue for="0" value="7.48074426303" />
+          <attvalue for="1" value="0.0284552845528" />
+          <attvalue for="2" value="6" />
+          <attvalue for="3" value="Il2rb" />
+          <attvalue for="4" value="ENSMUSP00000086820" />
+          <attvalue for="5" value="ENSMUSG00000068227" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="1.92415738503" />
+          <attvalue for="8" value="1.64329588662e-69" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="1.45639649972" />
+        </attvalues>
+      </node>
+      <node id="Lmnb1" label="Lmnb1">
+        <attvalues>
+          <attvalue for="0" value="7.68868268504" />
+          <attvalue for="1" value="0.0963414634146" />
+          <attvalue for="2" value="3" />
+          <attvalue for="3" value="Lmnb1" />
+          <attvalue for="4" value="ENSMUSP00000025486" />
+          <attvalue for="5" value="ENSMUSG00000024590" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="1.38182324076" />
+          <attvalue for="8" value="4.55341489715e-65" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="1.72423107181" />
+        </attvalues>
+      </node>
+      <node id="Stat3" label="Stat3">
+        <attvalues>
+          <attvalue for="0" value="9.32977811594" />
+          <attvalue for="1" value="0.557215447154" />
+          <attvalue for="2" value="14" />
+          <attvalue for="3" value="Stat3" />
+          <attvalue for="4" value="ENSMUSP00000120152" />
+          <attvalue for="5" value="ENSMUSG00000004040" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="21.4587890788" />
+          <attvalue for="8" value="1.22748149459e-206" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="2.16347783732" />
+        </attvalues>
+      </node>
+      <node id="Stat1" label="Stat1">
+        <attvalues>
+          <attvalue for="0" value="6.6035079944" />
+          <attvalue for="1" value="0.255589430894" />
+          <attvalue for="2" value="12" />
+          <attvalue for="3" value="Stat1" />
+          <attvalue for="4" value="ENSMUSP00000066743" />
+          <attvalue for="5" value="ENSMUSG00000026104" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-4.7852946453" />
+          <attvalue for="8" value="9.18684669127e-12" />
+          <attvalue for="9" value="False" />
+          <attvalue for="10" value="0.603525159713" />
+        </attvalues>
+      </node>
+      <node id="Tbx21" label="Tbx21">
+        <attvalues>
+          <attvalue for="0" value="5.95760392085" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="Tbx21" />
+          <attvalue for="4" value="ENSMUSP00000001484" />
+          <attvalue for="5" value="ENSMUSG00000001444" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="34.1467817558" />
+          <attvalue for="8" value="4.20899970653e-210" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="4.41269066812" />
+        </attvalues>
+      </node>
+      <node id="Prkcb" label="Prkcb">
+        <attvalues>
+          <attvalue for="0" value="4.38606951199" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="Prkcb" />
+          <attvalue for="4" value="ENSMUSP00000070019" />
+          <attvalue for="5" value="ENSMUSG00000052889" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-8.17642505555" />
+          <attvalue for="8" value="0.167969619102" />
+          <attvalue for="9" value="False" />
+          <attvalue for="10" value="-0.208418142941" />
+        </attvalues>
+      </node>
+      <node id="Tmpo" label="Tmpo">
+        <attvalues>
+          <attvalue for="0" value="6.73978119644" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="Tmpo" />
+          <attvalue for="4" value="ENSMUSP00000020123" />
+          <attvalue for="5" value="ENSMUSG00000019961" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-5.1182484999" />
+          <attvalue for="8" value="2.24101734158e-10" />
+          <attvalue for="9" value="False" />
+          <attvalue for="10" value="-0.529453377562" />
+        </attvalues>
+      </node>
+      <node id="Stap1" label="Stap1">
+        <attvalues>
+          <attvalue for="0" value="5.95859241862" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="Stap1" />
+          <attvalue for="4" value="ENSMUSP00000031171" />
+          <attvalue for="5" value="ENSMUSG00000029254" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="1.46514517431" />
+          <attvalue for="8" value="8.15854864296e-68" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="-1.57399075735" />
+        </attvalues>
+      </node>
+      <node id="Polr2a" label="Polr2a">
+        <attvalues>
+          <attvalue for="0" value="9.83401771757" />
+          <attvalue for="1" value="0.380487804878" />
+          <attvalue for="2" value="4" />
+          <attvalue for="3" value="Polr2a" />
+          <attvalue for="4" value="ENSMUSP00000050771" />
+          <attvalue for="5" value="ENSMUSG00000005198" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-7.66335385597" />
+          <attvalue for="8" value="0.0208361520286" />
+          <attvalue for="9" value="False" />
+          <attvalue for="10" value="-0.347346715806" />
+        </attvalues>
+      </node>
+      <node id="Cish" label="Cish">
+        <attvalues>
+          <attvalue for="0" value="8.46446906518" />
+          <attvalue for="1" value="0.0487804878049" />
+          <attvalue for="2" value="4" />
+          <attvalue for="3" value="Cish" />
+          <attvalue for="4" value="ENSMUSP00000082183" />
+          <attvalue for="5" value="ENSMUSG00000032578" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-3.5437823676" />
+          <attvalue for="8" value="1.24782874283e-19" />
+          <attvalue for="9" value="False" />
+          <attvalue for="10" value="0.839006223847" />
+        </attvalues>
+      </node>
+      <node id="Cxcr5" label="Cxcr5">
+        <attvalues>
+          <attvalue for="0" value="4.73000106192" />
+          <attvalue for="1" value="0.0030487804878" />
+          <attvalue for="2" value="3" />
+          <attvalue for="3" value="Cxcr5" />
+          <attvalue for="4" value="ENSMUSP00000050444" />
+          <attvalue for="5" value="ENSMUSG00000047880" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="6.80521477946" />
+          <attvalue for="8" value="2.18996374893e-102" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="3.59074868822" />
+        </attvalues>
+      </node>
+      <node id="Ccr7" label="Ccr7">
+        <attvalues>
+          <attvalue for="0" value="6.80425197878" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="2" />
+          <attvalue for="3" value="Ccr7" />
+          <attvalue for="4" value="ENSMUSP00000099423" />
+          <attvalue for="5" value="ENSMUSG00000037944" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-5.06905219081" />
+          <attvalue for="8" value="1.10004270921e-10" />
+          <attvalue for="9" value="False" />
+          <attvalue for="10" value="-0.992035935441" />
+        </attvalues>
+      </node>
+      <node id="Pou2f2" label="Pou2f2">
+        <attvalues>
+          <attvalue for="0" value="5.82142330904" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="Pou2f2" />
+          <attvalue for="4" value="ENSMUSP00000104056" />
+          <attvalue for="5" value="ENSMUSG00000008496" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="20.9619341944" />
+          <attvalue for="8" value="1.09874738344e-118" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="-2.56463006368" />
+        </attvalues>
+      </node>
+      <node id="Ptpn1" label="Ptpn1">
+        <attvalues>
+          <attvalue for="0" value="8.28306802381" />
+          <attvalue for="1" value="0.0487804878049" />
+          <attvalue for="2" value="2" />
+          <attvalue for="3" value="Ptpn1" />
+          <attvalue for="4" value="ENSMUSP00000029053" />
+          <attvalue for="5" value="ENSMUSG00000027540" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="5.03847581071" />
+          <attvalue for="8" value="1.00013534108e-92" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="1.57606626027" />
+        </attvalues>
+      </node>
+      <node id="Mxd1" label="Mxd1">
+        <attvalues>
+          <attvalue for="0" value="4.97530133683" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="Mxd1" />
+          <attvalue for="4" value="ENSMUSP00000001184" />
+          <attvalue for="5" value="ENSMUSG00000001156" />
+          <attvalue for="6" value="False" />
+          <attvalue for="7" value="53.5552165337" />
+          <attvalue for="8" value="1.33286569649e-147" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="3.54447436517" />
+        </attvalues>
+      </node>
+      <node id="Apbb1ip" label="Apbb1ip">
+        <attvalues>
+          <attvalue for="0" value="7.32564971831" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="Apbb1ip" />
+          <attvalue for="4" value="ENSMUSP00000014290" />
+          <attvalue for="5" value="ENSMUSG00000026786" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-3.58964200921" />
+          <attvalue for="8" value="4.32976507248e-19" />
+          <attvalue for="9" value="False" />
+          <attvalue for="10" value="-0.909599673076" />
+        </attvalues>
+      </node>
+      <node id="Timp1" label="Timp1">
+        <attvalues>
+          <attvalue for="0" value="4.11713456714" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="Timp1" />
+          <attvalue for="4" value="ENSMUSP00000110999" />
+          <attvalue for="5" value="ENSMUSG00000001131" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="1.88803325729" />
+          <attvalue for="8" value="4.03122659708e-69" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="4.62886864078" />
+        </attvalues>
+      </node>
+      <node id="Bhlhe40" label="Bhlhe40">
+        <attvalues>
+          <attvalue for="0" value="7.72621238693" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="Bhlhe40" />
+          <attvalue for="4" value="ENSMUSP00000032194" />
+          <attvalue for="5" value="ENSMUSG00000030103" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-8.57156652101" />
+          <attvalue for="8" value="0.52825710199" />
+          <attvalue for="9" value="False" />
+          <attvalue for="10" value="0.0909618202824" />
+        </attvalues>
+      </node>
+      <node id="App" label="App">
+        <attvalues>
+          <attvalue for="0" value="4.56422218932" />
+          <attvalue for="1" value="0.162195121951" />
+          <attvalue for="2" value="5" />
+          <attvalue for="3" value="App" />
+          <attvalue for="4" value="ENSMUSP00000073883" />
+          <attvalue for="5" value="ENSMUSG00000022892" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-7.09619312204" />
+          <attvalue for="8" value="0.00105488550996" />
+          <attvalue for="9" value="False" />
+          <attvalue for="10" value="0.477915325003" />
+        </attvalues>
+      </node>
+      <node id="Il6st" label="Il6st">
+        <attvalues>
+          <attvalue for="0" value="8.67878721492" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="4" />
+          <attvalue for="3" value="Il6st" />
+          <attvalue for="4" value="ENSMUSP00000064205" />
+          <attvalue for="5" value="ENSMUSG00000021756" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="20.1782279044" />
+          <attvalue for="8" value="6.13524602034e-146" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="1.95592931242" />
+        </attvalues>
+      </node>
+      <node id="Dok2" label="Dok2">
+        <attvalues>
+          <attvalue for="0" value="4.46734467413" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="Dok2" />
+          <attvalue for="4" value="ENSMUSP00000022698" />
+          <attvalue for="5" value="ENSMUSG00000022102" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-7.63916360469" />
+          <attvalue for="8" value="0.0181881351206" />
+          <attvalue for="9" value="False" />
+          <attvalue for="10" value="0.339729995468" />
+        </attvalues>
+      </node>
+      <node id="Jak3" label="Jak3">
+        <attvalues>
+          <attvalue for="0" value="8.06378206255" />
+          <attvalue for="1" value="0.0496951219512" />
+          <attvalue for="2" value="7" />
+          <attvalue for="3" value="Jak3" />
+          <attvalue for="4" value="ENSMUSP00000040236" />
+          <attvalue for="5" value="ENSMUSG00000031805" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="10.387109607" />
+          <attvalue for="8" value="3.10809555127e-191" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="2.36950077393" />
+        </attvalues>
+      </node>
+      <node id="Mnat1" label="Mnat1">
+        <attvalues>
+          <attvalue for="0" value="4.67468606345" />
+          <attvalue for="1" value="0.0487804878049" />
+          <attvalue for="2" value="2" />
+          <attvalue for="3" value="Mnat1" />
+          <attvalue for="4" value="ENSMUSP00000021523" />
+          <attvalue for="5" value="ENSMUSG00000021103" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-7.70896514364" />
+          <attvalue for="8" value="0.0252807307382" />
+          <attvalue for="9" value="False" />
+          <attvalue for="10" value="-0.280730583304" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="Casp6" target="Lmnb1">
+        <attvalues>
+          <attvalue for="11" value="900" />
+        </attvalues>
+      </edge>
+      <edge id="1" source="Socs1" target="Il2rb">
+        <attvalues>
+          <attvalue for="11" value="660" />
+        </attvalues>
+      </edge>
+      <edge id="2" source="Socs1" target="Pim2">
+        <attvalues>
+          <attvalue for="11" value="666" />
+        </attvalues>
+      </edge>
+      <edge id="3" source="Socs1" target="Socs3">
+        <attvalues>
+          <attvalue for="11" value="900" />
+        </attvalues>
+      </edge>
+      <edge id="4" source="Socs1" target="Stat1">
+        <attvalues>
+          <attvalue for="11" value="800" />
+        </attvalues>
+      </edge>
+      <edge id="5" source="Socs1" target="Jak3">
+        <attvalues>
+          <attvalue for="11" value="382" />
+        </attvalues>
+      </edge>
+      <edge id="6" source="Socs1" target="Stat3">
+        <attvalues>
+          <attvalue for="11" value="800" />
+        </attvalues>
+      </edge>
+      <edge id="7" source="Socs1" target="Cish">
+        <attvalues>
+          <attvalue for="11" value="900" />
+        </attvalues>
+      </edge>
+      <edge id="8" source="Socs3" target="Il2rb">
+        <attvalues>
+          <attvalue for="11" value="504" />
+        </attvalues>
+      </edge>
+      <edge id="9" source="Socs3" target="Stat1">
+        <attvalues>
+          <attvalue for="11" value="800" />
+        </attvalues>
+      </edge>
+      <edge id="10" source="Socs3" target="Il6st">
+        <attvalues>
+          <attvalue for="11" value="873" />
+        </attvalues>
+      </edge>
+      <edge id="11" source="Socs3" target="Jak3">
+        <attvalues>
+          <attvalue for="11" value="309" />
+        </attvalues>
+      </edge>
+      <edge id="12" source="Socs3" target="Stat3">
+        <attvalues>
+          <attvalue for="11" value="800" />
+        </attvalues>
+      </edge>
+      <edge id="13" source="Socs3" target="Cish">
+        <attvalues>
+          <attvalue for="11" value="900" />
+        </attvalues>
+      </edge>
+      <edge id="14" source="Cd274" target="Lck">
+        <attvalues>
+          <attvalue for="11" value="900" />
+        </attvalues>
+      </edge>
+      <edge id="15" source="Cd274" target="Stat1">
+        <attvalues>
+          <attvalue for="11" value="800" />
+        </attvalues>
+      </edge>
+      <edge id="16" source="Gpr65" target="App">
+        <attvalues>
+          <attvalue for="11" value="900" />
+        </attvalues>
+      </edge>
+      <edge id="17" source="Fasl" target="Ctla4">
+        <attvalues>
+          <attvalue for="11" value="369" />
+        </attvalues>
+      </edge>
+      <edge id="18" source="Fasl" target="Lck">
+        <attvalues>
+          <attvalue for="11" value="800" />
+        </attvalues>
+      </edge>
+      <edge id="19" source="Fasl" target="Stat1">
+        <attvalues>
+          <attvalue for="11" value="800" />
+        </attvalues>
+      </edge>
+      <edge id="20" source="Furin" target="Notch1">
+        <attvalues>
+          <attvalue for="11" value="900" />
+        </attvalues>
+      </edge>
+      <edge id="21" source="Ctla4" target="Lck">
+        <attvalues>
+          <attvalue for="11" value="912" />
+        </attvalues>
+      </edge>
+      <edge id="22" source="Irf1" target="Polr2a">
+        <attvalues>
+          <attvalue for="11" value="666" />
+        </attvalues>
+      </edge>
+      <edge id="23" source="Irf1" target="Irf8">
+        <attvalues>
+          <attvalue for="11" value="847" />
+        </attvalues>
+      </edge>
+      <edge id="24" source="Irf1" target="Stat3">
+        <attvalues>
+          <attvalue for="11" value="183" />
+        </attvalues>
+      </edge>
+      <edge id="25" source="Irf1" target="Stat1">
+        <attvalues>
+          <attvalue for="11" value="800" />
+        </attvalues>
+      </edge>
+      <edge id="26" source="Etv6" target="Irf8">
+        <attvalues>
+          <attvalue for="11" value="187" />
+        </attvalues>
+      </edge>
+      <edge id="27" source="Smc3" target="Lmnb1">
+        <attvalues>
+          <attvalue for="11" value="900" />
+        </attvalues>
+      </edge>
+      <edge id="28" source="Smc3" target="Polr2a">
+        <attvalues>
+          <attvalue for="11" value="405" />
+        </attvalues>
+      </edge>
+      <edge id="29" source="Smc3" target="Mxd1">
+        <attvalues>
+          <attvalue for="11" value="294" />
+        </attvalues>
+      </edge>
+      <edge id="30" source="Notch1" target="Lck">
+        <attvalues>
+          <attvalue for="11" value="800" />
+        </attvalues>
+      </edge>
+      <edge id="31" source="Notch1" target="Hif1a">
+        <attvalues>
+          <attvalue for="11" value="900" />
+        </attvalues>
+      </edge>
+      <edge id="32" source="Hif1a" target="Stat3">
+        <attvalues>
+          <attvalue for="11" value="563" />
+        </attvalues>
+      </edge>
+      <edge id="33" source="Il21" target="Stat3">
+        <attvalues>
+          <attvalue for="11" value="800" />
+        </attvalues>
+      </edge>
+      <edge id="34" source="Il21" target="Cxcr5">
+        <attvalues>
+          <attvalue for="11" value="800" />
+        </attvalues>
+      </edge>
+      <edge id="35" source="C80913" target="Stap1">
+        <attvalues>
+          <attvalue for="11" value="402" />
+        </attvalues>
+      </edge>
+      <edge id="36" source="C80913" target="Polr2a">
+        <attvalues>
+          <attvalue for="11" value="720" />
+        </attvalues>
+      </edge>
+      <edge id="37" source="Lck" target="Stat3">
+        <attvalues>
+          <attvalue for="11" value="900" />
+        </attvalues>
+      </edge>
+      <edge id="38" source="Lck" target="Stat1">
+        <attvalues>
+          <attvalue for="11" value="900" />
+        </attvalues>
+      </edge>
+      <edge id="39" source="Bcl3" target="Stat3">
+        <attvalues>
+          <attvalue for="11" value="155" />
+        </attvalues>
+      </edge>
+      <edge id="40" source="Bcl3" target="Stat1">
+        <attvalues>
+          <attvalue for="11" value="165" />
+        </attvalues>
+      </edge>
+      <edge id="41" source="Il2rb" target="Stat3">
+        <attvalues>
+          <attvalue for="11" value="201" />
+        </attvalues>
+      </edge>
+      <edge id="42" source="Il2rb" target="Stat1">
+        <attvalues>
+          <attvalue for="11" value="187" />
+        </attvalues>
+      </edge>
+      <edge id="43" source="Il2rb" target="Jak3">
+        <attvalues>
+          <attvalue for="11" value="908" />
+        </attvalues>
+      </edge>
+      <edge id="44" source="Il2rb" target="Cish">
+        <attvalues>
+          <attvalue for="11" value="580" />
+        </attvalues>
+      </edge>
+      <edge id="45" source="Lmnb1" target="Tmpo">
+        <attvalues>
+          <attvalue for="11" value="354" />
+        </attvalues>
+      </edge>
+      <edge id="46" source="Stat3" target="Stat1">
+        <attvalues>
+          <attvalue for="11" value="994" />
+        </attvalues>
+      </edge>
+      <edge id="47" source="Stat3" target="Bhlhe40">
+        <attvalues>
+          <attvalue for="11" value="823" />
+        </attvalues>
+      </edge>
+      <edge id="48" source="Stat3" target="App">
+        <attvalues>
+          <attvalue for="11" value="800" />
+        </attvalues>
+      </edge>
+      <edge id="49" source="Stat3" target="Il6st">
+        <attvalues>
+          <attvalue for="11" value="187" />
+        </attvalues>
+      </edge>
+      <edge id="50" source="Stat3" target="Jak3">
+        <attvalues>
+          <attvalue for="11" value="699" />
+        </attvalues>
+      </edge>
+      <edge id="51" source="Stat3" target="Ptpn1">
+        <attvalues>
+          <attvalue for="11" value="800" />
+        </attvalues>
+      </edge>
+      <edge id="52" source="Stat1" target="Tbx21">
+        <attvalues>
+          <attvalue for="11" value="800" />
+        </attvalues>
+      </edge>
+      <edge id="53" source="Stat1" target="Il6st">
+        <attvalues>
+          <attvalue for="11" value="177" />
+        </attvalues>
+      </edge>
+      <edge id="54" source="Stat1" target="Jak3">
+        <attvalues>
+          <attvalue for="11" value="800" />
+        </attvalues>
+      </edge>
+      <edge id="55" source="Prkcb" target="Cish">
+        <attvalues>
+          <attvalue for="11" value="654" />
+        </attvalues>
+      </edge>
+      <edge id="56" source="Polr2a" target="Mnat1">
+        <attvalues>
+          <attvalue for="11" value="900" />
+        </attvalues>
+      </edge>
+      <edge id="57" source="Cxcr5" target="App">
+        <attvalues>
+          <attvalue for="11" value="900" />
+        </attvalues>
+      </edge>
+      <edge id="58" source="Cxcr5" target="Ccr7">
+        <attvalues>
+          <attvalue for="11" value="900" />
+        </attvalues>
+      </edge>
+      <edge id="59" source="Ccr7" target="App">
+        <attvalues>
+          <attvalue for="11" value="900" />
+        </attvalues>
+      </edge>
+      <edge id="60" source="Pou2f2" target="Mnat1">
+        <attvalues>
+          <attvalue for="11" value="214" />
+        </attvalues>
+      </edge>
+      <edge id="61" source="Ptpn1" target="Apbb1ip">
+        <attvalues>
+          <attvalue for="11" value="900" />
+        </attvalues>
+      </edge>
+      <edge id="62" source="Timp1" target="App">
+        <attvalues>
+          <attvalue for="11" value="900" />
+        </attvalues>
+      </edge>
+      <edge id="63" source="Il6st" target="Jak3">
+        <attvalues>
+          <attvalue for="11" value="200" />
+        </attvalues>
+      </edge>
+      <edge id="64" source="Dok2" target="Jak3">
+        <attvalues>
+          <attvalue for="11" value="187" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

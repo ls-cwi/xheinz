@@ -1,0 +1,50 @@
+GO:0002376,immune system process,1082,43,9.37,1.2e-19
+GO:0001775,cell activation,472,30,4.09,9.1e-19
+GO:0048518,positive regulation of biological proces...,2523,60,21.86,5.7e-18
+GO:0050896,response to stimulus,4280,73,37.08,1.1e-15
+GO:0048522,positive regulation of cellular process,2292,53,19.86,1.8e-14
+GO:0006950,response to stress,1742,46,15.09,3.6e-14
+GO:0006955,immune response,563,27,4.88,8.3e-14
+GO:0031328,positive regulation of cellular biosynth...,1013,35,8.78,1.0e-13
+GO:0009611,response to wounding,527,26,4.57,1.4e-13
+GO:0009891,positive regulation of biosynthetic proc...,1029,35,8.92,1.7e-13
+GO:0051239,regulation of multicellular organismal p...,1444,41,12.51,2.1e-13
+GO:0001816,cytokine production,329,21,2.85,3.7e-13
+GO:0045321,leukocyte activation,412,23,3.57,3.8e-13
+GO:0031325,positive regulation of cellular metaboli...,1403,40,12.16,4.4e-13
+GO:0009893,positive regulation of metabolic process,1485,41,12.87,5.5e-13
+GO:0048583,regulation of response to stimulus,1563,42,13.54,6.0e-13
+GO:0010604,positive regulation of macromolecule met...,1372,39,11.89,1.2e-12
+GO:0030097,hemopoiesis,437,23,3.79,1.3e-12
+GO:0002520,immune system development,494,24,4.28,2.1e-12
+GO:0065007,biological regulation,5602,78,48.54,2.8e-12
+GO:0010557,positive regulation of macromolecule bio...,946,32,8.2,3.3e-12
+GO:0032501,multicellular organismal process,3760,64,32.58,5.1e-12
+GO:0050789,regulation of biological process,5341,76,46.28,5.4e-12
+GO:0006954,inflammatory response,297,19,2.57,5.6e-12
+GO:0048534,hematopoietic or lymphoid organ developm...,472,23,4.09,6.4e-12
+GO:0044707,single-multicellular organism process,3676,63,31.85,7.7e-12
+GO:0044699,single-organism process,6856,84,59.4,1.0e-11
+GO:0046649,lymphocyte activation,352,20,3.05,1.2e-11
+GO:0044763,single-organism cellular process,6256,81,54.2,1.3e-11
+GO:0042981,regulation of apoptotic process,879,30,7.62,1.7e-11
+GO:0006915,apoptotic process,1071,33,9.28,1.7e-11
+GO:0045944,positive regulation of transcription fro...,597,25,5.17,1.8e-11
+GO:0048513,organ development,1890,44,16.38,1.8e-11
+GO:0043067,regulation of programmed cell death,888,30,7.69,2.1e-11
+GO:0012501,programmed cell death,1082,33,9.37,2.3e-11
+GO:0048731,system development,2430,50,21.05,2.5e-11
+GO:0006952,defense response,571,24,4.95,4.6e-11
+GO:0010941,regulation of cell death,921,30,7.98,5.4e-11
+GO:0042221,response to chemical stimulus,1951,44,16.9,5.5e-11
+GO:0070887,cellular response to chemical stimulus,1004,31,8.7,8.8e-11
+GO:0008219,cell death,1139,33,9.87,9.2e-11
+GO:0016265,death,1142,33,9.89,9.9e-11
+GO:0051716,cellular response to stimulus,3317,58,28.74,1.0e-10
+GO:0030155,regulation of cell adhesion,198,15,1.72,1.2e-10
+GO:0002682,regulation of immune system process,548,23,4.75,1.3e-10
+GO:0050794,regulation of cellular process,5047,72,43.73,1.6e-10
+GO:0048519,negative regulation of biological proces...,2278,47,19.74,1.7e-10
+GO:0007275,multicellular organismal development,2746,52,23.79,1.7e-10
+GO:0080090,regulation of primary metabolic process,2760,52,23.91,2.1e-10
+GO:0002521,leukocyte differentiation,290,17,2.51,3.3e-10
