@@ -115,10 +115,10 @@ namespace solver {
 
  namespace {
 
-  static const double forceMinCardinalityValue = 10.0 * epsilon;
+  static const double forceMinCardinalityValue = 10.0 * cut_epsilon;
 
   inline double GetMinimalVal( double val ) {
-    return isZero( val ) ? forceMinCardinalityValue : val;
+    return intIsZero( val ) ? forceMinCardinalityValue : val;
   }
 
  } // namespace <anonymous>

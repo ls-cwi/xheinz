@@ -44,7 +44,8 @@ set( xHeinz_Src
   src/Solver/MinCutDigraphComponent.cpp
 )
 
-set( XHEINZ_EPSILON 1e-10 CACHE STRING "xHeinz epsilon (double type) value" )
+set( XHEINZ_INT_EPSILON 1e-9 CACHE STRING "xHeinz integrality epsilon (double type) value" )
+set( XHEINZ_CUT_EPSILON 1e-5 CACHE STRING "xHeinz cut epsilon (double type) value" )
 
 set( GitCommand1 "symbolic-ref HEAD 2> /dev/null | cut -b 12-" )
 execute_process( COMMAND git symbolic-ref HEAD  WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}

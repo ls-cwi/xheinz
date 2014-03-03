@@ -106,7 +106,7 @@ namespace xHeinz {
    for ( Graph::Node n : graph.nodes() ) {
      int nodeIndex = data.nodeToIndex[n];
      double x_i_value = cplex.getValue( data.xVars[nodeIndex] );
-     if ( isNonZero( x_i_value ) ) {
+     if ( intIsNonZero( x_i_value ) ) {
        score += graph.weight( n );
        solution.push_back( n );
      }

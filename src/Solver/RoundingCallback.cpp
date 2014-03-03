@@ -292,7 +292,7 @@ namespace solver {
            //  degMap[nn]++;
            //}
            if ( compMap_nn == -2 ) {
-             if ( isNonZero( x_val_nn ) ) {
+             if ( intIsNonZero( x_val_nn ) ) {
                queue.push( nn );
                compMap[nn] = -3;
              }

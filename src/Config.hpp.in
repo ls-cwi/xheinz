@@ -5,7 +5,8 @@
 
 namespace xHeinz {
 
-	static const double epsilon = @XHEINZ_EPSILON@;
+  static const double int_epsilon = @XHEINZ_INT_EPSILON@;
+  static const double cut_epsilon = @XHEINZ_CUT_EPSILON@;
 
 } // namespace xHeinz
 

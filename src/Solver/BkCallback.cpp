@@ -81,7 +81,7 @@ namespace solver {
    int compIdx = 0;
    for ( GraphComponent::Node n : component.nodes() ) {
      Graph::Node gn{ component, n };
-     if ( compMap[n] == -2 && isNonZero( x_values[vars.nodeToIndex[gn]] ) ) {
+     if ( compMap[n] == -2 && intIsNonZero( x_values[vars.nodeToIndex[gn]] ) ) {
        queue.push( n );
        compMap[n] = -3;
        nodesPerNonZeroComponent.emplace_back();
@@ -101,7 +101,7 @@ namespace solver {
            Graph::Node gnn{ component, nn };
 
            if ( compMap[nn] == -2 ) {
-             if ( isNonZero( x_values[vars.nodeToIndex[gnn]] ) ) {
+             if ( intIsNonZero( x_values[vars.nodeToIndex[gnn]] ) ) {
                queue.push( nn );
                compMap[nn] = -3;
              } else {
@@ -152,7 +152,7 @@ namespace solver {
        GraphComponent::Node i = nonZeroNodes.front();
        Graph::Node gn{ component, i };
        double x_i_value = x_values[vars.nodeToIndex[gn]];
-       assert( isNonZero( x_i_value ) );
+       assert( intIsNonZero( x_i_value ) );
        process( component
               , nonZeroNodes
               , x_i_value
@@ -207,7 +207,8 @@ namespace solver {
      //bkMaxFlow.printCut ( clog );
      //clog << "Min Cut Value: " << minCutValue << endl;
      //clog << "xi      Value: " << x_i_value   << endl;
-     if ( lessThanEq( x_i_value, minCutValue ) ) {
+     // TODO: do I need int or cut here?
+     if ( intLessThanEq( x_i_value, minCutValue ) ) {
        break;
      }
      //clog << x_i_value << " <= " << minCutValue << "\t" << nCuts
@@ -322,7 +323,7 @@ namespace solver {
      for_each( digraph.outArcs( v ), [&]( DgArc const & a ) {
        DgNode w = digraph.target( a );
 
-       if ( !dfsMarkedCache[w] && isNonZero( bkMaxFlow.residue( a ) ) ) {
+       if ( !dfsMarkedCache[w] && cutIsNonZero( bkMaxFlow.residue( a ) ) ) {
          queue.push( w );
          dfsMarkedCache[w] = true;
        }
@@ -383,7 +384,7 @@ namespace solver {
      for_each( digraph.inArcs( v ), [&]( DgArc const & a ) {
        DgNode u = digraph.source( a );
 
-       if ( !dfsMarkedCache[u] && isNonZero( bkMaxFlow.residue( a ) ) ) {
+       if ( !dfsMarkedCache[u] && cutIsNonZero( bkMaxFlow.residue( a ) ) ) {
          queue.push( u );
          dfsMarkedCache[u] = true;
        }
@@ -421,7 +422,7 @@ namespace solver {
    for_each( graphs.graph( graphIndex ).nodes(), [&]( Graph::Node const & i ) {
      int nodeIndex = graphs.variables( graphIndex ).nodeToIndex[i];
      double x_i_value = x_values[nodeIndex];
-     if ( isNonZero( x_i_value ) ) {
+     if ( intIsNonZero( x_i_value ) ) {
        clog << " " << graphs.variables( graphIndex ).xVars[nodeIndex].getName()
             << " " << x_i_value << endl;
        ++number;
