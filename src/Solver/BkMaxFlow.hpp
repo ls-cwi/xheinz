@@ -35,6 +35,7 @@ namespace solver {
 
    double flow( DgComponent::Arc const & a ) const;
    double residue( DgComponent::Arc const & a ) const;
+   double reverseResidue( DgComponent::Arc const & a ) const;
 
    bool cut( DgComponent::Arc const & a ) const;
    bool cut( DgComponent::Node const & v ) const;

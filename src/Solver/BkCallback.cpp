@@ -328,7 +328,18 @@ namespace solver {
          dfsMarkedCache[w] = true;
        }
      });
+
+     for_each( digraph.inArcs( v ), [&]( DgArc const & a ) {
+       DgNode w = digraph.source( a );
+
+       if ( !dfsMarkedCache[w] && cutIsNonZero( bkMaxFlow.reverseResidue( a ) ) ) {
+         queue.push( w );
+         dfsMarkedCache[w] = true;
+       }
+     });
    }
+
+   assert( dfsMarkedCache[digraph.rootNode()] != dfsMarkedCache[target] );
 
    for_each( diS, [&]( DgNode const & v ) {
      assert( dfsMarkedCache[v] );
@@ -389,7 +400,18 @@ namespace solver {
          dfsMarkedCache[u] = true;
        }
      });
+
+     for_each( digraph.outArcs( v ), [&]( DgArc const & a ) {
+       DgNode u = digraph.target( a );
+
+       if ( !dfsMarkedCache[u] && cutIsNonZero( bkMaxFlow.reverseResidue( a ) ) ) {
+         queue.push( u );
+         dfsMarkedCache[u] = true;
+       }
+     });
    }
+
+   assert( dfsMarkedCache[digraph.rootNode()] != dfsMarkedCache[target] );
 
    for ( DgNode const & v : diS ) {
      assert( dfsMarkedCache[v] );

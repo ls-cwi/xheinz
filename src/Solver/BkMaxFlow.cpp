@@ -66,6 +66,10 @@ namespace solver {
    return dgArcToBkArc[a]->r_cap;
  }
 
+ double BkMaxFlow::reverseResidue( DgComponent::Arc const & a ) const {
+   return dgArcToBkArc[a]->sister->r_cap;
+ }
+
  void BkMaxFlow::printFlow( std::ostream& out ) const {
    for_each( digraph.arcs(), [&]( DgComponent::Arc const & a ) {
      auto v = digraph.source( a );
