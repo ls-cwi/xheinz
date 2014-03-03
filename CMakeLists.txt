@@ -22,6 +22,8 @@ set( xHeinz_Hdr
   src/Solver/Solution.hpp
   src/Solver/BkMaxFlow.hpp
   src/Solver/BkCallback.hpp
+  src/Solver/BkLazyCallback.hpp
+  src/Solver/BkUserCallback.hpp
   src/Solver/ExtChainGraph.hpp
   src/Solver/GraphVariables.hpp
   src/Solver/MinCutDigraph.hpp
@@ -40,6 +42,8 @@ set( xHeinz_Src
   src/Solver/Solution.cpp
   src/Solver/BkMaxFlow.cpp
   src/Solver/BkCallback.cpp
+  src/Solver/BkLazyCallback.cpp
+  src/Solver/BkUserCallback.cpp
   src/Solver/RoundingCallback.cpp
   src/Solver/MinCutDigraphComponent.cpp
 )
