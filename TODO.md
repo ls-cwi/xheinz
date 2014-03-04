@@ -6,6 +6,7 @@ Changes:
 * Back-off functionality
 * Purge cuts
 * Intensive root node
+* Enable zero-half cuts (and maybe otherS)
 
 Done:
 
