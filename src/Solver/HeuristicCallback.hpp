@@ -1,5 +1,5 @@
-#ifndef xHeinz_Solver_RoundingCallback_HPP
-#define xHeinz_Solver_RoundingCallback_HPP
+#ifndef xHeinz_Solver_HeuristicCallback_HPP
+#define xHeinz_Solver_HeuristicCallback_HPP
 
 #include <cstring>
 #include <vector>
@@ -16,14 +16,14 @@ namespace xHeinz {
 
 namespace solver {
 
- class RoundingCallback
+ class HeuristicCallback
    : public IloCplex::HeuristicCallbackI {
   public:
-   RoundingCallback( IloEnv env
+   HeuristicCallback( IloEnv env
                    , Config const & conf
                    , ExtChainGraph const & gs
                    );
-   ~RoundingCallback();
+   ~HeuristicCallback();
 
   public:
    void main() override;
@@ -50,7 +50,7 @@ namespace solver {
    IloNumArray solutionVal;
 
   private:
-   RoundingCallback( RoundingCallback const & other );
+   HeuristicCallback( HeuristicCallback const & other );
 
   private:
    void determineComponents( int index
@@ -82,6 +82,6 @@ namespace solver {
 } // namespace solver
 } // namespace xHeinz
 
-#endif // xHeinz_Solver_RoundingCallback_HPP
+#endif // xHeinz_Solver_HeuristicCallback_HPP
 
 /* vim: set ts=8 sw=2 sts=2 et : */

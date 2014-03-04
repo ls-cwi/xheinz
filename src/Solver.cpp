@@ -2,8 +2,9 @@
 
 #include <limits>
 
-#include "Solver/BkCallback.hpp"
-#include "Solver/RoundingCallback.hpp"
+#include "Solver/LazyConstraintCallback.hpp"
+#include "Solver/UserCutCallback.hpp"
+#include "Solver/HeuristicCallback.hpp"
 
 #include "Math.hpp"
 #include "Verbosity.hpp"
@@ -525,7 +526,7 @@ namespace xHeinz {
    cplex.setParam( IloCplex::FlowPaths     , -1 );
    cplex.setParam( IloCplex::ImplBd        , -1 );
    cplex.setParam( IloCplex::DisjCuts      , -1 );
-   cplex.setParam( IloCplex::ZeroHalfCuts  , -1 );
+   //cplex.setParam( IloCplex::ZeroHalfCuts  , -1 );
    cplex.setParam( IloCplex::MCFCuts       , -1 );
    cplex.setParam( IloCplex::AggFill       ,  0 );
    cplex.setParam( IloCplex::PreInd        ,  0 );
@@ -533,16 +534,19 @@ namespace xHeinz {
    cplex.setParam( IloCplex::PreslvNd      , -1 );
    cplex.setParam( IloCplex::RepeatPresolve,  0 );
 
-   IloCplex::Callback cutCallback( new (env) BkCallback( env, config, graphs ) );
-   IloCplex::Callback roundingCallback( new (env) RoundingCallback( env, config, graphs ) );
+   IloCplex::Callback lazyCallback( new (env) LazyConstraintCallback( env, config, graphs ) );
+   IloCplex::Callback userCallback( new (env) UserCutCallback( env, config, graphs, BackOff( BackOff::LinearWaiting ) ) );
+   IloCplex::Callback heuristicCallback( new (env) HeuristicCallback( env, config, graphs ) );
 
-   cplex.use( cutCallback );
-   cplex.use( roundingCallback );
+   cplex.use( lazyCallback );
+   cplex.use( userCallback );
+   cplex.use( heuristicCallback );
 
    bool res = cplex.solve();
 
-   cutCallback.end();
-   roundingCallback.end();
+   lazyCallback.end();
+   userCallback.end();
+   heuristicCallback.end();
 
    return res;
  }

@@ -1,4 +1,4 @@
-#include "Solver/RoundingCallback.hpp"
+#include "Solver/HeuristicCallback.hpp"
 
 #include <ilcplex/ilocplexi.h>
 #include <queue>
@@ -11,7 +11,7 @@ using namespace std;
 namespace xHeinz {
 namespace solver {
 
- RoundingCallback::RoundingCallback( IloEnv env
+ HeuristicCallback::HeuristicCallback( IloEnv env
                                    , Config const & conf
                                    , ExtChainGraph const & gs
                                    )
@@ -49,7 +49,7 @@ namespace solver {
    solutionVal.setSize( solutionVar.getSize() );
  }
 
- RoundingCallback::RoundingCallback( RoundingCallback const & other )
+ HeuristicCallback::HeuristicCallback( HeuristicCallback const & other )
    : IloCplex::HeuristicCallbackI{ other }
    , config( other.config )
    , graphs( other.graphs )
@@ -61,16 +61,16 @@ namespace solver {
    }
  }
 
- RoundingCallback::~RoundingCallback() {
+ HeuristicCallback::~HeuristicCallback() {
    solutionVar.end();
    solutionVal.end();
  }
 
- IloCplex::CallbackI * RoundingCallback::duplicateCallback() const {
-   return new (getEnv()) RoundingCallback( *this );
+ IloCplex::CallbackI * HeuristicCallback::duplicateCallback() const {
+   return new (getEnv()) HeuristicCallback( *this );
  }
 
- void RoundingCallback::main() {
+ void HeuristicCallback::main() {
    // first determine components per graph
    std::vector< NodeMatrix > nodesPerComponentVector;
 
@@ -152,7 +152,7 @@ namespace solver {
    }
  }
 
- void RoundingCallback::obtainSolution( int index
+ void HeuristicCallback::obtainSolution( int index
                                       , int offset
                                       , NodeVector const & comp1
                                       , NodeVector const & comp2
@@ -205,7 +205,7 @@ namespace solver {
    }
  }
 
- void RoundingCallback::obtainSolution( int index
+ void HeuristicCallback::obtainSolution( int index
                                       , int offset
                                       , NodeVector const & comp
                                       ) {
@@ -234,7 +234,7 @@ namespace solver {
    }
  }
 
- void RoundingCallback::determineComponents( int index
+ void HeuristicCallback::determineComponents( int index
                                            , NodeMatrix & nodesPerComponent
                                            ) {
    Graph const          & graph   = graphs.graph( index );
@@ -311,7 +311,7 @@ namespace solver {
    xVal.end();
  }
 
- RoundingCallback::IndexPair RoundingCallback::determinePair( int index
+ HeuristicCallback::IndexPair HeuristicCallback::determinePair( int index
                                                             , NodeMatrix const & nodesPerComponent1
                                                             , NodeMatrix const & nodesPerComponent2
                                                             ) {
@@ -342,7 +342,7 @@ namespace solver {
    return res;
  }
 
- double RoundingCallback::computeAlpha( int index
+ double HeuristicCallback::computeAlpha( int index
                                       , NodeVector const & comp1
                                       , NodeVector const & comp2
                                       ) {

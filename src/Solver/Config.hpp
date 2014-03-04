@@ -20,6 +20,7 @@ namespace solver {
    int timeLimit;
    int numThreads;
    int size;
+   int maxCutIterations;
 
    Config( double cp = 0.6
          , std::array< double, 2 > pp = std::array< double, 2 >{ 0.0, 0.0 }
@@ -27,13 +28,15 @@ namespace solver {
          , int tl = -1
          , int threads = 1
          , int s = -1
+         , int mi = 20
          )
      : connectivityPercentage{ cp }
      , positivePercentage( pp )
      , connectivityType{ ct }
      , timeLimit{ tl }
      , numThreads{ threads }
-     , size{ s } {
+     , size{ s }
+     , maxCutIterations{ mi } {
    }
 
    friend std::ostream & operator<<( std::ostream & out, Config const & conf );
