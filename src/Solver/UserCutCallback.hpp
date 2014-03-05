@@ -1,6 +1,7 @@
 #ifndef xHeinz_Solver_UserCutCallback_HPP
 #define xHeinz_Solver_UserCutCallback_HPP
 
+#include <cstring>
 #include <ilcplex/ilocplexi.h>
 
 #include "Solver/Callback.hpp"
