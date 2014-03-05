@@ -1,6 +1,7 @@
 #ifndef xHeinz_Solver_LazyConstraintCallback_HPP
 #define xHeinz_Solver_LazyConstraintCallback_HPP
 
+#include <cstring>
 #include <ilcplex/ilocplexi.h>
 
 #include "Solver/Callback.hpp"
