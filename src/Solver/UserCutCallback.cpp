@@ -22,7 +22,8 @@ namespace solver {
    , nodeNumber{ 0 }
    , numCutIterations{ 0 }
    , makeAttempt{ true }
-   , backOff{ bo } {
+   , backOff{ bo }
+   , timeStamp{ -1 } {
    for ( int i = 0, e = graphs.numGraphs(); i != e; ++i ) {
      minCuts.emplace_back();
      for_each( graphs.digraph( i ).components(), [&]( MinCutDigraphComponent const & c ) {
@@ -38,7 +39,8 @@ namespace solver {
    , nodeNumber{ 0 }
    , numCutIterations{ 0 }
    , makeAttempt{ other.makeAttempt }
-   , backOff{ other.backOff } {
+   , backOff{ other.backOff }
+   , timeStamp{ other.timeStamp } {
    // We need to create new MaxFlow, which are per thread and we have one
    // callback per thread
    for ( int i = 0, e = graphs.numGraphs(); i != e; ++i ) {
@@ -54,6 +56,11 @@ namespace solver {
  }
 
  void UserCutCallback::main() {
+   if ( timeStamp == -1 )
+   {
+     timeStamp = getCplexTime();
+   }
+
    if (!isAfterCutLoop())
    {
      // first let cplex do its magic
@@ -68,8 +75,11 @@ namespace solver {
 
    ++numCutIterations;
 
+   int timeSpent = getCplexTime() - timeStamp;
+
    if ( makeAttempt &&
-        ( numCutIterations < config.maxCutIterations || nodeNumber == 0 ) ) {
+        ( numCutIterations < config.maxCutIterations ||
+        ( nodeNumber == 0 && ( config.rootTimeLimit == -1 || timeSpent < config.rootTimeLimit ) ) ) ) {
      assert( graphs.numGraphs() == 2 );
      assert( minCuts.size() == 2 );
      for ( int i = 0, e = graphs.numGraphs(); i != e; ++i ) {
@@ -98,7 +108,7 @@ namespace solver {
    NodeSetVector nonZeroNodesComponents;
    constructNonZeroComponents( graph, vars, x_values, nonZeroNodesComponents );
 
-   if ( nonZeroNodesComponents.size() > 1 )
+   //if ( nonZeroNodesComponents.size() > 1 )
    {
      NodeSet roots = determineRoots( graph, vars, y_values );
      separateConnectedComponents( graph

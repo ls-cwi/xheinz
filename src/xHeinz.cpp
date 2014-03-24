@@ -55,6 +55,7 @@ int main( int argc, char * argv[] ) {
               )
     .synonym( "omega", "w" )
     .refOption( "t", "Time limit (in seconds, default: -1)", config.timeLimit, false )
+    .refOption( "rt", "Time limit for the root node (in seconds, default: -1)", config.rootTimeLimit, false )
     .refOption( "warm", "xHeinz output file used as a warm start (must be solved with >= alpha)"
               , warmFilename, false
               )
