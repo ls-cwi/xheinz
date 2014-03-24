@@ -18,6 +18,7 @@ namespace solver {
    std::array< double, 2 > positivePercentage;
    ConnectivityType connectivityType;
    int timeLimit;
+   int rootTimeLimit;
    int numThreads;
    int size;
    int maxCutIterations;
@@ -26,6 +27,7 @@ namespace solver {
          , std::array< double, 2 > pp = std::array< double, 2 >{ 0.0, 0.0 }
          , ConnectivityType ct = SumUnits
          , int tl = -1
+         , int rtl = -1
          , int threads = 1
          , int s = -1
          , int mi = 20
@@ -34,6 +36,7 @@ namespace solver {
      , positivePercentage( pp )
      , connectivityType{ ct }
      , timeLimit{ tl }
+     , rootTimeLimit{ rtl }
      , numThreads{ threads }
      , size{ s }
      , maxCutIterations{ mi } {

@@ -38,6 +38,7 @@ namespace solver {
    int numCutIterations;
    bool makeAttempt;
    BackOff backOff;
+   int timeStamp;
 
   private:
    UserCutCallback( UserCutCallback const & other );
