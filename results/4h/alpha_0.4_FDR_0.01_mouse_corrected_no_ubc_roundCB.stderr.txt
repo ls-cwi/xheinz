@@ -1,0 +1,65 @@
+Warning: Control callbacks may disable some MIP features.
+Lazy constraint(s) or lazy constraint callback is present.
+    Disabling dual reductions (CPX_PARAM_REDUCE) in presolve.
+Clique table members: 53800.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 324.38 sec. (27163.33 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0       11.9841    19                     11.9841    19069         
+*     0+    0                            6.0853       11.9841    19069   96.94%
+      0     0       11.4323    12        6.0853       Cuts: 4    19077   87.87%
+      0     0       10.5532    14        6.0853 UserPurge1: 3    19082   73.42%
+*     0+    0                            6.2826       10.5532    19082   67.98%
+      0     2       10.5532    14        6.2826       10.5466    19082   67.87%                        0             0
+Elapsed time = 340.59 sec. (29262.62 ticks, tree = 0.00 MB, solutions = 2)
+      1     3       10.5376    11        6.2826       10.5228    19086   67.49%mm_ENSP000003602 D      1      0      1
+      2     4       10.4922     5        6.2826       10.4902    19092   66.97%x_ENSMUSP0000002 D      2      1      2
+*     3+    3                            7.6864       10.4902    19107   36.48%
+      3     5       10.3555     5        7.6864       10.3762    19107   34.99%x_ENSP0000038526 N      3      2      3
+      4     6       10.3762    12        7.6864       10.3669    19137   34.87%x_ENSP0000038526 U      4      2      3
+*     5+    3                            9.6533       10.3669    19148    7.39%
+      5     5       10.1960     5        9.6533       10.3669    19148    7.39%x_ENSP0000034947 D      5      3      4
+      6     5        9.9514    11        9.6533       10.3669    19151    7.39%z_ENSMUSP0000012 U      6      5      5
+      8     5        cutoff              9.6533       10.3669    19158    7.39%x_ENSP0000028663 N      8      7      7
+     10     6        9.7043     4        9.6533       10.3669    19160    7.39%x_ENSP0000034528 D     10      9      8
+     13     5        cutoff              9.6533       10.3669    19165    7.39%x_ENSP0000035643 D     13     12     10
+
+Zero-half cuts applied:  3
+Lift and project cuts applied:  1
+User cuts applied:  44
+
+Root node processing (before b&c):
+  Real time             =  340.53 sec. (29258.79 ticks)
+Sequential b&c:
+  Real time             =   29.82 sec. (5334.99 ticks)
+                          ------------
+Total (root+branch&cut) =  370.34 sec. (34593.78 ticks)
+Solved in 375.027s
+	Command being timed: "timeout 12500s /home/hsoueidan/xheinz/build/xHeinz_git_user_cuts -n1 4h/mouse_MA_scores_0.01_corrected_ensp_induced.tsv -n2 4h/human_MA_scores_0.01_corrected_ensp_induced.tsv -e1 /home/hsoueidan/xheinz/data/Th17/STRING/mmu-no_UBC.txt -e2 /home/hsoueidan/xheinz/data/Th17/STRING/hsa-no_UBC_no_SUMO2.txt -t 12000 -rt 2000 -cog data/ensembl_cog_ALL.tsv -a 0.4"
+	User time (seconds): 3627.35
+	System time (seconds): 40.34
+	Percent of CPU this job got: 930%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:34.09
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6568320
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 307654
+	Voluntary context switches: 396442
+	Involuntary context switches: 521648
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

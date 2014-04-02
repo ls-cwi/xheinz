@@ -1,0 +1,208 @@
+Warning: Control callbacks may disable some MIP features.
+Lazy constraint(s) or lazy constraint callback is present.
+    Disabling dual reductions (CPX_PARAM_REDUCE) in presolve.
+Clique table members: 61761.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 7.86 sec. (3330.21 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0      297.5438     7                    297.5438    14423         
+*     0+    0                          228.4196      297.5438    14423   30.26%
+      0     0      277.1987    77      228.4196 UserPurge1: 78    14657   21.36%
+*     0+    0                          250.4956      272.0725    14664    8.61%
+      0     0      271.8820    27      250.4956   ZeroHalf: 2    14665    8.54%
+*     0+    0                          259.0818      271.8820    14665    4.94%
+      0     0      270.6764    27      259.0818 UserPurge1: 66    14679    4.48%
+      0     0      270.6409    38      259.0818 UserPurge1: 61    14686    4.46%
+      0     0      270.4835    27      259.0818 UserPurge1: 65    14698    4.40%
+      0     0      270.4588    27      259.0818 UserPurge1: 62    14707    4.39%
+      0     0      270.4268    31      259.0818 UserPurge1: 62    14712    4.38%
+      0     0      270.4118    38      259.0818 UserPurge1: 64    14719    4.37%
+      0     0      270.3622    38      259.0818 UserPurge1: 67    14733    4.35%
+      0     0      270.3476    46      259.0818 UserPurge1: 65    14740    4.35%
+      0     0      270.3355    37      259.0818 UserPurge1: 69    14743    4.34%
+      0     0      270.2236    27      259.0818 UserPurge1: 65    14760    4.30%
+      0     0      270.2218    34      259.0818 UserPurge1: 61    14761    4.30%
+      0     0      270.2200    44      259.0818 UserPurge1: 65    14763    4.30%
+      0     0      270.1848    38      259.0818 UserPurge1: 70    14768    4.29%
+      0     0      270.1772    27      259.0818 UserPurge1: 66    14771    4.28%
+      0     0      270.1760    27      259.0818 UserPurge1: 63    14772    4.28%
+      0     0      270.1759    44      259.0818 UserPurge1: 63    14773    4.28%
+      0     0      270.1715    27      259.0818 UserPurge1: 70    14775    4.28%
+      0     0      270.1705    46      259.0818 UserPurge1: 64    14780    4.28%
+      0     0      270.1571    53      259.0818 UserPurge1: 70    14791    4.27%
+      0     0      270.1549    27      259.0818 UserPurge1: 72    14798    4.27%
+      0     0      270.1522    55      259.0818 UserPurge1: 62    14799    4.27%
+      0     0      270.1424    33      259.0818 UserPurge1: 75    14803    4.27%
+      0     0      270.1356    51      259.0818 UserPurge1: 66    14808    4.27%
+      0     0      270.1064    58      259.0818 UserPurge1: 74    14817    4.26%
+      0     0      270.0873    27      259.0818 UserPurge1: 75    14827    4.25%
+      0     0      270.0854    32      259.0818 UserPurge1: 63    14831    4.25%
+      0     0      270.0762    38      259.0818 UserPurge1: 65    14836    4.24%
+      0     0      270.0693    48      259.0818 UserPurge1: 67    14840    4.24%
+      0     0      270.0375    27      259.0818 UserPurge1: 72    14856    4.23%
+      0     0      270.0346    44      259.0818 UserPurge1: 62    14859    4.23%
+      0     0      270.0343    27      259.0818 UserPurge1: 73    14860    4.23%
+      0     0      270.0262    61      259.0818 UserPurge1: 62    14869    4.22%
+      0     0      269.9749    79      259.0818 UserPurge1: 79    14908    4.20%
+      0     0      269.9502    27      259.0818 UserPurge1: 80    14918    4.19%
+      0     0      269.9366    27      259.0818 UserPurge1: 61    14923    4.19%
+      0     0      269.9193    27      259.0818 UserPurge1: 63    14935    4.18%
+      0     0      269.9147    59      259.0818 UserPurge1: 61    14938    4.18%
+      0     0      269.8806    27      259.0818 UserPurge1: 80    14945    4.17%
+      0     0      269.8788    36      259.0818 UserPurge1: 61    14946    4.17%
+      0     0      269.8687    50      259.0818 UserPurge1: 63    14954    4.16%
+      0     0      269.8611    85      259.0818 UserPurge1: 74    14962    4.16%
+      0     0      269.8452    27      259.0818 UserPurge1: 81    14971    4.15%
+      0     0      269.8322    43      259.0818 UserPurge1: 61    14983    4.15%
+      0     0      269.8308    56      259.0818 UserPurge1: 70    14985    4.15%
+      0     0      269.8065    52      259.0818 UserPurge1: 76    14999    4.14%
+      0     0      269.7787    56      259.0818 UserPurge1: 76    15017    4.13%
+      0     0      269.7728    34      259.0818 UserPurge1: 79    15026    4.13%
+      0     0      269.7696    56      259.0818 UserPurge1: 67    15036    4.13%
+      0     0      269.7678    52      259.0818 UserPurge1: 78    15045    4.12%
+      0     0      269.7627    67      259.0818 UserPurge1: 75    15057    4.12%
+      0     0      269.7616    68      259.0818 UserPurge1: 85    15068    4.12%
+      0     0      269.7576    50      259.0818 UserPurge1: 87    15082    4.12%
+      0     0      269.7508    52      259.0818 UserPurge1: 76    15111    4.12%
+      0     0      269.7465    53      259.0818 UserPurge1: 78    15127    4.12%
+      0     0      269.7444    62      259.0818 UserPurge1: 74    15147    4.12%
+      0     0      269.7396    58      259.0818 UserPurge1: 82    15161    4.11%
+      0     0      269.7337    65      259.0818 UserPurge1: 80    15186    4.11%
+      0     0      269.7043    32      259.0818 UserPurge1: 82    15213    4.10%
+      0     0      269.6979    78      259.0818 UserPurge1: 63    15234    4.10%
+      0     0      269.6886    46      259.0818 UserPurge1: 78    15242    4.09%
+      0     0      269.6835    72      259.0818 UserPurge1: 68    15254    4.09%
+      0     0      269.6752    56      259.0818 UserPurge1: 76    15265    4.09%
+      0     0      269.6704    64      259.0818 UserPurge1: 79    15277    4.09%
+      0     0      269.6645    80      259.0818 UserPurge1: 80    15291    4.08%
+      0     0      269.6485    82      259.0818 UserPurge1: 80    15313    4.08%
+      0     0      269.6421    70      259.0818 UserPurge1: 83    15325    4.08%
+      0     0      269.6366    77      259.0818 UserPurge1: 78    15349    4.07%
+      0     0      269.6231    51      259.0818 UserPurge1: 91    15370    4.07%
+      0     0      269.6205    27      259.0818 UserPurge1: 73    15374    4.07%
+      0     0      269.6198    75      259.0818 UserPurge1: 61    15382    4.07%
+      0     0      269.6104    71      259.0818 UserPurge1: 89    15404    4.06%
+      0     0      269.6063    95      259.0818 UserPurge1: 81    15421    4.06%
+      0     0      269.6024    73      259.0818 UserPurge1: 91    15434    4.06%
+      0     0      269.5955    88      259.0818 UserPurge1: 81    15465    4.06%
+      0     0      269.5892    92      259.0818 UserPurge1: 88    15489    4.06%
+      0     0      269.5764    86      259.0818 UserPurge1: 92    15513    4.05%
+      0     0      269.5474    66      259.0818 UserPurge1: 84    15539    4.04%
+      0     0      269.5334    81      259.0818 UserPurge1: 84    15574    4.03%
+      0     0      269.5264    68      259.0818 UserPurge1: 85    15589    4.03%
+      0     0      269.5158    55      259.0818 UserPurge1: 84    15605    4.03%
+      0     0      269.5039    57      259.0818 UserPurge1: 85    15640    4.02%
+      0     0      269.4956    64      259.0818 UserPurge1: 82    15651    4.02%
+      0     0      269.4879    75      259.0818 UserPurge1: 84    15672    4.02%
+      0     0      269.4748    63      259.0818 UserPurge1: 91    15686    4.01%
+      0     0      269.4428   113      259.0818 UserPurge1: 85    15748    4.00%
+      0     0      269.4341    64      259.0818 UserPurge1: 91    15776    4.00%
+      0     0      269.4243    75      259.0818 UserPurge1: 84    15810    3.99%
+      0     0      269.4116    61      259.0818 UserPurge1: 86    15835    3.99%
+      0     0      269.4043    74      259.0818 UserPurge1: 83    15854    3.98%
+      0     0      269.3965   100      259.0818 UserPurge1: 88    15873    3.98%
+      0     0      269.3886    76      259.0818 UserPurge1: 96    15905    3.98%
+      0     0      269.3719    87      259.0818 UserPurge1: 91    15936    3.97%
+      0     0      269.3653    94      259.0818 UserPurge1: 89    15955    3.97%
+      0     0      269.3566    89      259.0818 UserPurge1: 90    15973    3.97%
+      0     0      269.3466   109      259.0818 UserPurge1: 90    16010    3.96%
+      0     0      269.3301    97      259.0818 UserPurge1: 94    16056    3.96%
+      0     0      269.3201    76      259.0818 UserPurge1: 91    16086    3.95%
+      0     0      269.3109    82      259.0818 UserPurge1: 93    16119    3.95%
+      0     0      269.3055    97      259.0818 UserPurge1: 96    16139    3.95%
+      0     0      269.2942   119      259.0818 UserPurge1: 95    16168    3.94%
+      0     0      269.2899   122      259.0818 UserPurge1: 97    16199    3.94%
+      0     0      269.2859    92      259.0818 UserPurge1: 100    16219    3.94%
+      0     0      269.2770   106      259.0818 UserPurge1: 89    16245    3.94%
+      0     0      269.2721    90      259.0818 UserPurge1: 97    16279    3.93%
+      0     0      269.2681    89      259.0818 UserPurge1: 94    16303    3.93%
+      0     0      269.2607    83      259.0818 UserPurge1: 91    16331    3.93%
+      0     0      269.2547    72      259.0818 UserPurge1: 97    16361    3.93%
+      0     0      269.2531    86      259.0818 UserPurge1: 89    16381    3.93%
+      0     0      269.2483    82      259.0818 UserPurge1: 90    16396    3.92%
+      0     0      269.2453    83      259.0818 UserPurge1: 95    16409    3.92%
+      0     0      269.2419   108      259.0818 UserPurge1: 94    16431    3.92%
+      0     0      269.2240    71      259.0818 UserPurge1: 96    16472    3.91%
+      0     0      269.2055    72      259.0818 UserPurge1: 93    16503    3.91%
+      0     0      269.1955    76      259.0818 UserPurge1: 94    16533    3.90%
+      0     0      269.1870   108      259.0818 UserPurge1: 92    16554    3.90%
+      0     0      269.1788   124      259.0818 UserPurge1: 99    16580    3.90%
+      0     0      269.1682    98      259.0818 UserPurge1: 101    16610    3.89%
+      0     0      269.1599    89      259.0818 UserPurge1: 96    16636    3.89%
+      0     0      269.1522   104      259.0818 UserPurge1: 91    16662    3.89%
+      0     0      269.1468   109      259.0818 UserPurge1: 100    16689    3.88%
+      0     0      269.1372   127      259.0818 UserPurge1: 100    16720    3.88%
+      0     0      269.1309    87      259.0818 UserPurge1: 105    16750    3.88%
+      0     0      269.1169    94      259.0818 UserPurge1: 95    16791    3.87%
+      0     0      269.1094   128      259.0818 UserPurge1: 100    16817    3.87%
+      0     0      269.1020   125      259.0818 UserPurge1: 106    16845    3.87%
+      0     0      269.0946   106      259.0818 UserPurge1: 103    16862    3.86%
+      0     0      269.0889    27      259.0818 UserPurge1: 102    16881    3.86%
+      0     0      269.0856    27      259.0818 UserPurge1: 62    16889    3.86%
+      0     0      269.0847   102      259.0818 UserPurge1: 62    16904    3.86%
+      0     0      269.0763    79      259.0818 UserPurge1: 101    16961    3.86%
+      0     0      269.0530    92      259.0818 UserPurge1: 95    17007    3.85%
+      0     0      269.0443    95      259.0818 UserPurge1: 100    17049    3.85%
+      0     0      269.0358    82      259.0818 UserPurge1: 103    17080    3.84%
+      0     0      269.0332    88      259.0818 UserPurge1: 95    17101    3.84%
+      0     0      269.0295    88      259.0818 UserPurge1: 97    17120    3.84%
+      0     0      269.0271    88      259.0818 UserPurge1: 99    17142    3.84%
+      0     0      269.0268    27      259.0818 UserPurge1: 102    17144    3.84%
+      0     0      269.0252   102      259.0818 UserPurge1: 62    17170    3.84%
+      0     0      269.0219    85      259.0818 UserPurge1: 100    17205    3.84%
+      0     0      269.0178   113      259.0818 UserPurge1: 105    17245    3.84%
+      0     0      269.0150   105      259.0818 UserPurge1: 109    17265    3.83%
+      0     0      269.0091    89      259.0818 UserPurge1: 103    17314    3.83%
+      0     0      269.0075    27      259.0818 UserPurge1: 103    17322    3.83%
+      0     0      269.0028   102      259.0818 UserPurge1: 62    17356    3.83%
+      0     0      268.9865    27      259.0818 UserPurge1: 106    17390    3.82%
+*     0+    0                          259.3760      268.9865    17390    3.71%
+      0     2      268.9865    27      259.3760      268.9861    17390    3.71%                        0             0
+Elapsed time = 512.17 sec. (177439.85 ticks, tree = 0.00 MB, solutions = 4)
+      1     3      268.9399     9      259.3760      268.9395    17460    3.69%x_ENSMUSP0000009 D      1      0      1
+      2     4      268.7745    91      259.3760      268.9365    18325    3.69%x_ENSP0000028663 N      2      1      2
+      3     5      268.8531    11      259.3760      268.9247    18413    3.68%x_ENSP0000028663 U      3      1      2
+*     4     4      integral     0      268.7408      268.9247    18473    0.07%x_ENSP0000027452 D      4      2      3
+      5     3      268.6855    67      268.7408      268.9247    18541    0.07%x_ENSP0000027452 U      5      2      3
+      6     2        cutoff            268.7408      268.8504    18645    0.04%x_ENSMUSP0000009 N      6      0      1
+      7     1      268.6569    17      268.7408      268.8484    18679    0.04%x_ENSP0000039159 U      7      3      3
+      8     0        cutoff            268.7408      268.7408    18694    0.00%x_ENSP0000039159 D      8      3      3
+
+Zero-half cuts applied:  2
+User cuts applied:  3109
+
+Root node processing (before b&c):
+  Real time             =  512.17 sec. (177435.69 ticks)
+Sequential b&c:
+  Real time             =  115.21 sec. (65742.50 ticks)
+                          ------------
+Total (root+branch&cut) =  627.38 sec. (243178.19 ticks)
+Solved in 631.182s
+	Command being timed: "timeout 12500s /home/hsoueidan/xheinz/build/xHeinz_git_user_cuts -n1 24h/mouse_MA_scores_0.01_corrected_ensp_induced.tsv -n2 24h/human_MA_scores_0.01_corrected_ensp_induced.tsv -e1 /home/hsoueidan/xheinz/data/Th17/STRING/mmu-no_UBC.txt -e2 /home/hsoueidan/xheinz/data/Th17/STRING/hsa-no_UBC_no_SUMO2.txt -t 12000 -rt 2000 -cog data/ensembl_cog_ALL.tsv -a 0.2"
+	User time (seconds): 639.09
+	System time (seconds): 24.12
+	Percent of CPU this job got: 101%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 10:50.78
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 11409392
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3465744
+	Voluntary context switches: 740
+	Involuntary context switches: 818
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

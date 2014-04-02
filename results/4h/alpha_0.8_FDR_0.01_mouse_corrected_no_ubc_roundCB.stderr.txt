@@ -1,0 +1,51 @@
+Warning: Control callbacks may disable some MIP features.
+Lazy constraint(s) or lazy constraint callback is present.
+    Disabling dual reductions (CPX_PARAM_REDUCE) in presolve.
+Clique table members: 53800.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 252.92 sec. (23866.59 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0        8.0471    12                      8.0471    19293         
+*     0+    0                           -3.2124        8.0471    19293  350.50%
+      0     0        7.4075    12       -3.2124 UserPurge1: 4    19335  330.59%
+*     0     0      integral     0        7.3908 UserPurge1: 4    19339    0.00%
+      0     0        cutoff              7.3908        7.3908    19339    0.00%                        0             0
+Elapsed time = 256.22 sec. (24658.02 ticks, tree = 0.00 MB, solutions = 2)
+
+User cuts applied:  6
+
+Root node processing (before b&c):
+  Real time             =  256.23 sec. (24659.73 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =  256.23 sec. (24659.73 ticks)
+Solved in 268.382s
+	Command being timed: "timeout 12500s /home/hsoueidan/xheinz/build/xHeinz_git_user_cuts -n1 4h/mouse_MA_scores_0.01_corrected_ensp_induced.tsv -n2 4h/human_MA_scores_0.01_corrected_ensp_induced.tsv -e1 /home/hsoueidan/xheinz/data/Th17/STRING/mmu-no_UBC.txt -e2 /home/hsoueidan/xheinz/data/Th17/STRING/hsa-no_UBC_no_SUMO2.txt -t 12000 -rt 2000 -cog data/ensembl_cog_ALL.tsv -a 0.8"
+	User time (seconds): 2814.46
+	System time (seconds): 34.98
+	Percent of CPU this job got: 805%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:53.83
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6615440
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 273065
+	Voluntary context switches: 290549
+	Involuntary context switches: 353469
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
