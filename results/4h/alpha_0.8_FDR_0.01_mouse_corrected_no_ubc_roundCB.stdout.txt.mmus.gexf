@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><gexf version="1.1" xmlns="http://www.gexf.net/1.1draft" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+  <graph defaultedgetype="undirected" mode="static">
+    <attributes class="edge" mode="static">
+      <attribute id="11" title="score" type="integer" />
+    </attributes>
+    <attributes class="node" mode="static">
+      <attribute id="0" title="logCPM" type="double" />
+      <attribute id="1" title="between_centrality" type="double" />
+      <attribute id="2" title="degree" type="integer" />
+      <attribute id="3" title="symbol" type="string" />
+      <attribute id="4" title="ensembl_protein_id" type="string" />
+      <attribute id="5" title="ensembl_gene_id" type="string" />
+      <attribute id="6" title="conserved" type="boolean" />
+      <attribute id="7" title="score" type="double" />
+      <attribute id="8" title="FDR" type="double" />
+      <attribute id="9" title="is_relevant" type="boolean" />
+      <attribute id="10" title="logFC" type="double" />
+    </attributes>
+    <nodes>
+      <node id="Il21" label="Il21">
+        <attvalues>
+          <attvalue for="0" value="7.06455167303" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="Il21" />
+          <attvalue for="4" value="ENSMUSP00000029273" />
+          <attvalue for="5" value="ENSMUSG00000027718" />
+          <attvalue for="6" value="False" />
+          <attvalue for="7" value="5.36941125611" />
+          <attvalue for="8" value="2.21862486602e-12" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="4.49392440278" />
+        </attvalues>
+      </node>
+      <node id="Stat3" label="Stat3">
+        <attvalues>
+          <attvalue for="0" value="10.4102795178" />
+          <attvalue for="1" value="1.0" />
+          <attvalue for="2" value="2" />
+          <attvalue for="3" value="Stat3" />
+          <attvalue for="4" value="ENSMUSP00000120152" />
+          <attvalue for="5" value="ENSMUSG00000004040" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-1.08550333279" />
+          <attvalue for="8" value="2.23733144368e-06" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="1.43694129931" />
+        </attvalues>
+      </node>
+      <node id="Ptpn1" label="Ptpn1">
+        <attvalues>
+          <attvalue for="0" value="9.98076149551" />
+          <attvalue for="1" value="0.0" />
+          <attvalue for="2" value="1" />
+          <attvalue for="3" value="Ptpn1" />
+          <attvalue for="4" value="ENSMUSP00000029053" />
+          <attvalue for="5" value="ENSMUSG00000027540" />
+          <attvalue for="6" value="True" />
+          <attvalue for="7" value="-0.158576092288" />
+          <attvalue for="8" value="3.8011574343e-08" />
+          <attvalue for="9" value="True" />
+          <attvalue for="10" value="1.32355493184" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="Il21" target="Stat3">
+        <attvalues>
+          <attvalue for="11" value="800" />
+        </attvalues>
+      </edge>
+      <edge id="1" source="Ptpn1" target="Stat3">
+        <attvalues>
+          <attvalue for="11" value="800" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

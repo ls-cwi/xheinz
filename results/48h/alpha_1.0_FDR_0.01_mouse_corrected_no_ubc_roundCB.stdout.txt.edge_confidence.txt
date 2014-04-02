@@ -1,0 +1,7 @@
+alpha time_point specie tag fdr_thr src tgt score
+1.0 48h hsa  0.01 VDR RORC 900
+1.0 48h hsa  0.01 VDR RORA 900
+1.0 48h hsa  0.01 RORC RORA 900
+1.0 48h mmus  0.01 Vdr Rorc 900
+1.0 48h mmus  0.01 Vdr Rora 900
+1.0 48h mmus  0.01 Rorc Rora 900

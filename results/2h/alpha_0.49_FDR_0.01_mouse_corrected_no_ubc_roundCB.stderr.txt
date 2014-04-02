@@ -1,0 +1,120 @@
+Warning: Control callbacks may disable some MIP features.
+Lazy constraint(s) or lazy constraint callback is present.
+    Disabling dual reductions (CPX_PARAM_REDUCE) in presolve.
+Clique table members: 62157.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 12.53 sec. (2508.13 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0      285.1102    10                    285.1102    13595         
+*     0+    0                            1.6858      285.1102    13595     --- 
+      0     0      278.8589    25        1.6858 UserPurge1: 71    13675     --- 
+      0     0      278.1247    15        1.6858   ZeroHalf: 1    13682     --- 
+      0     0      274.3743    15        1.6858 UserPurge1: 70    13710     --- 
+*     0+    0                          243.4395      274.3743    13710   12.71%
+      0     0      272.8289    19      243.4395 UserPurge1: 71    13748   12.07%
+*     0+    0                          252.2079      272.8289    13748    8.18%
+      0     0      272.4037    15      252.2079   ZeroHalf: 1    13757    8.01%
+*     0+    0                          255.0808      272.4037    13757    6.79%
+      0     0      272.3421     4      255.0808 UserPurge1: 63    13763    6.77%
+      0     0      272.2868    17      255.0808 UserPurge1: 63    13768    6.75%
+      0     0      272.2209    18      255.0808 UserPurge1: 64    13775    6.72%
+*     0+    0                          256.6720      272.2209    13775    6.06%
+      0     0      272.0941    20      256.6720 UserPurge1: 65    13822    6.01%
+      0     0      272.0181    20      256.6720 UserPurge1: 63    13834    5.98%
+      0     0      271.9497    15      256.6720 UserPurge1: 63    13868    5.95%
+*     0+    0                          265.8478      271.9497    13868    2.30%
+      0     0      271.7888    22      265.8478 UserPurge1: 65    13878    2.23%
+      0     0      271.7656    15      265.8478 UserPurge1: 65    13884    2.23%
+*     0+    0                          265.8694      271.7656    13884    2.22%
+      0     0      271.7318    26      265.8694 UserPurge1: 65    13897    2.20%
+      0     0      271.7043    35      265.8694 UserPurge1: 67    13901    2.19%
+      0     0      271.6622    38      265.8694 UserPurge1: 68    13908    2.18%
+      0     0      271.6541    20      265.8694 UserPurge1: 70    13911    2.18%
+      0     0      271.6216    37      265.8694 UserPurge1: 66    13926    2.16%
+      0     0      271.4934     5      265.8694 UserPurge1: 70    13940    2.12%
+*     0+    0                          266.2925      271.4934    13940    1.95%
+      0     0      271.4406    26      266.2925 UserPurge1: 62    13948    1.93%
+      0     0      271.4360    26      266.2925 UserPurge1: 64    13949    1.93%
+      0     0      271.4213    24      266.2925 UserPurge1: 65    13952    1.93%
+      0     0      271.3944    43      266.2925 UserPurge1: 67    13967    1.92%
+      0     0      271.3784     7      266.2925 UserPurge1: 74    13976    1.91%
+*     0+    0                          267.1221      271.3784    13976    1.59%
+      0     0      271.3657    32      267.1221 UserPurge1: 64    13980    1.59%
+      0     0      271.3616    51      267.1221 UserPurge1: 66    13983    1.59%
+      0     0      271.3510     5      267.1221 UserPurge1: 78    13987    1.58%
+      0     0      271.3042    28      267.1221 UserPurge1: 62    13996    1.57%
+      0     0      271.2906    58      267.1221 UserPurge1: 67    14001    1.56%
+      0     0      271.2877    63      267.1221 UserPurge1: 73    14003    1.56%
+      0     0      271.2066    52      267.1221 UserPurge1: 73    14036    1.53%
+      0     0      271.1933    41      267.1221 UserPurge1: 73    14046    1.52%
+      0     0      271.1905    30      267.1221 UserPurge1: 69    14048    1.52%
+      0     0      271.1864    88      267.1221 UserPurge1: 63    14051    1.52%
+      0     0      271.1703    33      267.1221 UserPurge1: 79    14060    1.52%
+      0     0      271.1644    47      267.1221 UserPurge1: 66    14062    1.51%
+      0     0      271.1484    76      267.1221 UserPurge1: 71    14074    1.51%
+      0     0      271.1464     5      267.1221 UserPurge1: 80    14077    1.51%
+      0     0      271.1439     5      267.1221 UserPurge1: 62    14078    1.51%
+*     0+    0                          268.1543      271.1439    14078    1.11%
+      0     0      271.1283    31      268.1543 UserPurge1: 63    14090    1.11%
+      0     0      271.1106    33      268.1543 UserPurge1: 70    14100    1.10%
+      0     0      271.1054    74      268.1543 UserPurge1: 66    14111    1.10%
+      0     0      271.0967    20      268.1543 UserPurge1: 78    14117    1.10%
+      0     0      271.0927    95      268.1543 UserPurge1: 66    14124    1.10%
+      0     0      271.0830    51      268.1543 UserPurge1: 85    14143    1.09%
+      0     0      271.0794     5      268.1543 UserPurge1: 75    14149    1.09%
+      0     0      271.0793    12      268.1543 UserPurge1: 61    14150    1.09%
+      0     0      271.0792     5      268.1543 UserPurge1: 61    14153    1.09%
+*     0+    0                          270.8536      271.0792    14153    0.08%
+      0     2      271.0792     5      270.8536      271.0789    14153    0.08%                        0             0
+Elapsed time = 117.14 sec. (32588.90 ticks, tree = 0.00 MB, solutions = 11)
+      1     3      271.0781     4      270.8536      271.0778    14156    0.08%x_ENSP0000026805 U      1      0      1
+      2     4      271.0671     1      270.8536      271.0701    14178    0.08%x_ENSP0000035561 D      2      1      2
+      3     4      271.0208    47      270.8536      271.0669    14217    0.08%x_ENSP0000035561 U      3      1      2
+      4     4      270.9890    21      270.8536      271.0669    14232    0.08%          m_3075 D      4      3      3
+      5     3        cutoff            270.8536      271.0669    14280    0.08%z_ENSMUSP0000002 N      5      4      4
+      6     4      271.0633     2      270.8536      271.0622    14288    0.08%x_ENSMUSP0000002 D      6      2      3
+      8     5      271.0212     7      270.8536      271.0512    14305    0.07%x_ENSP0000034168 D      8      7      5
+     11     7      270.9195     2      270.8536      271.0512    14312    0.07%x_ENSP0000030516 D     11     10      8
+     12     6      270.9195     2      270.8536      271.0512    14314    0.07%x_ENSMUSP0000002 D     12     11      9
+     14     4      268.2130    15      270.8536      271.0256    14360    0.06%x_ENSP0000034168 U     14      7      5
+Elapsed time = 160.76 sec. (54697.40 ticks, tree = 0.09 MB, solutions = 11)
+     16     2      268.9711    15      270.8536      270.9966    14417    0.05%x_ENSMUSP0000002 U     16      2      3
+
+Zero-half cuts applied:  2
+User cuts applied:  928
+
+Root node processing (before b&c):
+  Real time             =  117.13 sec. (32587.37 ticks)
+Sequential b&c:
+  Real time             =   47.05 sec. (23623.82 ticks)
+                          ------------
+Total (root+branch&cut) =  164.18 sec. (56211.19 ticks)
+Solved in 169.561s
+	Command being timed: "timeout 12500s /home/hsoueidan/xheinz/build/xHeinz_git_user_cuts -n1 2h/mouse_MA_scores_0.01_corrected_ensp_induced.tsv -n2 2h/human_MA_scores_0.01_corrected_ensp_induced.tsv -e1 /home/hsoueidan/xheinz/data/Th17/STRING/mmu-no_UBC.txt -e2 /home/hsoueidan/xheinz/data/Th17/STRING/hsa-no_UBC_no_SUMO2.txt -t 12000 -rt 2000 -cog data/ensembl_cog_ALL.tsv -a 0.49"
+	User time (seconds): 212.50
+	System time (seconds): 6.38
+	Percent of CPU this job got: 110%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:17.55
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 7135504
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1212859
+	Voluntary context switches: 512
+	Involuntary context switches: 4497
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
