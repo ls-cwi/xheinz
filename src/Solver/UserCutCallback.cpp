@@ -11,6 +11,10 @@ using namespace std;
 namespace xHeinz {
 namespace solver {
 
+ namespace {
+  IloNum const InvalidTimeStamp = -std::numeric_limits< IloNum >::infinity();
+ }
+
  UserCutCallback::UserCutCallback( IloEnv                env
                                  , Config        const & conf
                                  , ExtChainGraph const & gs
@@ -23,7 +27,7 @@ namespace solver {
    , numCutIterations{ 0 }
    , makeAttempt{ true }
    , backOff{ bo }
-   , timeStamp{ -1 } {
+   , timeStamp{ InvalidTimeStamp } {
    for ( int i = 0, e = graphs.numGraphs(); i != e; ++i ) {
      minCuts.emplace_back();
      for_each( graphs.digraph( i ).components(), [&]( MinCutDigraphComponent const & c ) {
@@ -56,15 +60,12 @@ namespace solver {
  }
 
  void UserCutCallback::main() {
-   if ( timeStamp == -1 )
-   {
+   if ( timeStamp == InvalidTimeStamp ) {
      timeStamp = getCplexTime();
    }
 
-   if (!isAfterCutLoop())
-   {
-     // first let cplex do its magic
-     return;
+   if ( !isAfterCutLoop() ) {
+     return;   // let cplex do its magic first
    }
 
    if ( nodeNumber != getNnodes() ) {
@@ -75,11 +76,13 @@ namespace solver {
 
    ++numCutIterations;
 
-   int timeSpent = getCplexTime() - timeStamp;
+   IloNum timeSpent = getCplexTime() - timeStamp;
 
-   if ( makeAttempt &&
-        ( numCutIterations < config.maxCutIterations ||
-        ( nodeNumber == 0 && ( config.rootTimeLimit == -1 || timeSpent < config.rootTimeLimit ) ) ) ) {
+   if ( makeAttempt
+     && ( numCutIterations < config.maxCutIterations
+       || (nodeNumber == 0 && timeSpent < config.rootTimeLimit)
+        )
+      ) {
      assert( graphs.numGraphs() == 2 );
      assert( minCuts.size() == 2 );
      for ( int i = 0, e = graphs.numGraphs(); i != e; ++i ) {

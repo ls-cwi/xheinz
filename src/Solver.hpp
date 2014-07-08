@@ -3,6 +3,8 @@
 
 #include <cassert>
 #include <ostream>
+#include <utility>
+#include <tuple>
 
 #include "Solver/Config.hpp"
 #include "Solver/Solution.hpp"
@@ -17,9 +19,12 @@ namespace xHeinz {
    using InputSolution  = solver::InputSolution;
    using OutputSolution = solver::OutputSolution;
 
+   using NodeBoolPair = OutputSolution::NodeBoolPair;
+   using SolutionSet  = OutputSolution::SolutionSet;
+
   public:
    Solver( ChainGraph const & gs, Config conf );
-   ~Solver();
+   ~Solver() noexcept;
 
   public:
    void warm( InputSolution const & sol, char const * name = nullptr );
@@ -27,13 +32,14 @@ namespace xHeinz {
    optional< OutputSolution > solve();
 
   private:
-   using NodeVector = std::vector< Graph::Node >;
-   using BoolVector = std::vector< bool >;
-
    using ExtChainGraph      = solver::ExtChainGraph;
    using GraphVariables     = solver::GraphVariables;
    using LinkGraphVariables = solver::LinkGraphVariables;
 
+   using AlphaTriple = std::tuple< OutputSolution::AlphaScore
+                                 , OutputSolution::AlphaScore
+                                 , OutputSolution::AlphaScore
+                                 >;
   private:
    Config config;
 
@@ -69,22 +75,21 @@ namespace xHeinz {
 
    bool setParamsAndSolve();
 
-   double computeAlpha( ThreeWayGraph const         & twg
-                      , LinkGraphVariables const    & linkVars
-                      , NodeVector  const           & comp1
-                      , NodeVector  const           & comp2
-                      , OutputSolution::SolutionSet & out1
-                      , OutputSolution::SolutionSet & out2
-                      );
+   OutputSolution determineSolution() const;
 
-   double determineSolution( Graph const          & graph
-                           , GraphVariables const & data
-                           , NodeVector           & solution
-                           );
+   SolutionSet extractSolFromCplexVars( Graph const          & graph
+                                      , GraphVariables const & data
+                                      ) const;
+
+   AlphaTriple fillMappedAndComputeAlpha( ThreeWayGraph const      & twg
+                                        , LinkGraphVariables const & linkVars
+                                        , SolutionSet & solSet0
+                                        , SolutionSet & solSet1
+                                        ) const;
  };
 
 } // namespace xHeinz
 
-#endif // xHeinz_Solver_Hpp
+#endif // xHeinz_Solver_HPP
 
 /* vim: set ts=8 sw=2 sts=2 et : */

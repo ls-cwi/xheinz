@@ -69,7 +69,6 @@ namespace solver {
    return dS == ddS;
  }
 
-
  void Callback::constructNonZeroComponents( Graph          const & g
                                           , GraphVariables const & vars
                                           , IloNumArray            x_values

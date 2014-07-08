@@ -1,6 +1,7 @@
 #include "Solver.hpp"
 
 #include <limits>
+#include <algorithm>
 
 #include "Solver/LazyConstraintCallback.hpp"
 #include "Solver/UserCutCallback.hpp"
@@ -26,7 +27,7 @@ namespace xHeinz {
    initObjectiveFunction( graphs );
  }
 
- Solver::~Solver() {
+ Solver::~Solver() noexcept {
    env.end();
  }
 
@@ -45,82 +46,217 @@ namespace xHeinz {
      }
    }
 
-   //cplex.exportModel( "model.lp" );
-
    if ( !setParamsAndSolve() ) {
      if ( cplex.getStatus() != IloAlgorithm::Infeasible ) {
-       if ( g_verbosity >= VERBOSE_ESSENTIAL ) {
-         clog << "Optimization error, CPLEX status code: " 
-              << cplex.getStatus() << endl;
-       }
+       clog << "Optimization error, CPLEX status code: "
+            << cplex.getStatus() << endl;
      }
      return none;
    }
+   return determineSolution();
+ }
 
-   // print m
-   //if ( config.connectedPercentage ) {
-   //  int numRedNodes  = graphs.threeWay( 0 ).red ().numNodes();
-   //  int numBlueNodes = graphs.threeWay( 0 ).blue().numNodes();
-   //  for ( int i = 0; i < numRedNodes + numBlueNodes; ++i ) {
-   //    cout << mVars[i].getName() << " = "
-   //         << cplex.getValue( mVars[i] ) << endl;
-   //  }
-   //}
+ namespace {
 
+  double computeSolScore( Graph const & graph, Solver::SolutionSet const & solSet ) {
+    return accumulate( solSet, 0.0, [&]( double count, OutputSolution::NodeBoolPair const & p ) {
+      return count + graph.weight( getNode( p ) );
+    });
+  }
+
+ }
+
+ Solver::OutputSolution Solver::determineSolution() const {
    assert( graphs.numGraphs() == 2 );
+
    Graph const & g1 = graphs.graph( 0 );
+   GraphVariables const & gv1 = graphs.variables( 0 );
+   auto   sol1   = extractSolFromCplexVars( g1, gv1 );
+   double score1 = computeSolScore( g1, sol1 );
+
    Graph const & g2 = graphs.graph( 1 );
-   GraphVariables const & d1 = graphs.variables( 0 );
-   GraphVariables const & d2 = graphs.variables( 1 );
+   GraphVariables const & gv2 = graphs.variables( 1 );
+   auto   sol2 = extractSolFromCplexVars( g2, gv2 );
+   double score2 = computeSolScore( g2, sol2 );
+
+   auto alphas = fillMappedAndComputeAlpha( graphs.threeWay( 0 )
+                                          , graphs.linkVariables( 0 )
+                                          , sol1, sol2
+                                          );
+
    OutputSolution sol;
-   NodeVector module1;
-   NodeVector module2;
-   //double score1 = determineSolution( graphs.graph( 0 ), graphs.variables( 0 ), module1 );
-   //double score2 = determineSolution( graphs.graph( 1 ), graphs.variables( 1 ), module2 );
-   double score1 = determineSolution( g1, d1, module1 );
-   double score2 = determineSolution( g2, d2, module2 );
-
-   OutputSolution::SolutionSet sol1;
-   OutputSolution::SolutionSet sol2;
-
-   double alpha = computeAlpha( graphs.threeWay( 0 )
-                              , graphs.linkVariables( 0 )
-                              , module1, module2
-                              , sol1, sol2
-                              );
-
-   sol.totalScore = score1 + score2;
-   sol.graphsSolutions.emplace_back( score1, std::move( sol1 ) );
-   sol.graphsSolutions.emplace_back( score2, std::move( sol2 ) );
-   sol.alpha.emplace_back( alpha );
-
+   sol.weight = score1 + score2;
+   sol.alpha  = get< 0 >( alphas );
+   sol.graphsSolutions.emplace_back( move( sol1 ), score1, get< 1 >( alphas ) );
+   sol.graphsSolutions.emplace_back( move( sol2 ), score2, get< 2 >( alphas ) );
    return sol;
  }
 
- double Solver::determineSolution( Graph const          & graph
-                                 , GraphVariables const & data
-                                 , NodeVector           & solution
-                                 ) {
-   double score = 0;
+ Solver::SolutionSet Solver::extractSolFromCplexVars( Graph const          & graph
+                                                    , GraphVariables const & data
+                                                    ) const {
+   SolutionSet solSet;
 
-   solution.clear();
-   for ( Graph::Node n : graph.nodes() ) {
+   for_each( graph.nodes(), [&]( Graph::Node const & n ) {
      int nodeIndex = data.nodeToIndex[n];
      double x_i_value = cplex.getValue( data.xVars[nodeIndex] );
      if ( intIsNonZero( x_i_value ) ) {
-       score += graph.weight( n );
-       solution.push_back( n );
+       // unmapped by default (false), changed in fillMappedAndComputeAlpha
+       solSet.push_back( make_pair( n, false ) );
      }
-   }
+   });
 
-   sort( solution.begin(), solution.end(),
-     []( Graph::Node const & a, Graph::Node const & b ) {
-         // invert the order, we want maximaly scoring first
-         return a.component().weight( a ) > b.component().weight( b );
-   } );
+   sort( solSet, []( NodeBoolPair const & pa, NodeBoolPair const & pb ) {
+     auto na = getNode( pa ), nb = getNode( pb );
+     // invert the order, we want maximaly scoring first
+     return na.component().weight( na ) > nb.component().weight( nb );
+   });
 
-   return score;
+   return solSet;
  }
+
+ Solver::AlphaTriple Solver::fillMappedAndComputeAlpha( ThreeWayGraph const      & twg
+                                                      , LinkGraphVariables const & linkVars
+                                                      , SolutionSet & solSet0
+                                                      , SolutionSet & solSet1
+                                                      ) const {
+   Graph const & red  = twg.red();
+   Graph const & blue = twg.blue();
+
+   // present will list if both red and blue nodes
+   // are present for a particular link component
+   // 0 red
+   // 1 blue
+   // 2 red & blue
+   map< int, int > present;
+   for_each( solSet0, [&]( NodeBoolPair const & p ) {
+     auto n  = getNode( p );
+     auto rn = twg.toRedNode( n );
+     if ( rn != lemon::INVALID ) {
+       int compIdx = linkVars.nodeToIndex[rn];
+       present[compIdx] = 0;
+     }
+   });
+   for_each( solSet1, [&]( NodeBoolPair const & p ) {
+     auto n  = getNode( p );
+     auto bn = twg.toBlueNode( n );
+     if ( bn != lemon::INVALID ) {
+       int compIdx = linkVars.nodeToIndex[bn];
+       if ( present.find( compIdx ) == present.end() ) {
+         present[compIdx] = 1;
+       }
+       else if ( present[compIdx] == 0 ) {
+         present[compIdx] = 2;
+       }
+     }
+   });
+
+   // TODO remove code copy (inside switch branches, and with RoundingCallback.cpp)
+   double alpha = 0;
+   switch( config.connectivityType ) {
+    case Config::ConnectivityType::SumUnits: {
+      int x_card = static_cast< int >(solSet0.size() + solSet1.size());
+      int m_card = 0;
+
+      for_each( solSet0, [&]( NodeBoolPair & p ) {
+        auto n  = getNode( p );
+        auto rn = twg.toRedNode( n );
+        if ( rn != lemon::INVALID && present[linkVars.nodeToIndex[rn]] == 2 ) {
+          getBool( p ) = true;
+          m_card++;
+        }
+      });
+      for_each( solSet1, [&]( NodeBoolPair & p ) {
+        auto n  = getNode( p );
+        auto bn = twg.toBlueNode( n );
+        if ( bn != lemon::INVALID && present[linkVars.nodeToIndex[bn]] == 2 ) {
+          getBool( p ) = true;
+          m_card++;
+        }
+      });
+      alpha = m_card / static_cast< double >(x_card);
+    } break;
+    default: assert( !"Impossible!!" );
+    case Config::ConnectivityType::SumWeights: {
+      double x_weight = 0;
+      double m_weight = 0;
+
+      for_each( solSet0, [&]( NodeBoolPair & p ) {
+        auto n  = getNode( p );
+        x_weight += red.weight( n );
+        auto rn = twg.toRedNode( n );
+        if ( rn != lemon::INVALID && present[linkVars.nodeToIndex[rn]] == 2 ) {
+          getBool( p ) = true;
+          m_weight += red.weight( n );
+        }
+      });
+      for_each( solSet1, [&]( NodeBoolPair & p ) {
+        auto n  = getNode( p );
+        x_weight += blue.weight( n );
+        auto bn = twg.toBlueNode( n );
+        if ( bn != lemon::INVALID && present[linkVars.nodeToIndex[bn]] == 2 ) {
+          getBool( p ) = true;
+          m_weight += blue.weight( n );
+        }
+      });
+      alpha = m_weight / x_weight;
+    } break;
+    case Config::ConnectivityType::SumPosUnits: {
+      int x_card = static_cast< int >(solSet0.size() + solSet1.size());
+      int m_card = 0;
+
+      for_each( solSet0, [&]( NodeBoolPair & p ) {
+        auto n  = getNode( p );
+        auto rn = twg.toRedNode( n );
+        if ( rn != lemon::INVALID && present[linkVars.nodeToIndex[rn]] == 2
+          && twg.red().weight( n ) >= 0.0
+           ) {
+          getBool( p ) = true;
+          m_card++;
+        }
+      });
+      for_each( solSet1, [&]( NodeBoolPair & p ) {
+        auto n  = getNode( p );
+        auto bn = twg.toBlueNode( n );
+        if ( bn != lemon::INVALID && present[linkVars.nodeToIndex[bn]] == 2
+          && twg.blue().weight( n ) >= 0.0
+           ) {
+          getBool( p ) = true;
+          m_card++;
+        }
+      });
+      alpha = static_cast< double >(m_card) / static_cast< double >(x_card);
+    } break;
+    case Config::ConnectivityType::SumPosWeights: {
+      double x_weight = 0;
+      double m_weight = 0;
+
+      for_each( solSet0, [&]( NodeBoolPair & p ) {
+        auto n  = getNode( p );
+        x_weight += red.weight( n );
+        auto rn = twg.toRedNode( n );
+        if ( rn != lemon::INVALID && present[linkVars.nodeToIndex[rn]] == 2
+          && twg.red().weight( n ) >= 0.0
+           ) {
+          m_weight += red.weight( n );
+        }
+      });
+      for_each( solSet1, [&]( NodeBoolPair & p ) {
+        auto n  = getNode( p );
+        x_weight += blue.weight( n );
+        auto bn = twg.toBlueNode( n );
+        if ( bn != lemon::INVALID && present[linkVars.nodeToIndex[bn]] == 2
+          && twg.blue().weight( n ) >= 0.0
+           ) {
+          m_weight += blue.weight( n );
+        }
+      });
+      alpha = m_weight / x_weight;
+    } break;
+   }
+   return make_tuple( alpha, 0.0, 0.0 );
+ }
+
 
  void Solver::initGraphVariables( Graph const & graph, GraphVariables & data ) {
    int numNodes = graph.numNodes();
@@ -507,7 +643,9 @@ namespace xHeinz {
    // exactly under the hood and our epsilon is much smaller than cplex'
    //cplex.setParam( IloCplex::EpLin, epsilon );
 
-   if ( config.timeLimit > 0 ) {
+   if ( config.timeLimit > 0
+     && config.timeLimit < std::numeric_limits< double >::infinity()
+      ) {
      cplex.setParam( IloCplex::TiLim, config.timeLimit );
    }
 
@@ -551,155 +689,6 @@ namespace xHeinz {
    return res;
  }
 
- double Solver::computeAlpha( ThreeWayGraph const         & twg
-                            , LinkGraphVariables const    & linkVars
-                            , NodeVector const            & comp1
-                            , NodeVector const            & comp2
-                            , OutputSolution::SolutionSet & out1
-                            , OutputSolution::SolutionSet & out2
-                            ) {
-   Graph const & red  = twg.red();
-   Graph const & blue = twg.blue();
-   out1.clear();
-   out2.clear();
-   out1.reserve( comp1.size() );
-   out2.reserve( comp2.size() );
-
-   // present will list if both red and blue nodes
-   // are present for a particular link component
-   // 0 red
-   // 1 blue
-   // 2 red & blue
-   map< int, int > present;
-   for ( Graph::Node n : comp1 ) {
-     auto rn = twg.toRedNode( n );
-     if ( rn != lemon::INVALID ) {
-       int compIdx = linkVars.nodeToIndex[rn];
-       present[compIdx] = 0;
-     }
-   }
-   for ( Graph::Node n : comp2 ) {
-     auto bn = twg.toBlueNode( n );
-     if ( bn != lemon::INVALID ) {
-       int compIdx = linkVars.nodeToIndex[bn];
-       if ( present.find( compIdx ) == present.end()  ) {
-         present[compIdx] = 1;
-       }
-       else if ( present[compIdx] == 0 ) {
-         present[compIdx] = 2;
-       }
-     }
-   }
-
-   // TODO remove code copy (inside switch branches, and with RoundingCallback.cpp)
-   double alpha = 0;
-   switch( config.connectivityType ) {
-    case Config::ConnectivityType::SumUnits: {
-     int x_card = static_cast<int>( comp1.size() + comp2.size() );
-     int m_card = 0;
-
-     for ( Graph::Node n : comp1 ) {
-       auto rn = twg.toRedNode( n );
-       if ( rn != lemon::INVALID && present[linkVars.nodeToIndex[rn]] == 2 ) {
-         out1.emplace_back( n, true );
-         m_card++;
-       } else {
-         out1.emplace_back( n, false );
-       }
-     }
-     for ( Graph::Node n : comp2 ) {
-       auto bn = twg.toBlueNode( n );
-       if ( bn != lemon::INVALID && present[linkVars.nodeToIndex[bn]] == 2 ) {
-         out2.emplace_back( n, true );
-         m_card++;
-       } else {
-         out2.emplace_back( n, false );
-       }
-     }
-     alpha = static_cast<double>( m_card ) / static_cast<double>( x_card );
-    } break;
-    case Config::ConnectivityType::SumWeights: {
-     double x_weight = 0;
-     double m_weight = 0;
-
-     for ( Graph::Node n : comp1 ) {
-       x_weight += red.weight( n );
-       auto rn = twg.toRedNode( n );
-       if ( rn != lemon::INVALID && present[linkVars.nodeToIndex[rn]] == 2 ) {
-         out1.emplace_back( n, true );
-         m_weight += red.weight( n );
-       } else {
-         out1.emplace_back( n, false );
-       }
-     }
-     for ( Graph::Node n : comp2 ) {
-       x_weight += blue.weight( n );
-       auto bn = twg.toBlueNode( n );
-       if ( bn != lemon::INVALID && present[linkVars.nodeToIndex[bn]] == 2 ) {
-         out2.emplace_back( n, true );
-         m_weight += blue.weight( n );
-       } else {
-         out2.emplace_back( n, false );
-       }
-     }
-     alpha = m_weight / x_weight;
-    } break;
-    case Config::ConnectivityType::SumPosUnits: {
-     int x_card = static_cast<int>( comp1.size() + comp2.size() );
-     int m_card = 0;
-
-     for ( Graph::Node n : comp1 ) {
-       auto rn = twg.toRedNode( n );
-       if ( rn != lemon::INVALID && present[linkVars.nodeToIndex[rn]] == 2
-         && twg.red().weight( n ) >= 0.0
-          ) {
-         out1.emplace_back( n, true );
-         m_card++;
-       } else {
-         out1.emplace_back( n, false );
-       }
-     }
-     for ( Graph::Node n : comp2 ) {
-       auto bn = twg.toBlueNode( n );
-       if ( bn != lemon::INVALID && present[linkVars.nodeToIndex[bn]] == 2
-         && twg.blue().weight( n ) >= 0.0
-          ) {
-         out2.emplace_back( n, true );
-         m_card++;
-       } else {
-         out2.emplace_back( n, false );
-       }
-     }
-     alpha = static_cast<double>( m_card ) / static_cast<double>( x_card );
-    } break;
-    case Config::ConnectivityType::SumPosWeights: {
-     double x_weight = 0;
-     double m_weight = 0;
-
-     for ( Graph::Node n : comp1 ) {
-       x_weight += red.weight( n );
-       auto rn = twg.toRedNode( n );
-       if ( rn != lemon::INVALID && present[linkVars.nodeToIndex[rn]] == 2
-         && twg.red().weight( n ) >= 0.0
-          ) {
-         m_weight += red.weight( n );
-       }
-     }
-     for ( Graph::Node n : comp2 ) {
-       x_weight += blue.weight( n );
-       auto bn = twg.toBlueNode( n );
-       if ( bn != lemon::INVALID && present[linkVars.nodeToIndex[bn]] == 2
-         && twg.blue().weight( n ) >= 0.0
-          ) {
-         m_weight += blue.weight( n );
-       }
-     }
-     alpha = m_weight / x_weight;
-    } break;
-   }
-   return alpha;
- }
-
  namespace {
 
   void SetBpGraphCplexVarsValues( Graph const & red
@@ -729,13 +718,13 @@ namespace xHeinz {
     }
 
     // set mm to 0
-    int m_offset = z_offset + static_cast<int>( linkVars.edgesPerComponent.size() );
-    for ( int i = 0; i < static_cast<int>( redVars.mmVars.getSize() + blueVars.mmVars.getSize() ); ++i ) {
+    int m_offset = z_offset + static_cast< int >(linkVars.edgesPerComponent.size());
+    for ( int i = 0; i < static_cast< int >(redVars.mmVars.getSize() + blueVars.mmVars.getSize()); ++i ) {
       solutionVal[m_offset + i] = 0;
     }
 
     // set m
-    for ( int i = 0, e = static_cast<int>( linkVars.edgesPerComponent.size() ); i < e; ++i) {
+    for ( int i = 0, e = static_cast< int >(linkVars.edgesPerComponent.size()); i < e; ++i) {
       bool found = false;
       for ( ThreeWayGraph::BpEdge edge : linkVars.edgesPerComponent[i] ) {
         int x1 = redVars.nodeToIndex[twg.toRegularNode( link.redNode( edge ) )];
@@ -745,7 +734,7 @@ namespace xHeinz {
           found = true;
           // set mm
           solutionVal[m_offset + x1] = 1;
-          solutionVal[m_offset + static_cast<int>( redVars.mmVars.getSize() ) + x2] = 1;
+          solutionVal[m_offset + static_cast< int >(redVars.mmVars.getSize()) + x2] = 1;
         }
       }
 
@@ -764,7 +753,7 @@ namespace xHeinz {
                              , IloNumVarArray & solutionVar
                              , IloNumArray    & solutionVal
                              ) {
-    int x_card = static_cast<int>( vars.xVars.getSize() );
+    int x_card = static_cast< int >(vars.xVars.getSize());
 
     // set x and y to 0
     for ( int i = 0; i < 2 * x_card; ++i ) {

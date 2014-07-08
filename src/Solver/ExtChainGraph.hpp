@@ -43,34 +43,34 @@ namespace solver {
 
    GraphVariables       & variables( int i )       {
      assert( i >= 0 );
-     assert( static_cast< unsigned int >( i ) < vars.size() );
+     assert( static_cast< unsigned int >(i) < vars.size() );
      return vars[i];
    }
    GraphVariables const & variables( int i ) const {
      assert( i >= 0 );
-     assert( static_cast< unsigned int >( i ) < vars.size() );
+     assert( static_cast< unsigned int >(i) < vars.size() );
      return vars[i];
    }
 
    LinkGraphVariables       & linkVariables( int i )       {
      assert( i >= 0 );
-     assert( static_cast< unsigned int >( i ) < linkVars.size() );
+     assert( static_cast< unsigned int >(i) < linkVars.size() );
      return linkVars[i];
    }
    LinkGraphVariables const & linkVariables( int i ) const {
      assert( i >= 0 );
-     assert( static_cast< unsigned int >( i ) < linkVars.size() );
+     assert( static_cast< unsigned int >(i) < linkVars.size() );
      return linkVars[i];
    }
 
    MinCutDigraph       & digraph( int i )       {
      assert( i >= 0 );
-     assert( static_cast< unsigned int >( i ) < digraphs.size() );
+     assert( static_cast< unsigned int >(i) < digraphs.size() );
      return digraphs[i];
    }
    MinCutDigraph const & digraph( int i ) const {
      assert( i >= 0 );
-     assert( static_cast< unsigned int >( i ) < digraphs.size() );
+     assert( static_cast< unsigned int >(i) < digraphs.size() );
      return digraphs[i];
    }
 

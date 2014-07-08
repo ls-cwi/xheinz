@@ -19,7 +19,7 @@ namespace xHeinz {
    }
 
   public:
-   int numGraphs() const {   return static_cast< int >( graphs.size() );   }
+   int numGraphs() const {   return static_cast< int >(graphs.size());   }
 
    Graph       & graph( int i )       {   return graphs[i];   }
    Graph const & graph( int i ) const {   return graphs[i];   }

@@ -38,7 +38,7 @@ namespace solver {
    int numCutIterations;
    bool makeAttempt;
    BackOff backOff;
-   int timeStamp;
+   IloNum timeStamp;
 
   private:
    UserCutCallback( UserCutCallback const & other );
