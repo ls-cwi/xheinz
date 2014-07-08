@@ -14,7 +14,6 @@ using namespace std;
 using namespace xHeinz;
 
 int main( int argc, char * argv[] ) {
-  // parse command line arguments
   solver::Config config;
   int verbosityLevel = 2;
   int connectivityType = 0;
@@ -38,6 +37,7 @@ int main( int argc, char * argv[] ) {
               , config.connectivityPercentage, false
               )
     .synonym("alpha", "a" )
+#if 0
     .refOption( "b1", "Graph 1: positive node ratio threshold (default: 0.0) TODO"
               , config.positivePercentage[0], false
               )
@@ -46,6 +46,7 @@ int main( int argc, char * argv[] ) {
               , config.positivePercentage[1], false
               )
     .synonym("beta2", "b2" )
+#endif
     .refOption( "w", "Specifies the type of mapping weighting:\n"
                      "         0 - Sum mapped nodes (default)\n"
                      "         1 - Sum mapped node weights\n"
@@ -54,8 +55,12 @@ int main( int argc, char * argv[] ) {
               , connectivityType, false
               )
     .synonym( "omega", "w" )
-    .refOption( "t", "Time limit (in seconds, default: -1)", config.timeLimit, false )
-    .refOption( "rt", "Time limit for the root node (in seconds, default: -1)", config.rootTimeLimit, false )
+    .refOption( "t", "Time limit (in seconds, default: ∞)"
+              , config.timeLimit, false
+              )
+    .refOption( "rt", "Time limit for the root node (in seconds, default: ∞)"
+              , config.rootTimeLimit, false
+              )
     .refOption( "warm", "xHeinz output file used as a warm start (must be solved with >= alpha)"
               , warmFilename, false
               )
@@ -106,7 +111,7 @@ int main( int argc, char * argv[] ) {
     return 1;
   }
   config.connectivityType =
-    static_cast< solver::Config::ConnectivityType >( connectivityType );
+    static_cast< solver::Config::ConnectivityType >(connectivityType);
 
   if ( ap.given( "version" ) ) {
     cout << "Version number: " << XHEINZ_VERSION << endl;
@@ -121,13 +126,13 @@ int main( int argc, char * argv[] ) {
     return 1;
   }
 
-  auto const & graphParsing = ParseChainGraphListsFiles( nodeFile[0].c_str()
-                                                       , edgeFile[0].c_str()
-                                                       , cogFile.c_str()
-                                                       , nodeFile[1].c_str()
-                                                       , edgeFile[1].c_str()
-                                                       );
-  auto const & inputGraph = get< 0 >( graphParsing );
+  auto const & parsedGraph = ParseChainGraphListsFiles( nodeFile[0].c_str()
+                                                      , edgeFile[0].c_str()
+                                                      , cogFile.c_str()
+                                                      , nodeFile[1].c_str()
+                                                      , edgeFile[1].c_str()
+                                                      );
+  auto const & inputGraph = get< 0 >( parsedGraph );
 
   cout << "-- Solver configuration:\n" << config << endl;
   Solver solver( inputGraph, config );
@@ -136,8 +141,8 @@ int main( int argc, char * argv[] ) {
     lemon::Timer t;
     try {
       solver.warm( solver::InputSolution( warmFilename.c_str()
-                                        , get< 1 >( graphParsing )
-                                        , get< 2 >( graphParsing )
+                                        , get< 1 >( parsedGraph )
+                                        , get< 2 >( parsedGraph )
                                         )
                  , warmFilename.c_str()
                  );

@@ -12,9 +12,9 @@ namespace xHeinz {
 namespace solver {
 
  HeuristicCallback::HeuristicCallback( IloEnv env
-                                   , Config const & conf
-                                   , ExtChainGraph const & gs
-                                   )
+                                     , Config const & conf
+                                     , ExtChainGraph const & gs
+                                     )
    : IloCplex::HeuristicCallbackI{ env }
    , config( conf )
    , graphs( gs )
@@ -153,10 +153,10 @@ namespace solver {
  }
 
  void HeuristicCallback::obtainSolution( int index
-                                      , int offset
-                                      , NodeVector const & comp1
-                                      , NodeVector const & comp2
-                                      ) {
+                                       , int offset
+                                       , NodeVector const & comp1
+                                       , NodeVector const & comp2
+                                       ) {
    GraphVariables const & redVars  = graphs.variables( index );
    GraphVariables const & blueVars = graphs.variables( index + 1 );
    LinkGraphVariables const & linkVars = graphs.linkVariables( index );
@@ -177,13 +177,13 @@ namespace solver {
    }
 
    // set mm to 0
-   int m_offset = z_offset + static_cast<int>( linkVars.edgesPerComponent.size() );
-   for ( int i = 0; i < static_cast<int>( redVars.mmVars.getSize() + blueVars.mmVars.getSize() ); ++i ) {
+   int m_offset = z_offset + static_cast< int >(linkVars.edgesPerComponent.size());
+   for ( int i = 0; i < static_cast< int >(redVars.mmVars.getSize() + blueVars.mmVars.getSize()); ++i ) {
      solutionVal[m_offset + i] = 0;
    }
 
    // set m
-   for ( int i = 0, e = static_cast<int>( linkVars.edgesPerComponent.size() ); i < e; ++i) {
+   for ( int i = 0, e = static_cast< int >(linkVars.edgesPerComponent.size()); i < e; ++i) {
      bool found = false;
      for ( ThreeWayGraph::BpEdge edge : linkVars.edgesPerComponent[i] ) {
        int x1 = redVars.nodeToIndex[twg.toRegularNode( link.redNode( edge ) )];
@@ -193,7 +193,7 @@ namespace solver {
          found = true;
          // set mm
          solutionVal[m_offset + x1] = 1;
-         solutionVal[m_offset + static_cast<int>( redVars.mmVars.getSize() ) + x2] = 1;
+         solutionVal[m_offset + static_cast< int >(redVars.mmVars.getSize()) + x2] = 1;
        }
      }
 
@@ -206,12 +206,12 @@ namespace solver {
  }
 
  void HeuristicCallback::obtainSolution( int index
-                                      , int offset
-                                      , NodeVector const & comp
-                                      ) {
+                                       , int offset
+                                       , NodeVector const & comp
+                                       ) {
    Graph const & graph = graphs.graph( index );
    GraphVariables const & vars = graphs.variables( index );
-   int x_card = static_cast<int>( vars.xVars.getSize() );
+   int x_card = static_cast< int >(vars.xVars.getSize());
 
    // set x and y to 0
    for ( int i = 0; i < 2 * x_card; ++i ) {
@@ -219,7 +219,7 @@ namespace solver {
    }
 
    // set x to 1
-   int smallest_i = std::numeric_limits<int>::max();
+   int smallest_i = std::numeric_limits< int >::max();
    for ( auto n : comp ) {
      int i = vars.nodeToIndex[n];
      if ( i < smallest_i && graph.weight( n ) > 0 ) {
@@ -235,8 +235,8 @@ namespace solver {
  }
 
  void HeuristicCallback::determineComponents( int index
-                                           , NodeMatrix & nodesPerComponent
-                                           ) {
+                                            , NodeMatrix & nodesPerComponent
+                                            ) {
    Graph const          & graph   = graphs.graph( index );
    GraphVariables const & vars    = graphs.variables( index );
    IntNodeMap           & compMap = componentMapVector[index];
@@ -312,19 +312,19 @@ namespace solver {
  }
 
  HeuristicCallback::IndexPair HeuristicCallback::determinePair( int index
-                                                            , NodeMatrix const & nodesPerComponent1
-                                                            , NodeMatrix const & nodesPerComponent2
-                                                            ) {
+                                                              , NodeMatrix const & nodesPerComponent1
+                                                              , NodeMatrix const & nodesPerComponent2
+                                                              ) {
    IndexPair res(-1, -1 );
    double maxWeight = hasIncumbent() ? getIncumbentObjValue() : -std::numeric_limits< double >::max();
    //std::cout << "maxWeight : " << maxWeight << std::endl;
 
-   for ( int i = 0; i < static_cast<int>( nodesPerComponent1.size() ); ++i ) {
-     for ( int j = 0; j < static_cast<int>( nodesPerComponent2.size() ); ++j ) {
+   for ( int i = 0; i < static_cast< int >(nodesPerComponent1.size()); ++i ) {
+     for ( int j = 0; j < static_cast< int >(nodesPerComponent2.size()); ++j ) {
        double w = nodesPerComponent1[i].first + nodesPerComponent2[j].first;
        bool sizeOK = config.size < 0 ||
-           ( ( static_cast<int>( nodesPerComponent1[i].second.size() ) <= config.size ) &&
-             ( static_cast<int>( nodesPerComponent2[j].second.size() ) <= config.size ) );
+           ( ( static_cast< int >(nodesPerComponent1[i].second.size()) <= config.size ) &&
+             ( static_cast< int >(nodesPerComponent2[j].second.size()) <= config.size ) );
        if ( w > maxWeight && sizeOK ) {
          double alpha = computeAlpha( index
                                     , nodesPerComponent1[i].second
@@ -343,9 +343,9 @@ namespace solver {
  }
 
  double HeuristicCallback::computeAlpha( int index
-                                      , NodeVector const & comp1
-                                      , NodeVector const & comp2
-                                      ) {
+                                       , NodeVector const & comp1
+                                       , NodeVector const & comp2
+                                       ) {
    Graph const         & red  = graphs.graph( index );
    Graph const         & blue = graphs.graph( index + 1 );
    ThreeWayGraph const & twg  = graphs.threeWay( index );
@@ -382,7 +382,7 @@ namespace solver {
    double alpha = 0;
    switch ( config.connectivityType ) {
     case Config::ConnectivityType::SumUnits: {
-     int x_card = static_cast<int>( comp1.size() + comp2.size() );
+     int x_card = static_cast< int >(comp1.size() + comp2.size());
      int m_card = 0;
 
      for ( Graph::Node n : comp1 ) {
@@ -397,7 +397,7 @@ namespace solver {
          m_card++;
        }
      }
-     alpha = static_cast<double>( m_card ) / static_cast<double>( x_card );
+     alpha = static_cast< double >(m_card) / static_cast< double >(x_card);
     } break;
     case Config::ConnectivityType::SumWeights: {
      double x_weight = 0;
@@ -420,7 +420,7 @@ namespace solver {
      alpha = m_weight / x_weight;
     } break;
     case Config::ConnectivityType::SumPosUnits: {
-     int x_card = static_cast<int>( comp1.size() + comp2.size() );
+     int x_card = static_cast< int >(comp1.size() + comp2.size());
      int m_card = 0;
 
      for ( Graph::Node n : comp1 ) {
@@ -439,7 +439,7 @@ namespace solver {
          m_card++;
        }
      }
-     alpha = static_cast<double>( m_card ) / static_cast<double>( x_card );
+     alpha = static_cast< double >(m_card) / static_cast< double >(x_card);
     } break;
     case Config::ConnectivityType::SumPosWeights: {
      double x_weight = 0;

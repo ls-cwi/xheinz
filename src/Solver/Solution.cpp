@@ -12,23 +12,34 @@ namespace xHeinz {
 namespace solver {
 
  ostream & operator<<( ostream & out, OutputSolution const & sol ) {
-   out << "-- Alpha       = " << sol.alpha.front() << endl;
-   out << "-- Total Score = " << sol.totalScore << " (";
+   out << "-- Alpha = " << sol.alpha  << " (";
    bool first = true;
-   for ( int i = 0, e = sol.graphsSolutions.size(); i != e; ++i ) {
+   for_each( sol.graphsSolutions, [&]( OutputSolution::GraphSolution const & gs ) {
      if ( !first ) {
        out << ", ";
      } else {
        first = false;
      }
-     out << sol.graphsSolutions[i].first;
-   }
+     out << get< 2 >( gs );
+   });
+   out << ")\n-- Score = " << sol.weight << " (";
+   first = true;
+   for_each( sol.graphsSolutions, [&]( OutputSolution::GraphSolution const & gs ) {
+     if ( !first ) {
+       out << ", ";
+     } else {
+       first = false;
+     }
+     out << get< 1 >( gs );
+   });
    out << ")";
 
    for ( int i = 0, e = sol.graphsSolutions.size(); i != e; ++i ) {
-     auto const & nodesSet = sol.graphsSolutions[i].second;
-     out << "\n#" << i << " graph nodes:";
-     for_each( nodesSet, [&]( std::pair< Graph::Node, bool > const & p ) {
+     auto const & graphSol = sol.graphsSolutions[i];
+     out << "\n#" << i << " graph (alpha="
+         << get< 2 >( graphSol ) << ", score="
+         << get< 1 >( graphSol ) << ") nodes:";
+     for_each( get< 0 >( graphSol ), [&]( std::pair< Graph::Node, bool > const & p ) {
        auto const & n = p.first;
        out << '\n' << n.component().label( n )
            << '\t' << n.component().weight( n );

@@ -54,11 +54,11 @@ namespace solver {
    void constructNonZeroComponents( Graph          const & g
                                   , GraphVariables const & vars
                                   , IloNumArray            x_values
-                                  , NodeSetVector        & nonZeroNodesComponents                                   ) const;
+                                  , NodeSetVector        & nonZeroNodesComponents
+                                  ) const;
 
    void printNonZeroX(IloNumArray x_values, int graphIndex) const;
    void printNonZeroY(IloNumArray y_values, int graphIndex) const;
-
  };
 
 

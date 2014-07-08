@@ -20,9 +20,9 @@ namespace solver {
    : public IloCplex::HeuristicCallbackI {
   public:
    HeuristicCallback( IloEnv env
-                   , Config const & conf
-                   , ExtChainGraph const & gs
-                   );
+                    , Config const & conf
+                    , ExtChainGraph const & gs
+                    );
    ~HeuristicCallback();
 
   public:

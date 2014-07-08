@@ -9,7 +9,8 @@
 #include <boost/optional.hpp>
 #include <boost/iterator/iterator_facade.hpp>
 #include <boost/iterator/zip_iterator.hpp>
-#include <boost/range/algorithm/for_each.hpp>
+#include <boost/range/algorithm.hpp>
+#include <boost/range/numeric.hpp>
 #include <boost/range/iterator_range.hpp>
 
 namespace xHeinz {
@@ -22,14 +23,18 @@ namespace xHeinz {
 
 	using std::shared_ptr;
 	using std::make_shared;
-  using std::weak_ptr;
+	using std::weak_ptr;
 	template< typename T >
 	std::weak_ptr< T > make_weak( shared_ptr< T > const & ptr ) {
 			return weak_ptr< T >( ptr );
 	}
 
 	using std::for_each;
+	using std::sort;
+	using std::accumulate;
 	using boost::for_each;
+	using boost::sort;
+	using boost::accumulate;
 
 	using boost::optional;
 	using boost::none;

@@ -51,8 +51,7 @@ namespace solver {
    NodeSetVector nonZeroNodesComponents;
    constructNonZeroComponents( graph, vars, x_values, nonZeroNodesComponents );
 
-   if ( nonZeroNodesComponents.size() > 1 )
-   {
+   if ( nonZeroNodesComponents.size() > 1 ) {
      Graph::Node root = determineRoot( graph, vars, y_values );
      separateConnectedComponents( graph
                                 , vars
@@ -83,7 +82,7 @@ namespace solver {
        // determine dS
        NodeSet dS;
        for ( Graph::Node i : S ) {
-         for ( Graph::Edge e : g.incEdges( i) ) {
+         for ( Graph::Edge e : g.incEdges( i ) ) {
            Graph::Node j = g.oppositeNode( i, e );
            if ( S.find( j ) == S.end() )
            {
@@ -108,26 +107,36 @@ namespace solver {
                                                   , GraphVariables const & vars
                                                   , IloNumArray    const & y_values
                                                   ) const {
+#if defined( DEBUG )
    Graph::Node root;
-
-#ifdef DEBUG
-   bool first = true;
-#endif
-
-   for ( Graph::Node const & i : g.nodes() ) {
-     int nodeIndex = vars.nodeToIndex[i];
+   int numRoots = 0;
+   for ( Graph::Node const & n : g.nodes() ) {
+     int nodeIndex = vars.nodeToIndex[n];
      if ( intIsNonZero( y_values[nodeIndex] ) ) {
-       root = i;
-#ifdef DEBUG
-       assert(first);
-       first = false;
-#else
-       break;
-#endif
+       root = n;
+       cerr << "Lazy DEBUG Label, root: " << g.label( n )
+            << "   y value: " << y_values[nodeIndex]
+            << (numRoots > 0 ? "  *" : "") << std::endl;
+       ++numRoots;
      }
    }
-
+   // do not use assert, since NDEBUG might be defined independantly from NDEBUG (used in assert)
+   if ( numRoots != 1 ) {
+     cerr << "More than one root detected in LazyConstraintCallback::determineRoot"
+          << endl;
+     std::abort();
+   }
    return root;
+#else
+   auto it = find_if( g.nodes()
+                    , [&]( Graph::Node const & n ) {
+                        int nodeIndex = vars.nodeToIndex[n];
+                        return intIsNonZero( y_values[nodeIndex] );
+                      }
+                    );
+   assert( it != g.nodes().end() );
+   return *it;
+#endif
  }
 
 } // namespace solver
