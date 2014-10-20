@@ -1,0 +1,281 @@
+import os,sys
+import os
+from snakemake.utils import R
+from subprocess import call,check_output
+
+
+from os.path import dirname
+sys.path.append(dirname(__file__))
+sys.path.append(".")
+
+user_system=str(check_output(['gcc', '-dumpmachine']))
+host_name=str(check_output(['hostname']))
+
+if "jarvis" in host_name:
+	XHEINZROOT=os.path.expanduser("~/xheinz")
+	XHEINZBIN=XHEINZROOT+"/build/xHeinz_recomb"
+elif "hayssams" in host_name:
+	XHEINZROOT=os.path.expanduser("~/xheinz")
+	XHEINZBIN=XHEINZROOT+"/build/xHeinz"
+else:
+	XHEINZROOT=os.path.expanduser("~/xheinz")
+	XHEINZBIN=XHEINZROOT+"/build/xHeinz"
+
+
+
+
+
+STRING_VERSION="9.1"
+ENSEMBL_VERSION="59"
+TIMEPOINTS=["2h","4h","24h","48h","72h"]
+ALPHAS=["0.0","0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1.0"]
+FDR="0.1"
+TIMELIMIT="12000"
+ROOTTIMELIMIT="4000"
+
+
+
+ROOTDIR=os.getcwd()
+PYTHON="python"
+
+
+HUMANNETWORK=XHEINZROOT+"/data/Th17/newSTRING/9606."+STRING_VERSION+"-actions-filtered-noHub.txt"
+MOUSENETWORK=XHEINZROOT+"/data/Th17/newSTRING/10090."+STRING_VERSION+"-actions-filtered-noHub.txt"
+# HUMANMAPPING="data/hsa_ensp2ensg_ens"+ENSEMBL_VERSION+".tsv"
+# MOUSEMAPPING="data/mmus_ensp2ensg_ens"+ENSEMBL_VERSION+".tsv"
+HUMAN_DB="data/ensembl_human_ensg_enst_ensp_symbol_ens"+ENSEMBL_VERSION+".tsv"
+MOUSE_DB="data/ensembl_mouse_ensg_enst_ensp_symbol_ens"+ENSEMBL_VERSION+".tsv"
+MOUSEMAPPING="temp_data/ensembl_mouse_ensp2ensg_ens"+ENSEMBL_VERSION+".tsv"
+HUMANMAPPING="temp_data/ensembl_human_ensp2ensg_ens"+ENSEMBL_VERSION+".tsv"
+COGFILE="temp_data/ensembl_cog_ALL_ens"+ENSEMBL_VERSION+".tsv" 
+
+SPECIES=["human","mouse"]
+
+ALLRESULTS=expand("{tp}/alpha_{alpha}_FDR_{FDR}_mouse_corrected_no_ubc_roundCB.stdout.txt",tp=TIMEPOINTS,alpha=ALPHAS,FDR=FDR)
+ALLRESULTS_logs=expand("{tp}/alpha_{alpha}_FDR_{FDR}_mouse_corrected_no_ubc_roundCB.stderr.txt",tp=TIMEPOINTS,alpha=ALPHAS,FDR=FDR)
+
+### Helpers
+
+if "linux" in user_system:
+	 # Do linux things
+	TIMECMD="/usr/bin/time -v"
+	PROCESSTIMELIMIT="timeout "+str(int(TIMELIMIT)+500)+"s"
+elif "apple" in user_system:
+	# Do Os X things
+	TIMECMD="time"
+	PROCESSTIMELIMIT=""
+else:
+	 # Do things for others
+	TIMECMD="time -v"
+	PROCESSTIMELIMIT=""
+
+
+### DB preparation 
+
+rule build_mapping:
+	input: "data/ensembl_{species}_ensg_enst_ensp_symbol_ens"+ENSEMBL_VERSION+".tsv"
+	output: "temp_data/ensembl_{species}_ensp2ensg_ens"+ENSEMBL_VERSION+".tsv"
+	run:
+		os.chdir(ROOTDIR)
+		R("""suppressWarnings(library(data.table))
+		db=fread("{input}")
+		setnames(db,make.names(tolower(colnames(db))))
+		db=unique(db[,list(ensembl.protein.id,ensembl.gene.id)])
+		write.table(db[ensembl.protein.id!=""],file="{output}",quote=F,row.names=F,col.names=F,sep="\t")
+		""")
+
+
+rule extract_network: 
+	input:	lambda wildcards: HUMANNETWORK if wildcards.species=="human" else MOUSENETWORK
+	output: "temp_data/{species}_string_ensp.txt"
+
+	shell:
+		"""
+		cut -d$"\t" -f1 {input} > {output}
+		cut -d$"\t" -f2 {input} >> {output}
+		sort -u {output} -o {output}
+		"""
+
+rule build_cog_file: 
+	input: human_orth="data/ensembl_human_mouse_orthologs_ens"+ENSEMBL_VERSION+".tsv",mouse_orth="data/ensembl_mouse_human_orthologs_ens"+ENSEMBL_VERSION+".tsv"
+	output: COGFILE
+	run:
+		os.chdir(ROOTDIR)
+		R("""
+			library(data.table)
+			human_orth=fread("{input.human_orth}")
+			mouse_orth=fread("{input.mouse_orth}")
+			setnames(human_orth,make.names(tolower(colnames(human_orth))))
+			setnames(mouse_orth,make.names(tolower(colnames(mouse_orth))))
+			print(colnames(human_orth))
+			batch1=unique(human_orth[,list("mouse.protein"=mouse.ensembl.protein.id,"human.protein"=ensembl.protein.id,"mouse.perc.ident"=mouse...identity,"human.perc.ident"=X..identity)])
+			batch2=unique(mouse_orth[,list("mouse.protein"=ensembl.protein.id,"human.protein"=human.ensembl.protein.id,"mouse.perc.ident"=X..identity,"human.perc.ident"=human...identity)])
+			all_cogs=rbind(batch1,batch2)
+			all_cogs=all_cogs[mouse.protein!="" & human.protein!=""]
+			write.table(all_cogs,file="{output}",col.names=F,quote=F,row.names=F,sep="\t")
+		""")
+
+
+
+# data/ensembl_cog.tsv: data/ensembl_mmus_hsa_orthologs.tsv  data/ensembl_hsa_mmus_orthologs.tsv
+# 	tail -n +2  data/ensembl_mmus_hsa_orthologs.tsv | cut -f 6,7,9  | sort -u > data/ensembl_cog.tsv 
+# 	tail -n +2  data/ensembl_hsa_mmus_orthologs.tsv | cut -f 3,6,9 | sort -u >> data/ensembl_cog.tsv 
+
+# data/ensembl_cog_HQ.tsv:  data/ensembl_cog.tsv 
+# 	# Filter out lines without two fields 
+# 	# Filter out low quality mappings 
+# 	# Filter out non proteins 
+# 	python -c "import sys; [sys.stdout.write(\" \".join(line.strip().split())+\"\\n\") for line in sys.stdin if len(line.strip().split())>=3 and line.strip().split()[2]==\"1\"]" < data/ensembl_cog.tsv | sort -u | \
+# 	grep -v "ENST" | grep -v "ENSMUST"  > data/ensembl_cog_HQ.tsv
+
+# data/ensembl_cog_ALL.tsv:  data/ensembl_cog.tsv 
+# 	# Filter out lines without two fields 
+# 	# Filter out non proteins 
+# 	python -c "import sys; [sys.stdout.write(\" \".join(line.strip().split())+\"\\n\") for line in sys.stdin if len(line.strip().split())>=3 ]" < data/ensembl_cog.tsv | sort -u | \
+# 	grep -v "ENST" | grep -v "ENSMUST"  > data/ensembl_cog_ALL.tsv
+
+
+
+# cog_stats.txt: data/ensembl_cog_HQ.tsv data/ensembl_cog_ALL.tsv  ./check_connected_components.py
+# 	./check_connected_components.py data/ensembl_cog_ALL.tsv  data/ensembl_cog_HQ.tsv $(HEINZ)/data/Th17/ensHOMSA-modMUSMU-filtered.txt $(HEINZ)/data/Th17/ensHOMSA-modMUSMU-filtered-top1000.txt $(HEINZ)/data/Th17/ensHOMSA-modMUSMU.txt > cog_stats.txt
+
+### Differential expression 
+############################################################################################################
+### Careful, call MA load files when called, needs to manually ensure consistency with current ENSEMBL version and DB names 
+############################################################################################################
+
+rule call_MA:
+	input: "process_arrays_probe_filtering.Rmd"
+	output: expand("{tp}/{species}_MA_calls.tsv",species=SPECIES,tp=TIMEPOINTS)
+	run:
+		os.chdir(ROOTDIR)
+		R("""
+			library(knitr)
+			knit("process_arrays_probe_filtering.Rmd")
+		""")
+
+rule compute_scores_and_normalize:
+	input:"{tp}/mouse_MA_calls.tsv","{tp}/human_MA_calls.tsv"
+	output:"{tp}/mouse_MA_scores_{FDR}_corrected.tsv","{tp}/human_MA_scores_{FDR}_corrected.tsv"
+	shell: """Rscript normalize_scores.R {FDR} {wildcards.tp}"""
+
+
+rule convert_to_prot_calls:
+	input: "{tp}/{species}_MA_calls.tsv"
+	output: "{tp}/{species}_MA_calls_ensp_ens{ENSEMBL_VERSION}.tsv"
+	run:
+		os.chdir(ROOTDIR)
+		if wildcards.species=="human":
+			shell("""cat {input} | {PYTHON} mapRnaSeq.py {HUMANMAPPING} | tail -n +2 > {output}""")
+		else:
+			shell("""cat {input} | {PYTHON} mapRnaSeq.py {MOUSEMAPPING} | tail -n +2 > {output}""")
+
+
+rule induce: 
+	input: mapping="temp_data/ensembl_{species}_ensp2ensg_ens"+ENSEMBL_VERSION+".tsv",scores="{tp}/{species}_MA_scores_{FDR}_corrected.tsv",prot_list="temp_data/{species}_string_ensp.txt",network=lambda wildcards: HUMANNETWORK if wildcards.species=="human" else MOUSENETWORK
+	output: induced_network="{tp}/{species}_string_induced_network_{FDR}_ens"+ENSEMBL_VERSION+".tsv",induced_scores="{tp}/{species}_MA_scores_{FDR}_corrected_ensp_induced_ens"+ENSEMBL_VERSION+".tsv",mapped_scores="{tp}/{species}_MA_scores_{FDR}_corrected_ensp_mapped_ens"+ENSEMBL_VERSION+".tsv",temp_score="{tp}/{species}_{FDR}_scores.tsv",temp_score2="{tp}/{species}_{FDR}_scores_ensp.tsv"
+	run:
+		os.chdir(ROOTDIR)
+		if wildcards.species=="human":
+			shell("cut -f1,8 {input.scores} | tail -n +2  > {output.temp_score}") #take raw score
+		else:
+			shell("cut -f1,10 {input.scores} | tail -n +2  > {output.temp_score}") #take corrected score 
+		shell("""cat {output.temp_score} | {PYTHON} mapRnaSeq.py {input.mapping} > {output.temp_score2}""")
+		shell("""{PYTHON} {XHEINZROOT}/script/induce.py {input.prot_list} {output.temp_score2} > {output.mapped_scores}""")
+		# we induce the network only keeping the largest connected component
+		shell("""{PYTHON} induce_network.py --SCORES {output.mapped_scores} --NETWORK {input.network} -oN {output.induced_network} -oS {output.induced_scores}""")
+
+
+
+
+rule prot_scores:
+	input: expand("{tp}/{species}_MA_calls_ensp_ens{ENSEMBL_VERSION}.tsv",tp=TIMEPOINTS,ENSEMBL_VERSION=ENSEMBL_VERSION,species=SPECIES)
+
+
+## Running xheinz 
+
+rule run_xheinz:
+	input: mouse_network="{tp}/mouse_string_induced_network_{FDR}_ens"+ENSEMBL_VERSION+".tsv",human_network="{tp}/human_string_induced_network_{FDR}_ens"+ENSEMBL_VERSION+".tsv",human_scores="{tp}/human_MA_scores_"+FDR+"_corrected_ensp_induced_ens"+ENSEMBL_VERSION+".tsv",mouse_scores="{tp}/mouse_MA_scores_"+FDR+"_corrected_ensp_induced_ens"+ENSEMBL_VERSION+".tsv"
+	output: stdout="{tp}/alpha_{alpha}_FDR_{FDR}_mouse_corrected_no_ubc_roundCB.stdout.txt",stderr="{tp}/alpha_{alpha}_FDR_{FDR}_mouse_corrected_no_ubc_roundCB.stderr.txt"
+	shell:""" \
+{TIMECMD} {PROCESSTIMELIMIT} {XHEINZBIN} -n1 {input.mouse_scores} -n2 {input.human_scores} \
+-e1 {input.mouse_network} \
+-e2 {input.human_network} \
+-t {TIMELIMIT} \
+-rt {ROOTTIMELIMIT} \
+-cog {COGFILE} -a {wildcards.alpha} \
+> >(tee {output.stdout}) 2> >(tee {output.stderr} >&2)		
+"""
+
+rule concatenate_annotations: 
+	input: "annotate_module.py",ALLRESULTS,expand("{tp}/{species}_MA_calls_ensp_ens{ENSEMBL_VERSION}.tsv",tp=TIMEPOINTS,species=SPECIES,ENSEMBL_VERSION=ENSEMBL_VERSION),expand("{tp}/{species}_MA_scores_"+FDR+"_corrected_ensp_induced_ens{ENSEMBL_VERSION}.tsv",tp=TIMEPOINTS,species=SPECIES,ENSEMBL_VERSION=ENSEMBL_VERSION)
+	output: "annotated_modules.csv"
+	shell:
+		"""{PYTHON} annotate_module.py -r \
+--HUMANNETWORK {HUMANNETWORK} \
+--MOUSENETWORK {MOUSENETWORK} \
+--MOUSEMAPPING {MOUSEMAPPING} \
+--HUMANMAPPING {HUMANMAPPING} \
+--COGFILE {COGFILE}"""
+
+
+rule MS_figures:
+	input: "annotated_modules.csv","analyze_module_graphs_MS.R"
+	output: "summary_statistics_all_runs.tsv","figures/node_classes_by_alpha_array_scores.pdf", "figures/node_classes_ratios_by_alpha_array.pdf", "figures/score_by_alpha_array.pdf",
+	run:
+		os.chdir(ROOTDIR)
+		R("""
+			FDR_THRESHOLD={FDR}
+			setwd("{ROOTDIR}")
+			source("analyze_module_graphs_MS.R")
+		""")
+
+rule gap: 
+	input: ALLRESULTS_logs
+	output: "gaps.txt"
+	run:
+		os.chdir(ROOTDIR)
+		R("""
+			suppressWarnings({{library(data.table);library(plyr)}})
+			input_files=list.files(".",pattern='*.stderr',rec=T)
+			last_lines=ldply(input_files,function(a_file) {{content=readLines(a_file);paste(a_file,content[max(grep('^[[:space:]]+[[:digit:]]+|^\\\\*[[:space:]]+[[:digit:]]+',content))],sep='\t')}})
+			write.table(last_lines,file='{output}',quote=F,row.names=F,col.names=F,sep="\t")
+		""")
+
+rule generate_gml:
+	input: COGFILE,HUMANNETWORK,MOUSENETWORK,MOUSEMAPPING,HUMANMAPPING,human_scores="{tp}/human_MA_scores_{FDR}_corrected_ensp_induced_ens"+ENSEMBL_VERSION+".tsv",mouse_scores="{tp}/mouse_MA_scores_{FDR}_corrected_ensp_induced_ens"+ENSEMBL_VERSION+".tsv",human_prot_calls="{tp}/human_MA_calls_ensp_ens"+ENSEMBL_VERSION+".tsv",mouse_prot_calls="{tp}/mouse_MA_calls_ensp_ens"+ENSEMBL_VERSION+".tsv", module_file="{tp}/alpha_{alpha}_FDR_{FDR}_mouse_corrected_no_ubc_roundCB.stdout.txt"
+	output: "{tp}/alpha_{alpha}_FDR_{FDR}_mouse_corrected_no_ubc_roundCB.stdout.txt.human.gml","{tp}/alpha_{alpha}_FDR_{FDR}_mouse_corrected_no_ubc_roundCB.stdout.txt.mouse.gml"
+	shell:
+		"""{PYTHON} annotate_module.py \
+--HUMANNETWORK {HUMANNETWORK} \
+--MOUSENETWORK {MOUSENETWORK} \
+--MOUSEMAPPING {MOUSEMAPPING} \
+--HUMANMAPPING {HUMANMAPPING} \
+--HUMANSCORES {input.human_scores} \
+--MOUSESCORES {input.mouse_scores} \
+--HUMANCALLSPROT {input.human_prot_calls} \
+--MOUSECALLSPROT {input.mouse_prot_calls} \
+--COGFILE {COGFILE} {input.module_file}"""
+
+
+rule MS_graphs: 
+	input: expand("{tp}/alpha_{alpha}_FDR_{FDR}_mouse_corrected_no_ubc_roundCB.stdout.txt.{species}.gml",tp=["2h","24h","48h"],alpha=["0.7","0.8","0.9"],FDR="0.1",species=SPECIES)
+
+
+rule scores:
+	shell:
+		"""grep --color=always "Total Score" */* | grep --color=always -v tmp"""
+
+rule run_time:
+	shell:
+		"""grep --color "Total (root+branch&cut)" */* """
+
+
+
+
+# check for diffs with previous runs 
+
+# results networks for cytoscape etc. 
+
+
+
