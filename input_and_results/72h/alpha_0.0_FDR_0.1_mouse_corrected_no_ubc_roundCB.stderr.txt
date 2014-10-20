@@ -1,0 +1,56 @@
+intEpsilon: 1e-05
+cutEpsilon: 1e-05
+Warning: Control callbacks may disable some MIP features.
+Lazy constraint(s) or lazy constraint callback is present.
+    Disabling dual reductions (CPX_PARAM_REDUCE) in presolve.
+Clique table members: 162852.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 13.04 sec. (1074.81 ticks)
+Lazy DEBUG Label, root: ENSMUSP00000099793   y value: 1
+Lazy DEBUG Label, root: ENSP00000338703   y value: 1
+Lazy DEBUG Label, root: ENSP00000338703   y value: 1
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0     1782.0216     8                   1793.3924     1191         
+*     0+    0                         1775.2089     1782.0216     1191    0.38%
+*     0     0      integral     0     1781.5631   ZeroHalf: 1     1200    0.00%
+      0     0        cutoff           1781.5631     1781.5631     1200    0.00%                        0             0
+Elapsed time = 24.89 sec. (3381.71 ticks, tree = 0.00 MB, solutions = 2)
+
+Zero-half cuts applied:  1
+User cuts applied:  64
+
+Root node processing (before b&c):
+  Real time             =   24.91 sec. (3383.90 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =   24.91 sec. (3383.90 ticks)
+Solved in 39.1617s
+	Command being timed: "timeout 12500s /home/hsoueidan/xheinz/build/xHeinz_recomb -n1 72h/mouse_MA_scores_0.1_corrected_ensp_induced_ens59.tsv -n2 72h/human_MA_scores_0.1_corrected_ensp_induced_ens59.tsv -e1 72h/mouse_string_induced_network_0.1_ens59.tsv -e2 72h/human_string_induced_network_0.1_ens59.tsv -t 24000 -rt 4000 -cog temp_data/ensembl_cog_ALL_ens59.tsv -a 0.0"
+	User time (seconds): 56.00
+	System time (seconds): 2.81
+	Percent of CPU this job got: 116%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:50.35
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 17500096
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 368883
+	Voluntary context switches: 148
+	Involuntary context switches: 508
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

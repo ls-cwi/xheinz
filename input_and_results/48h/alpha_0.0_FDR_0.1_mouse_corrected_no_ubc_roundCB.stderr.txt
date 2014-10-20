@@ -1,0 +1,618 @@
+intEpsilon: 1e-05
+cutEpsilon: 1e-05
+Warning: Control callbacks may disable some MIP features.
+Lazy constraint(s) or lazy constraint callback is present.
+    Disabling dual reductions (CPX_PARAM_REDUCE) in presolve.
+Clique table members: 76288.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 1.17 sec. (404.49 ticks)
+Lazy DEBUG Label, root: ENSMUSP00000099793   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0     1326.5569    13                   1340.5844      452         
+*     0+    0                         1257.6769     1326.5569      452    5.48%
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+      0     0     1325.1404    21     1257.6769   ZeroHalf: 2      457    5.36%
+*     0+    0                         1294.9371     1325.1404      457    2.33%
+      0     0     1325.1289    20     1294.9371 UserPurge1: 175      460    2.33%
+      0     0     1325.1105    25     1294.9371 UserPurge1: 176      464    2.33%
+      0     0     1325.1002    24     1294.9371 UserPurge1: 179      468    2.33%
+      0     0     1325.0897    25     1294.9371 UserPurge1: 177      473    2.33%
+      0     0     1325.0816    27     1294.9371 UserPurge1: 178      478    2.33%
+      0     0     1325.0766    32     1294.9371 UserPurge1: 180      482    2.33%
+      0     0     1325.0662    32     1294.9371 UserPurge1: 184      490    2.33%
+      0     0     1325.0523    34     1294.9371 UserPurge1: 182      499    2.33%
+      0     0     1325.0455    33     1294.9371 UserPurge1: 184      504    2.33%
+      0     0     1325.0417    38     1294.9371 UserPurge1: 185      508    2.32%
+      0     0     1325.0326    31     1294.9371 UserPurge1: 188      514    2.32%
+      0     0     1325.0176    31     1294.9371 UserPurge1: 182      515    2.32%
+      0     0     1325.0129    32     1294.9371 UserPurge1: 183      519    2.32%
+      0     0     1325.0088    33     1294.9371 UserPurge1: 184      523    2.32%
+      0     0     1325.0073    44     1294.9371 UserPurge1: 185      526    2.32%
+      0     0     1325.0054    33     1294.9371 UserPurge1: 191      531    2.32%
+      0     0     1325.0009    40     1294.9371 UserPurge1: 185      535    2.32%
+      0     0     1324.9921    46     1294.9371 UserPurge1: 189      544    2.32%
+      0     0     1324.9898    40     1294.9371 UserPurge1: 193      547    2.32%
+      0     0     1324.9886    46     1294.9371 UserPurge1: 190      551    2.32%
+      0     0     1324.9811    48     1294.9371 UserPurge1: 193      561    2.32%
+      0     0     1324.9787    44     1294.9371 UserPurge1: 192      569    2.32%
+      0     0     1324.9668    40     1294.9371 UserPurge1: 193      579    2.32%
+      0     0     1324.9564    37     1294.9371 UserPurge1: 188      585    2.32%
+      0     0     1324.9511    36     1294.9371 UserPurge1: 187      588    2.32%
+      0     0     1324.9436    43     1294.9371 UserPurge1: 187      594    2.32%
+      0     0     1324.9380    36     1294.9371 UserPurge1: 192      608    2.32%
+      0     0     1324.9343    52     1294.9371 UserPurge1: 186      624    2.32%
+      0     0     1324.9267    27     1294.9371 UserPurge1: 196      630    2.32%
+      0     0     1324.9265    38     1294.9371 UserPurge1: 180      632    2.32%
+      0     0     1324.9189    26     1294.9371 UserPurge1: 188      639    2.32%
+      0     0     1324.9171    37     1294.9371 UserPurge1: 180      643    2.32%
+      0     0     1324.9088    53     1294.9371 UserPurge1: 188      650    2.31%
+      0     0     1324.9058    52     1294.9371 UserPurge1: 197      652    2.31%
+      0     0     1324.9042    49     1294.9371 UserPurge1: 197      659    2.31%
+      0     0     1324.9018    55     1294.9371 UserPurge1: 197      667    2.31%
+      0     0     1324.9006    59     1294.9371 UserPurge1: 197      674    2.31%
+      0     0     1324.8879    32     1294.9371 UserPurge1: 200      684    2.31%
+      0     0     1324.8841    54     1294.9371 UserPurge1: 185      688    2.31%
+      0     0     1324.8817    36     1294.9371 UserPurge1: 197      692    2.31%
+      0     0     1324.8807    49     1294.9371 UserPurge1: 185      699    2.31%
+      0     0     1324.8800    45     1294.9371 UserPurge1: 196      705    2.31%
+      0     0     1324.8778    52     1294.9371 UserPurge1: 193      710    2.31%
+      0     0     1324.8754    48     1294.9371 UserPurge1: 196      720    2.31%
+      0     0     1324.8692    52     1294.9371 UserPurge1: 195      729    2.31%
+      0     0     1324.8604    51     1294.9371 UserPurge1: 198      746    2.31%
+      0     0     1324.8585    52     1294.9371 UserPurge1: 197      753    2.31%
+      0     0     1324.8537    53     1294.9371 UserPurge1: 198      766    2.31%
+      0     0     1324.8374    49     1294.9371 UserPurge1: 199      777    2.31%
+      0     0     1324.8213    56     1294.9371 UserPurge1: 197      797    2.31%
+      0     0     1324.8165    35     1294.9371 UserPurge1: 201      805    2.31%
+      0     0     1324.8156    44     1294.9371 UserPurge1: 186      807    2.31%
+      0     0     1324.8139    55     1294.9371 UserPurge1: 193      810    2.31%
+      0     0     1324.8095    59     1294.9371 UserPurge1: 203      824    2.31%
+      0     0     1324.8089    38     1294.9371 UserPurge1: 202      831    2.31%
+      0     0     1324.8086    59     1294.9371 UserPurge1: 186      835    2.31%
+      0     0     1324.8071    61     1294.9371 UserPurge1: 202      847    2.31%
+      0     0     1324.7997    60     1294.9371 UserPurge1: 203      864    2.31%
+      0     0     1324.7977    61     1294.9371 UserPurge1: 201      875    2.31%
+      0     0     1324.7906    59     1294.9371 UserPurge1: 201      891    2.31%
+      0     0     1324.7866    59     1294.9371 UserPurge1: 202      901    2.31%
+      0     0     1324.7742    56     1294.9371 UserPurge1: 201      916    2.30%
+      0     0     1324.7712    48     1294.9371 UserPurge1: 199      922    2.30%
+      0     0     1324.7695    61     1294.9371 UserPurge1: 194      933    2.30%
+      0     0     1324.7684    58     1294.9371 UserPurge1: 204      942    2.30%
+      0     0     1324.7660    58     1294.9371 UserPurge1: 204      959    2.30%
+      0     0     1324.7578    55     1294.9371 UserPurge1: 202      982    2.30%
+      0     0     1324.7493    60     1294.9371 UserPurge1: 200      995    2.30%
+      0     0     1324.7426    60     1294.9371 UserPurge1: 202     1006    2.30%
+      0     0     1324.7382    64     1294.9371 UserPurge1: 202     1026    2.30%
+      0     0     1324.7353    59     1294.9371 UserPurge1: 204     1034    2.30%
+      0     0     1324.7327    66     1294.9371 UserPurge1: 204     1044    2.30%
+      0     0     1324.7285    66     1294.9371 UserPurge1: 206     1066    2.30%
+      0     0     1324.7268    45     1294.9371 UserPurge1: 207     1087    2.30%
+      0     0     1324.7248    63     1294.9371 UserPurge1: 193     1098    2.30%
+      0     0     1324.7238    62     1294.9371 UserPurge1: 206     1109    2.30%
+      0     0     1324.7226    56     1294.9371 UserPurge1: 207     1119    2.30%
+      0     0     1324.7195    63     1294.9371 UserPurge1: 203     1132    2.30%
+      0     0     1324.7170    69     1294.9371 UserPurge1: 205     1145    2.30%
+      0     0     1324.7154    54     1294.9371 UserPurge1: 210     1160    2.30%
+      0     0     1324.7144    68     1294.9371 UserPurge1: 199     1173    2.30%
+      0     0     1324.7120    66     1294.9371 UserPurge1: 209     1195    2.30%
+      0     0     1324.7028    54     1294.9371 UserPurge1: 208     1212    2.30%
+      0     0     1324.7002    61     1294.9371 UserPurge1: 199     1220    2.30%
+      0     0     1324.6963    67     1294.9371 UserPurge1: 205     1239    2.30%
+      0     0     1324.6932    70     1294.9371 UserPurge1: 208     1251    2.30%
+      0     0     1324.6891    70     1294.9371 UserPurge1: 211     1274    2.30%
+      0     0     1324.6883    68     1294.9371 UserPurge1: 211     1281    2.30%
+      0     0     1324.6860    74     1294.9371 UserPurge1: 210     1310    2.30%
+      0     0     1324.6843    65     1294.9371 UserPurge1: 214     1329    2.30%
+      0     0     1324.6826    74     1294.9371 UserPurge1: 210     1357    2.30%
+      0     0     1324.6773    68     1294.9371 UserPurge1: 214     1386    2.30%
+      0     0     1324.6713    68     1294.9371 UserPurge1: 209     1406    2.30%
+      0     0     1324.6659    64     1294.9371 UserPurge1: 210     1430    2.30%
+      0     0     1324.6623    71     1294.9371 UserPurge1: 211     1462    2.30%
+      0     0     1324.6583    60     1294.9371 UserPurge1: 210     1475    2.30%
+      0     0     1324.6572    69     1294.9371 UserPurge1: 205     1484    2.30%
+      0     0     1324.6553    71     1294.9371 UserPurge1: 211     1495    2.29%
+      0     0     1324.6528    70     1294.9371 UserPurge1: 212     1518    2.29%
+      0     0     1324.6459    65     1294.9371 UserPurge1: 213     1557    2.29%
+      0     0     1324.6427    70     1294.9371 UserPurge1: 210     1575    2.29%
+      0     0     1324.6408    68     1294.9371 UserPurge1: 210     1589    2.29%
+      0     0     1324.6392    64     1294.9371 UserPurge1: 209     1606    2.29%
+      0     0     1324.6359    65     1294.9371 UserPurge1: 208     1627    2.29%
+      0     0     1324.6313    71     1294.9371 UserPurge1: 208     1644    2.29%
+      0     0     1324.6297    75     1294.9371 UserPurge1: 213     1657    2.29%
+      0     0     1324.6262    66     1294.9371 UserPurge1: 215     1674    2.29%
+      0     0     1324.6237    70     1294.9371 UserPurge1: 211     1697    2.29%
+      0     0     1324.6224    59     1294.9371 UserPurge1: 213     1717    2.29%
+      0     0     1324.6217    66     1294.9371 UserPurge1: 204     1729    2.29%
+      0     0     1324.6213    71     1294.9371 UserPurge1: 212     1740    2.29%
+      0     0     1324.6209    81     1294.9371 UserPurge1: 213     1764    2.29%
+      0     0     1324.6185    65     1294.9371 UserPurge1: 221     1810    2.29%
+      0     0     1324.6162    22     1294.9371 UserPurge1: 210     1826    2.29%
+      0     0     1324.6150    70     1294.9371 UserPurge1: 176     1846    2.29%
+      0     0     1324.6113    69     1294.9371 UserPurge1: 211     1884    2.29%
+      0     0     1324.6089    73     1294.9371 UserPurge1: 213     1899    2.29%
+      0     0     1324.6071    66     1294.9371 UserPurge1: 213     1916    2.29%
+      0     0     1324.6048    76     1294.9371 UserPurge1: 211     1929    2.29%
+      0     0     1324.6019    70     1294.9371 UserPurge1: 215     1948    2.29%
+      0     0     1324.6001    74     1294.9371 UserPurge1: 211     1974    2.29%
+      0     0     1324.5972    76     1294.9371 UserPurge1: 216     1994    2.29%
+      0     0     1324.5914    77     1294.9371 UserPurge1: 216     2013    2.29%
+      0     0     1324.5842    64     1294.9371 UserPurge1: 217     2042    2.29%
+      0     0     1324.5806    66     1294.9371 UserPurge1: 209     2055    2.29%
+      0     0     1324.5761    58     1294.9371 UserPurge1: 208     2080    2.29%
+      0     0     1324.5744    74     1294.9371 UserPurge1: 205     2103    2.29%
+      0     0     1324.5739    74     1294.9371 UserPurge1: 213     2119    2.29%
+      0     0     1324.5732    67     1294.9371 UserPurge1: 213     2152    2.29%
+      0     0     1324.5711    77     1294.9371 UserPurge1: 214     2184    2.29%
+      0     0     1324.5692    72     1294.9371 UserPurge1: 216     2201    2.29%
+      0     0     1324.5674    81     1294.9371 UserPurge1: 216     2229    2.29%
+      0     0     1324.5657    77     1294.9371 UserPurge1: 219     2264    2.29%
+      0     0     1324.5616    78     1294.9371 UserPurge1: 218     2300    2.29%
+      0     0     1324.5566    72     1294.9371 UserPurge1: 221     2332    2.29%
+      0     0     1324.5529    79     1294.9371 UserPurge1: 217     2365    2.29%
+      0     0     1324.5505    74     1294.9371 UserPurge1: 219     2393    2.29%
+      0     0     1324.5421    75     1294.9371 UserPurge1: 218     2449    2.29%
+      0     0     1324.5405    75     1294.9371 UserPurge1: 214     2473    2.29%
+      0     0     1324.5392    78     1294.9371 UserPurge1: 214     2491    2.29%
+      0     0     1324.5384    76     1294.9371 UserPurge1: 216     2507    2.29%
+      0     0     1324.5369    62     1294.9371 UserPurge1: 216     2524    2.29%
+      0     0     1324.5351    77     1294.9371 UserPurge1: 206     2541    2.29%
+      0     0     1324.5324    71     1294.9371 UserPurge1: 215     2560    2.29%
+      0     0     1324.5300    79     1294.9371 UserPurge1: 214     2581    2.29%
+      0     0     1324.5287    75     1294.9371 UserPurge1: 219     2604    2.29%
+      0     0     1324.5274    64     1294.9371 UserPurge1: 216     2635    2.29%
+      0     0     1324.5260    84     1294.9371 UserPurge1: 209     2669    2.28%
+      0     0     1324.5248    84     1294.9371 UserPurge1: 222     2705    2.28%
+      0     0     1324.5210    72     1294.9371 UserPurge1: 222     2764    2.28%
+      0     0     1324.5184    78     1294.9371 UserPurge1: 215     2785    2.28%
+      0     0     1324.5175    81     1294.9371 UserPurge1: 218     2802    2.28%
+      0     0     1324.5149    82     1294.9371 UserPurge1: 220     2822    2.28%
+      0     0     1324.5119    80     1294.9371 UserPurge1: 221     2859    2.28%
+      0     0     1324.5096    71     1294.9371 UserPurge1: 220     2898    2.28%
+      0     0     1324.5080    72     1294.9371 UserPurge1: 217     2924    2.28%
+      0     0     1324.5064    77     1294.9371 UserPurge1: 218     2958    2.28%
+      0     0     1324.5046    73     1294.9371 UserPurge1: 219     2985    2.28%
+      0     0     1324.5001    78     1294.9371 UserPurge1: 218     3041    2.28%
+      0     0     1324.4978    82     1294.9371 UserPurge1: 219     3071    2.28%
+      0     0     1324.4969    75     1294.9371 UserPurge1: 223     3100    2.28%
+      0     0     1324.4962    84     1294.9371 UserPurge1: 218     3134    2.28%
+      0     0     1324.4954    78     1294.9371 UserPurge1: 222     3158    2.28%
+      0     0     1324.4938    87     1294.9371 UserPurge1: 218     3204    2.28%
+      0     0     1324.4925    83     1294.9371 UserPurge1: 225     3243    2.28%
+      0     0     1324.4910    73     1294.9371 UserPurge1: 225     3296    2.28%
+      0     0     1324.4883    85     1294.9371 UserPurge1: 215     3327    2.28%
+      0     0     1324.4843    79     1294.9371 UserPurge1: 225     3366    2.28%
+      0     0     1324.4756    81     1294.9371 UserPurge1: 220     3402    2.28%
+      0     0     1324.4711    77     1294.9371 UserPurge1: 221     3444    2.28%
+      0     0     1324.4693    85     1294.9371 UserPurge1: 222     3469    2.28%
+      0     0     1324.4649    81     1294.9371 UserPurge1: 224     3503    2.28%
+      0     0     1324.4626    86     1294.9371 UserPurge1: 221     3551    2.28%
+      0     0     1324.4585    84     1294.9371 UserPurge1: 224     3584    2.28%
+      0     0     1324.4555    81     1294.9371 UserPurge1: 224     3633    2.28%
+      0     0     1324.4540    82     1294.9371 UserPurge1: 222     3665    2.28%
+      0     0     1324.4521    83     1294.9371 UserPurge1: 223     3687    2.28%
+      0     0     1324.4514    84     1294.9371 UserPurge1: 223     3716    2.28%
+      0     0     1324.4493    82     1294.9371 UserPurge1: 224     3771    2.28%
+      0     0     1324.4471    87     1294.9371 UserPurge1: 225     3818    2.28%
+      0     0     1324.4420    86     1294.9371 UserPurge1: 226     3856    2.28%
+      0     0     1324.4387    88     1294.9371 UserPurge1: 226     3899    2.28%
+      0     0     1324.4366    92     1294.9371 UserPurge1: 226     3946    2.28%
+      0     0     1324.4352    89     1294.9371 UserPurge1: 232     3986    2.28%
+      0     0     1324.4335    85     1294.9371 UserPurge1: 227     4035    2.28%
+      0     0     1324.4323    80     1294.9371 UserPurge1: 225     4070    2.28%
+      0     0     1324.4309    93     1294.9371 UserPurge1: 224     4098    2.28%
+      0     0     1324.4290    73     1294.9371 UserPurge1: 231     4135    2.28%
+      0     0     1324.4286    83     1294.9371 UserPurge1: 217     4150    2.28%
+      0     0     1324.4278    89     1294.9371 UserPurge1: 225     4185    2.28%
+      0     2     1324.4278    89     1294.9371     1324.4271     4185    2.28%                        0             0
+Elapsed time = 4043.69 sec. (901436.85 ticks, tree = 0.00 MB, solutions = 2)
+      1     3     1324.3619    67     1294.9371     1324.3555     4275    2.27%x_ENSP0000033712 D      1      0      1
+      2     4     1323.8802    65     1294.9371     1324.2152     4517    2.26%x_ENSP0000033976 N      2      1      2
+      3     5     1323.7472    46     1294.9371     1324.2152     4561    2.26%x_ENSP0000026463 D      3      2      3
+      4     6     1323.7159    44     1294.9371     1324.2152     4568    2.26%x_ENSP0000031012 D      4      3      4
+      5     7     1322.7573    27     1294.9371     1324.2152     4627    2.26%x_ENSP0000031012 N      5      3      4
+      6     8     1323.6747    41     1294.9371     1324.2152     4639    2.26%x_ENSP0000032512 D      6      4      5
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+*     7+    7                         1297.7361     1324.2152     4644    2.04%
+      7     9     1320.7121    13     1297.7361     1324.2152     4644    2.04%x_ENSP0000030040 U      7      6      6
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+      8    10     1319.4869    14     1297.7361     1324.2152     4646    2.04%x_ENSP0000030293 D      8      7      7
+*     9+    9                         1303.7292     1324.2152     4657    1.57%
+      9    11     1320.0938    10     1303.7292     1324.2152     4657    1.57%x_ENSP0000030293 U      9      7      7
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     10    12     1319.8890    33     1303.7292     1324.2152     4662    1.57%x_ENSP0000034355 D     10      9      8
+Elapsed time = 4581.27 sec. (994994.73 ticks, tree = 5.69 MB, solutions = 4)
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     11    13     1319.8712    32     1303.7292     1324.2152     4666    1.57%x_ENSP0000026509 D     11     10      9
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     12    14     1319.8248    30     1303.7292     1324.2152     4667    1.57%x_ENSP0000034601 U     12     11     10
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+*    14+   14                         1311.4598     1324.2152     4680    0.97%
+     14    16     1319.7585     6     1311.4598     1324.2152     4680    0.97%x_ENSP0000024856 N     14     13     11
+     15    17     1319.5613     7     1311.4598     1324.2152     4693    0.97%x_ENSP0000024856 U     15     13     11
+*    17+   17                         1312.3094     1324.2152     4707    0.91%
+     17    19     1319.2540     5     1312.3094     1324.2152     4707    0.91%x_ENSP0000034625 D     17     16     13
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     18    20     1318.4052     9     1312.3094     1324.2152     4713    0.91%x_ENSP0000033326 U     18     17     14
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     19    21     1315.1851     9     1312.3094     1324.2152     4723    0.91%x_ENSP0000025133 U     19     18     15
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     20    22     1315.1492     5     1312.3094     1324.2152     4724    0.91%x_ENSP0000037585 U     20     19     16
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     22    24     1314.9927     6     1312.3094     1324.2152     4731    0.91%x_ENSP0000026818 D     22     20     17
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     23    25     1314.8179     6     1312.3094     1324.2152     4732    0.91%x_ENSP0000023148 U     23     22     18
+Elapsed time = 4854.40 sec. (1041360.48 ticks, tree = 11.57 MB, solutions = 6)
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     24    26     1314.8694     6     1312.3094     1324.2152     4740    0.91%x_ENSP0000023148 N     24     22     18
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     25    27     1314.6923     6     1312.3094     1324.2152     4743    0.91%x_ENSP0000028170 U     25     24     19
+     26    28     1314.8507     5     1312.3094     1324.2152     4744    0.91%x_ENSP0000028170 D     26     24     19
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     27    29     1313.8027     6     1312.3094     1324.2152     4747    0.91%x_ENSP0000035449 U     27     26     20
+     29    31     1314.8470     5     1312.3094     1324.2152     4749    0.91%x_ENSP0000034085 U     29     28     21
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     30    30        cutoff           1312.3094     1324.2152     4752    0.91%x_ENSP0000022143 U     30     29     22
+     31    31     1314.8372     4     1312.3094     1324.2152     4753    0.91%x_ENSP0000022143 D     31     29     22
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     32    32     1314.8242    29     1312.3094     1324.2152     4757    0.91%x_ENSP0000027425 D     32     31     23
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     33    33     1314.8149     6     1312.3094     1324.2152     4758    0.91%x_ENSP0000026173 D     33     32     24
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     34    34     1314.7990    22     1312.3094     1324.2152     4760    0.91%x_ENSP0000030383 U     34     33     25
+Elapsed time = 5153.38 sec. (1097854.55 ticks, tree = 11.85 MB, solutions = 6)
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     36    36     1314.7503     8     1312.3094     1324.2152     4770    0.91%x_ENSP0000031692 N     36     35     26
+Lazy DEBUG Label, root: ENSP00000357152   y value: 1
+Lazy DEBUG Label, root: ENSP00000357152   y value: 1
+Lazy DEBUG Label, root: ENSP00000357152   y value: 1
+Lazy DEBUG Label, root: ENSP00000357152   y value: 1
+Lazy DEBUG Label, root: ENSP00000357152   y value: 1
+     37    37     1313.1025     6     1312.3094     1324.2152     4790    0.91%y_ENSP0000032904 D     37     36     27
+     38    38     1314.7401    20     1312.3094     1324.2152     4795    0.91%y_ENSP0000032904 U     38     36     27
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     39    39     1314.7196     7     1312.3094     1324.2152     4797    0.91%x_ENSP0000036299 D     39     38     28
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     40    40     1313.1422     4     1312.3094     1324.2152     4807    0.91%x_ENSP0000036825 U     40     39     29
+     41    40     1314.7168    21     1312.3094     1324.2152     4809    0.91%x_ENSP0000036825 D     41     39     29
+     42    41     1314.7168     7     1312.3094     1324.2152     4810    0.91%x_ENSP0000037960 D     42     41     30
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     43    42     1314.2946     4     1312.3094     1324.2152     4817    0.91%x_ENSP0000021622 U     43     42     31
+     44    43     1314.7134    24     1312.3094     1324.2152     4819    0.91%x_ENSP0000021622 D     44     42     31
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     45    44     1314.2593     4     1312.3094     1324.2152     4826    0.91%x_ENSP0000029559 U     45     44     32
+Elapsed time = 5537.10 sec. (1165371.63 ticks, tree = 12.17 MB, solutions = 6)
+     46    45     1314.7129    24     1312.3094     1324.2152     4827    0.91%x_ENSP0000029559 D     46     44     32
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     47    46     1314.2469     4     1312.3094     1324.2152     4834    0.91%x_ENSP0000025000 U     47     46     33
+     48    47     1314.7118    23     1312.3094     1324.2152     4835    0.91%x_ENSP0000025000 D     48     46     33
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     49    48     1314.6844     8     1312.3094     1324.2152     4837    0.91%x_ENSP0000025103 D     49     48     34
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     50    49     1314.4957     4     1312.3094     1324.2152     4838    0.91%x_ENSP0000033161 U     50     49     35
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     51    50     1314.4687     6     1312.3094     1324.2152     4839    0.91%x_ENSP0000026203 U     51     50     36
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     52    51     1314.3651     6     1312.3094     1324.2152     4842    0.91%x_ENSP0000026203 N     52     50     36
+     53    52     1314.4632     3     1312.3094     1324.2152     4843    0.91%x_ENSP0000034603 D     53     51     37
+     54    53     1314.4428     3     1312.3094     1324.2152     4844    0.91%x_ENSP0000025372 D     54     53     38
+     55    54     1314.4301     5     1312.3094     1324.2152     4845    0.91%x_ENSP0000024474 D     55     54     39
+Elapsed time = 6076.42 sec. (1235148.80 ticks, tree = 12.53 MB, solutions = 6)
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     56    55     1314.1546     7     1312.3094     1324.2152     4847    0.91%x_ENSP0000035256 U     56     55     40
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     57    56     1313.8255     6     1312.3094     1324.2152     4853    0.91%x_ENSP0000028324 U     57     56     41
+     58    57     1314.1510     6     1312.3094     1324.2152     4854    0.91%x_ENSP0000028324 D     58     56     41
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     59    58     1313.9963     4     1312.3094     1324.2152     4861    0.91%x_ENSP0000038439 U     59     58     42
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     60    59     1314.1473     9     1312.3094     1324.2152     4862    0.91%x_ENSP0000038439 D     60     58     42
+     61    60     1314.1446     6     1312.3094     1324.2152     4863    0.91%x_ENSP0000029687 D     61     60     43
+     62    61     1314.1423     4     1312.3094     1324.2152     4864    0.91%x_ENSP0000029868 D     62     61     44
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     63    62     1314.1097     4     1312.3094     1324.2152     4868    0.91%x_ENSP0000022913 D     63     62     45
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     64    63     1313.3262     3     1312.3094     1324.2152     4883    0.91%x_ENSP0000038025 U     64     63     46
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     65    64     1312.9194     3     1312.3094     1324.2152     4884    0.91%x_ENSP0000034827 U     65     64     47
+Elapsed time = 6683.57 sec. (1316389.59 ticks, tree = 12.86 MB, solutions = 6)
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     66    65     1312.4810     3     1312.3094     1324.2152     4885    0.91%x_ENSP0000035712 U     66     65     48
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     67    64        cutoff           1312.3094     1324.2152     4888    0.91%x_ENSP0000034341 U     67     66     49
+     68    65     1312.4777     3     1312.3094     1324.2152     4891    0.91%x_ENSP0000034341 D     68     66     49
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     69    64        cutoff           1312.3094     1324.2152     4897    0.91%x_ENSP0000034207 U     69     68     50
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     70    64     1312.3815     6     1312.3094     1324.2152     4904    0.91%x_ENSP0000034207 N     70     68     50
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     71    64     1312.3726     7     1312.3094     1324.2152     4905    0.91%x_ENSP0000035682 D     71     70     51
+     72    65     1312.3619     5     1312.3094     1324.2152     4906    0.91%x_ENSP0000029658 U     72     71     52
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     73    65     1312.3390    18     1312.3094     1324.2152     4908    0.91%x_ENSP0000026183 D     73     72     53
+     74    66     1312.3376    17     1312.3094     1324.2152     4909    0.91%x_ENSP0000036931 D     74     73     54
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     75    65        cutoff           1312.3094     1324.2152     4913    0.91%x_ENSP0000031445 D     75     74     55
+Elapsed time = 7159.33 sec. (1389119.18 ticks, tree = 12.93 MB, solutions = 6)
+     76    64        cutoff           1312.3094     1324.2152     4917    0.91%x_ENSP0000031445 U     76     74     55
+     77    65     1324.2060    49     1312.3094     1324.2038     5042    0.91%x_ENSP0000033976 U     77      1      2
+     78    66     1324.1917    45     1312.3094     1324.2009     5098    0.91%x_ENSP0000026509 D     78     77      3
+     79    67     1324.1909    47     1312.3094     1324.2009     5103    0.91%x_ENSP0000032512 D     79     78      4
+     80    68     1324.1902    45     1312.3094     1324.2009     5106    0.91%x_ENSP0000025372 D     80     79      5
+     81    69     1324.1901    42     1312.3094     1324.2009     5109    0.91%x_ENSP0000024474 D     81     80      6
+     82    70     1324.1896    44     1312.3094     1324.2009     5112    0.91%x_ENSP0000029658 U     82     81      7
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     83    71     1324.1343    78     1312.3094     1324.2009     5298    0.91%x_ENSP0000029868 N     83     82      8
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+*    84+   39                         1314.5507     1324.2009     5327    0.73%
+     84    41     1324.0871     3     1314.5507     1324.2009     5327    0.73%x_ENSP0000028463 U     84     83      9
+     85    42     1324.1326    78     1314.5507     1324.2009     5335    0.73%x_ENSP0000028463 D     85     83      9
+Elapsed time = 7560.97 sec. (1524840.53 ticks, tree = 12.16 MB, solutions = 7)
+     86    43     1324.0817     5     1314.5507     1324.2009     5352    0.73%x_ENSP0000038146 D     86     84     10
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     87    44     1324.0549     3     1314.5507     1324.2009     5354    0.73%x_ENSP0000028209 D     87     86     11
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     88    45     1323.9875     3     1314.5507     1324.2009     5361    0.73%x_ENSP0000028209 U     88     86     11
+     89    46     1324.0511     7     1314.5507     1324.2009     5366    0.73%x_ENSP0000034603 D     89     87     12
+     90    47     1324.0432     3     1314.5507     1324.2009     5379    0.73%x_ENSP0000026818 U     90     89     13
+     91    48     1324.0359     8     1314.5507     1324.2009     5385    0.73%x_ENSP0000035420 D     91     90     14
+     92    49     1324.0243     4     1314.5507     1324.2009     5393    0.73%x_ENSP0000034085 U     92     91     15
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     93    50     1323.7061     4     1314.5507     1324.2009     5411    0.73%x_ENSP0000034085 D     93     91     15
+     94    51     1324.0193     3     1314.5507     1324.2009     5412    0.73%x_ENSP0000029540 D     94     92     16
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     95    52     1323.8371     3     1314.5507     1324.2009     5430    0.73%x_ENSP0000029540 U     95     92     16
+Elapsed time = 8149.01 sec. (1583946.18 ticks, tree = 12.49 MB, solutions = 7)
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     96    53     1323.9381     4     1314.5507     1324.2009     5444    0.73%x_ENSP0000034601 D     96     94     17
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     97    54     1323.8816    27     1314.5507     1324.2009     5447    0.73%x_ENSP0000035256 D     97     96     18
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+     98    55     1323.6891    27     1314.5507     1324.2009     5449    0.73%x_ENSP0000035256 U     98     96     18
+     99    56     1323.8798     8     1314.5507     1324.2009     5451    0.73%x_ENSP0000026183 D     99     97     19
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+*   100+   40                         1318.7400     1324.2009     5467    0.41%
+    100    42     1323.8098     7     1318.7400     1324.2009     5467    0.41%x_ENSP0000040596 D    100     99     20
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    101    43     1323.2309     4     1318.7400     1324.2009     5489    0.41%x_ENSP0000040596 U    101     99     20
+*   102+   42                         1319.0625     1324.2009     5490    0.39%
+    102    44     1323.8087     6     1319.0625     1324.2009     5490    0.39%x_ENSP0000022913 D    102    100     21
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    103    45     1323.7845     6     1319.0625     1324.2009     5494    0.39%x_ENSP0000038439 N    103    102     22
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    104    46     1323.7302     6     1319.0625     1324.2009     5496    0.39%x_ENSP0000029687 D    104    103     23
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    105    47     1323.7214     7     1319.0625     1324.2009     5497    0.39%x_ENSP0000035656 D    105    104     24
+Elapsed time = 8939.93 sec. (1675646.48 ticks, tree = 10.52 MB, solutions = 9)
+*   106+   46                         1319.2144     1324.2009     5498    0.38%
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    107    49     1323.3060     5     1319.2144     1324.2009     5499    0.38%x_ENSP0000035712 U    107    106     26
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    108    50     1322.5613     9     1319.2144     1324.2009     5527    0.38%x_ENSP0000037065 U    108    107     27
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    109    51     1322.4926     4     1319.2144     1324.2009     5528    0.38%x_ENSP0000038133 D    109    108     28
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    110    52     1322.0486     4     1319.2144     1324.2009     5529    0.38%x_ENSP0000023783 D    110    109     29
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    111    53     1322.4265     4     1319.2144     1324.2009     5532    0.38%x_ENSP0000023783 U    111    109     29
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    112    54     1322.3765     3     1319.2144     1324.2009     5535    0.38%x_ENSP0000030296 D    112    111     30
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    113    55     1322.0709     4     1319.2144     1324.2009     5537    0.38%x_ENSP0000030296 U    113    111     30
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    114    56     1322.3621     6     1319.2144     1324.2009     5541    0.38%x_ENSP0000024856 D    114    112     31
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    115    57     1321.8397     4     1319.2144     1324.2009     5543    0.38%x_ENSP0000034846 U    115    114     32
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    117    59     1322.3516     4     1319.2144     1324.2009     5546    0.38%x_ENSP0000035682 D    117    116     33
+Elapsed time = 11086.10 sec. (1941614.33 ticks, tree = 10.93 MB, solutions = 10)
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    118    60     1322.3230     3     1319.2144     1324.2009     5547    0.38%x_ENSP0000034207 D    118    117     34
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    119    61     1322.2981     4     1319.2144     1324.2009     5550    0.38%x_ENSP0000041942 D    119    118     35
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    120    62     1321.8772    20     1319.2144     1324.2009     5553    0.38%x_ENSP0000034827 U    120    119     36
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    121    63     1321.8699    20     1319.2144     1324.2009     5555    0.38%x_ENSP0000022213 D    121    120     37
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    122    62        cutoff           1319.2144     1324.2009     5610    0.38%x_ENSP0000037714 U    122    121     38
+    123    63     1321.8689     3     1319.2144     1324.2009     5611    0.38%x_ENSP0000037714 D    123    121     38
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    124    64     1321.8462    22     1319.2144     1324.2009     5614    0.38%x_ENSP0000034870 D    124    123     39
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    125    65     1321.8223     6     1319.2144     1324.2009     5615    0.38%x_ENSP0000026465 D    125    124     40
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+    127    67     1321.7975     5     1319.2144     1324.2009     5619    0.38%x_ENSP0000035710 D    127    126     42
+Lazy DEBUG Label, root: ENSP00000329040   y value: 1
+
+Zero-half cuts applied:  2
+User cuts applied:  53327
+
+Root node processing (before b&c):
+  Real time             = 4043.90 sec. (901435.11 ticks)
+Sequential b&c:
+  Real time             = 7999.43 sec. (1165949.63 ticks)
+                          ------------
+Total (root+branch&cut) = 12043.33 sec. (2067384.74 ticks)
+Solved in 12056.7s
+	Command being timed: "timeout 12500s /home/hsoueidan/xheinz/build/xHeinz_recomb -n1 48h/mouse_MA_scores_0.1_corrected_ensp_induced_ens59.tsv -n2 48h/human_MA_scores_0.1_corrected_ensp_induced_ens59.tsv -e1 48h/mouse_string_induced_network_0.1_ens59.tsv -e2 48h/human_string_induced_network_0.1_ens59.tsv -t 12000 -rt 4000 -cog temp_data/ensembl_cog_ALL_ens59.tsv -a 0.0"
+	User time (seconds): 11698.15
+	System time (seconds): 353.88
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:21:06
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 91287824
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 10300834
+	Voluntary context switches: 153
+	Involuntary context switches: 16219
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

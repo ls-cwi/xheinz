@@ -1,0 +1,127 @@
+intEpsilon: 1e-05
+cutEpsilon: 1e-05
+Warning: Control callbacks may disable some MIP features.
+Lazy constraint(s) or lazy constraint callback is present.
+    Disabling dual reductions (CPX_PARAM_REDUCE) in presolve.
+Clique table members: 251001.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 90.01 sec. (10500.24 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0     1699.1244   387                   1699.1244    31069         
+*     0+    0                         1524.2627     1699.1244    31069   11.47%
+      0     0     1684.5933   246     1524.2627     Cuts: 194    31443   10.52%
+*     0+    0                         1545.1091     1684.5933    31443    9.03%
+      0     0     1679.4736   183     1545.1091 ZeroHalf: 202    31721    8.70%
+*     0+    0                         1556.4185     1679.4736    31721    7.91%
+      0     0     1677.6967   103     1556.4185 ZeroHalf: 183    31919    7.79%
+*     0+    0                         1571.4902     1677.6967    31919    6.76%
+      0     0     1676.7796    52     1571.4902  ZeroHalf: 63    32072    6.70%
+      0     0     1676.4487    35     1571.4902  ZeroHalf: 35    32124    6.68%
+      0     0     1676.3989    18     1571.4902  ZeroHalf: 12    32145    6.68%
+      0     0     1676.3970    17     1571.4902   ZeroHalf: 6    32147    6.68%
+      0     0     1676.3921    17     1571.4902   ZeroHalf: 4    32152    6.68%
+      0     0     1668.0734    93     1571.4902 UserPurge1: 39    32358    6.15%
+*     0+    0                         1639.5366     1668.0734    32358    1.74%
+      0     0     1668.0613   101     1639.5366 UserPurge1: 3    32359    1.74%
+      0     0     1667.6561   107     1639.5366 UserPurge1: 3    32394    1.72%
+      0     2     1667.6561   107     1639.5366     1667.2575    32394    1.69%                        0             0
+Elapsed time = 167.64 sec. (30076.44 ticks, tree = 0.00 MB, solutions = 5)
+      1     3     1667.2575   102     1639.5366     1666.8964    32395    1.67%x_ENSMUSP0000005 U      1      0      1
+      2     4     1666.8165   107     1639.5366     1666.8873    32434    1.67%x_ENSMUSP0000005 N      2      0      1
+      3     5     1666.8873    91     1639.5366     1666.8009    32436    1.66%x_ENSMUSP0000007 U      3      1      2
+*     4+    4                         1645.4575     1666.8009    32479    1.30%
+      4     6     1666.5535    59     1645.4575     1666.7881    32479    1.30%x_ENSP0000036112 D      4      3      3
+      5     7     1666.3648    59     1645.4575     1666.7881    32492    1.30%x_ENSMUSP0000002 D      5      4      4
+      6     8     1665.5091    55     1645.4575     1666.7881    32495    1.30%x_ENSMUSP0000002 U      6      4      4
+      7     9     1666.1558    59     1645.4575     1666.7881    32505    1.30%x_ENSMUSP0000002 D      7      5      5
+*     8+    8                         1647.2341     1666.7881    32516    1.19%
+      8    10     1665.9015    54     1647.2341     1666.7881    32516    1.19%x_ENSP0000036556 D      8      7      6
+*     9+    9                         1648.0097     1666.7881    32532    1.14%
+      9    11     1665.7856    47     1648.0097     1666.7881    32532    1.14%x_ENSMUSP0000001 D      9      8      7
+*    10+   10                         1653.1975     1666.7881    32569    0.82%
+     13    14     1665.6015    53     1653.1975     1666.7881    32587    0.82%mm_ENSP000003605 U     13     11      9
+Elapsed time = 250.88 sec. (58134.39 ticks, tree = 8.88 MB, solutions = 9)
+     14    15     1665.5864    44     1653.1975     1666.7881    32733    0.82%x_ENSMUSP0000002 N     14     13     10
+     15    16     1665.5188    38     1653.1975     1666.7881    32736    0.82%x_ENSP0000029502 D     15     14     11
+     16    17     1665.3199    79     1653.1975     1666.7881    32752    0.82%mm_ENSMUSP000000 D     16     15     12
+     18    19     1665.2473    71     1653.1975     1666.7881    32757    0.82%x_ENSP0000028537 D     18     17     13
+     20    21     1665.1792    68     1653.1975     1666.7881    32784    0.82%x_ENSMUSP0000005 D     20     19     15
+     21    22     1665.1652    21     1653.1975     1666.7881    32794    0.82%z_ENSMUSP0000011 D     21     20     16
+     22    23     1665.1623    21     1653.1975     1666.7881    32798    0.82%x_ENSP0000037098 D     22     21     17
+*    24+   23                         1654.4616     1666.7881    32816    0.75%
+     24    25     1665.1221    21     1654.4616     1666.7881    32816    0.75%x_ENSP0000021797 D     24     22     18
+     25    26     1665.1213    23     1654.4616     1666.7881    32818    0.75%x_ENSMUSP0000002 D     25     24     19
+     26    27     1665.1168    23     1654.4616     1666.7881    32831    0.75%x_ENSP0000028620 D     26     25     20
+Elapsed time = 385.18 sec. (86618.57 ticks, tree = 9.60 MB, solutions = 10)
+*    27+   26                         1658.5787     1666.7881    32852    0.49%
+     28    29     1665.0119    53     1658.5787     1666.7881    32866    0.49%x_ENSMUSP0000004 D     28     26     21
+     29    30     1664.9943    26     1658.5787     1666.7881    32870    0.49%z_ENSMUSP0000011 D     29     28     22
+*    30+   29                         1660.9155     1666.7881    32889    0.35%
+     30    31     1664.9896    10     1660.9155     1666.7881    32889    0.35%x_ENSMUSP0000003 D     30     29     23
+     31    32     1664.3208    44     1660.9155     1666.7881    32924    0.35%x_ENSMUSP0000003 U     31     29     23
+*    32+   29                         1662.9356     1666.7881    32925    0.23%
+*    33+   20                         1664.3752     1666.7881    32943    0.14%
+     34    22     1664.9843    34     1664.3752     1666.7881    32945    0.14%x_ENSP0000034920 D     34     32     25
+     35    22     1664.9835     6     1664.3752     1666.7881    32946    0.14%z_ENSMUSP0000008 D     35     34     26
+     36    23     1664.9835     6     1664.3752     1666.7881    32948    0.14%z_ENSMUSP0000009 D     36     35     27
+     41    28     1664.9541     6     1664.3752     1666.7881    33094    0.14%x_ENSMUSP0000000 D     41     39     30
+*    44+   27                         1664.5891     1666.7881    33223    0.13%
+     44    29     1664.9556     5     1664.5891     1666.7881    33223    0.13%x_ENSMUSP0000005 U     44     42     32
+*    45    17      integral     0     1664.9544     1666.7881    33227    0.11%x_ENSMUSP0000008 U     45     44     33
+Elapsed time = 462.96 sec. (110737.30 ticks, tree = 1.06 MB, solutions = 16)
+     47    19     1666.0637    63     1664.9544     1666.6348    33265    0.10%x_ENSP0000036112 D     47     46      3
+     53    20     1665.2513    96     1664.9544     1666.6348    33331    0.10%z_ENSMUSP0000000 D     53     51      7
+     59    19        cutoff           1664.9544     1666.6348    33371    0.10%z_ENSMUSP0000002 D     59     57     11
+     64    21     1665.0872    66     1664.9544     1666.4463    33480    0.09%x_ENSMUSP0000001 D     64     63      6
+     70    24     1665.4251    67     1664.9544     1666.0705    33560    0.07%z_ENSMUSP0000000 D     70     69      6
+     75    26     1665.3391    59     1664.9544     1665.8997    33640    0.06%mm_ENSMUSP000000 U     75     67      4
+     80    23     1665.3812    72     1664.9544     1665.7079    33695    0.05%x_ENSP0000036112 U     80      3      3
+     85    24     1665.2448    69     1664.9544     1665.6832    33879    0.04%z_ENSMUSP0000009 D     85     84     10
+     89    22        cutoff           1664.9544     1665.5834    33910    0.04%mm_ENSMUSP000000 U     89     68      5
+     90    22     1665.4685    57     1664.9544     1665.3852    33925    0.03%x_ENSMUSP0000002 U     90      5      5
+Elapsed time = 593.96 sec. (122482.89 ticks, tree = 5.39 MB, solutions = 16)
+     91    22     1665.1103    60     1664.9544     1665.3852    33945    0.03%z_ENSMUSP0000000 D     91     90      6
+     92    23     1665.1103    57     1664.9544     1665.3852    33952    0.03%x_ENSMUSP0000002 D     92     91      7
+     97    19     1664.8869    87     1664.9544     1665.3088    34024    0.02%x_ENSP0000026364 D     97     16     13
+    103    16     1665.1796    77     1664.9544     1665.2036    34072    0.01%z_ENSMUSP0000002 D    103    102     14
+    108    20     1665.0098    31     1664.9544     1665.2036    34139    0.01%z_ENSMUSP0000011 D    108    107     19
+
+Zero-half cuts applied:  523
+Lift and project cuts applied:  2
+User cuts applied:  53
+
+Root node processing (before b&c):
+  Real time             =  167.64 sec. (30074.96 ticks)
+Sequential b&c:
+  Real time             =  496.52 sec. (99530.92 ticks)
+                          ------------
+Total (root+branch&cut) =  664.16 sec. (129605.88 ticks)
+Solved in 677.482s
+	Command being timed: "timeout 12500s /home/hsoueidan/xheinz/build/xHeinz_recomb -n1 72h/mouse_MA_scores_0.1_corrected_ensp_induced_ens59.tsv -n2 72h/human_MA_scores_0.1_corrected_ensp_induced_ens59.tsv -e1 72h/mouse_string_induced_network_0.1_ens59.tsv -e2 72h/human_string_induced_network_0.1_ens59.tsv -t 12000 -rt 4000 -cog temp_data/ensembl_cog_ALL_ens59.tsv -a 0.3"
+	User time (seconds): 775.57
+	System time (seconds): 9.48
+	Percent of CPU this job got: 114%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 11:28.22
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 28097920
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 960013
+	Voluntary context switches: 12842
+	Involuntary context switches: 1107
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

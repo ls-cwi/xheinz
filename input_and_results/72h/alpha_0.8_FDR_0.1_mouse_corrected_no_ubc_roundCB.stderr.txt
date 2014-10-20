@@ -1,0 +1,115 @@
+intEpsilon: 1e-05
+cutEpsilon: 1e-05
+Warning: Control callbacks may disable some MIP features.
+Lazy constraint(s) or lazy constraint callback is present.
+    Disabling dual reductions (CPX_PARAM_REDUCE) in presolve.
+Clique table members: 251001.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 133.41 sec. (18737.41 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0     1231.0192  2060                   1231.0192    33227         
+*     0+    0                          485.1102     1231.0192    33227  153.76%
+      0     0     1022.9479  2139      485.1102     Cuts: 674    37702  110.87%
+      0     0      984.1869  1439      485.1102     Cuts: 537    39105  102.88%
+      0     0      980.6926  1429      485.1102 ZeroHalf: 255    39690  102.16%
+      0     0      977.9096  1294      485.1102 ZeroHalf: 329    40370  101.59%
+      0     0      975.5918  1405      485.1102 ZeroHalf: 198    40620  101.11%
+      0     0      974.8371  1320      485.1102 ZeroHalf: 303    40838  100.95%
+      0     0      974.4025  1182      485.1102 ZeroHalf: 109    41006  100.86%
+*     0+    0                          490.4116      974.4025    41006   98.69%
+      0     0      974.0886  1384      490.4116 ZeroHalf: 180    41166   98.63%
+      0     0      973.5862  1372      490.4116 ZeroHalf: 234    41307   98.52%
+      0     0      973.1259  1284      490.4116 ZeroHalf: 153    41537   98.43%
+      0     0      972.9743  1302      490.4116  ZeroHalf: 46    41681   98.40%
+      0     0      972.7953  1377      490.4116 ZeroHalf: 441    41930   98.36%
+      0     0      972.4971  1357      490.4116  ZeroHalf: 24    42222   98.30%
+      0     0      972.3856  1425      490.4116  ZeroHalf: 23    42398   98.28%
+      0     0      972.2770  1376      490.4116   ZeroHalf: 9    42488   98.26%
+      0     0      972.2308  1689      490.4116  ZeroHalf: 27    42608   98.25%
+      0     0      966.0116  1856      490.4116 UserPurge1: 19    43968   96.98%
+      0     0      964.6727  1906      490.4116 UserPurge1: 205    44334   96.71%
+      0     0      964.6712  1925      490.4116 UserPurge1: 178    44429   96.71%
+      0     0      964.6706  1928      490.4116 UserPurge1: 193    44441   96.71%
+      0     0      964.6698  1918      490.4116 UserPurge1: 193    44466   96.71%
+      0     0      964.6691  1921      490.4116 UserPurge1: 176    44481   96.71%
+      0     0      964.6687  1925      490.4116 UserPurge1: 176    44491   96.71%
+      0     0      964.6681  1932      490.4116 UserPurge1: 176    44507   96.71%
+      0     0      964.6681  1937      490.4116 UserPurge1: 176    44511   96.71%
+      0     0      964.6680  1939      490.4116 UserPurge1: 176    44519   96.71%
+      0     0      964.6675  2212      490.4116 UserPurge1: 176    44536   96.71%
+      0     0      964.6667  1957      490.4116 UserPurge1: 180    44544   96.71%
+      0     0      964.6659  1934      490.4116 UserPurge1: 176    44561   96.71%
+      0     0      964.6653  1950      490.4116 UserPurge1: 176    44577   96.71%
+      0     0      964.6639  1972      490.4116 UserPurge1: 177    44601   96.70%
+      0     0      964.6631  1938      490.4116 UserPurge1: 177    44612   96.70%
+      0     0      964.6629  1984      490.4116 UserPurge1: 177    44619   96.70%
+      0     0      964.6626  1972      490.4116 UserPurge1: 169    44631   96.70%
+      0     0      964.6624  1983      490.4116 UserPurge1: 169    44642   96.70%
+      0     2      964.6624  1983      490.4116      964.4294    44642   96.66%                        0             0
+Elapsed time = 7171.28 sec. (878689.98 ticks, tree = 0.00 MB, solutions = 2)
+      1     3      963.9697  1706      490.4116      964.4288    45150   96.66%x_ENSP0000028481 D      1      0      1
+      2     4      964.2603  1979      490.4116      964.2598    45761   96.62%x_ENSP0000028481 N      2      0      1
+      3     5      963.9309  1837      490.4116      964.2598    46029   96.62%mm_ENSP000003613 U      3      1      2
+      4     6      963.4988  1717      490.4116      964.2598    46106   96.62%mm_ENSP000003613 D      4      1      2
+      5     7      963.7378  1870      490.4116      964.2598    48199   96.62%x_ENSP0000025952 N      5      3      3
+      6     8      963.5751  1861      490.4116      964.2598    49906   96.62%x_ENSP0000025952 U      6      3      3
+      7     9      963.6653  1873      490.4116      964.2598    51338   96.62%x_ENSP0000023868 D      7      5      4
+      8    10      963.1487  1651      490.4116      964.2598    53342   96.62%x_ENSP0000023868 U      8      5      4
+      9    11      963.6124  1906      490.4116      964.2598    54151   96.62%x_ENSP0000031243 N      9      7      5
+     10    12      962.4253  1772      490.4116      964.2598    55572   96.62%x_ENSMUSP0000002 D     10      9      6
+Elapsed time = 8632.72 sec. (1103036.74 ticks, tree = 8.74 MB, solutions = 2)
+     11    13      961.9886  1846      490.4116      964.2598    56852   96.62%x_ENSMUSP0000002 U     11      9      6
+     12    14      962.4088  1766      490.4116      964.2598    56889   96.62%x_ENSMUSP0000005 D     12     10      7
+     13    15      962.4086  1780      490.4116      964.2598    56898   96.62%x_ENSMUSP0000003 D     13     12      8
+     14    16      962.3998  1746      490.4116      964.2598    57113   96.62%x_ENSP0000029749 N     14     13      9
+     15    17      962.2090  1677      490.4116      964.2598    57461   96.62%x_ENSP0000022596 D     15     14     10
+     16    18      960.7263  1667      490.4116      964.2598    58050   96.62%x_ENSP0000022596 U     16     14     10
+     17    19      962.1941  1664      490.4116      964.2598    58117   96.62%x_ENSMUSP0000010 D     17     15     11
+*    18+   18                          632.3895      964.2598    59986   52.48%
+     18    20      954.9571  1043      632.3895      964.2598    59986   52.48%x_ENSMUSP0000010 U     18     15     11
+     19    21      962.1409  1671      632.3895      964.2598    60282   52.48%x_ENSP0000036380 D     19     17     12
+     20    22      958.8400  1638      632.3895      964.2598    62918   52.48%x_ENSP0000036380 N     20     17     12
+Elapsed time = 11202.10 sec. (1767922.51 ticks, tree = 9.48 MB, solutions = 3)
+     21    23      961.5044  1877      632.3895      964.2598    64830   52.48%x_ENSMUSP0000001 D     21     19     13
+     22    24      961.4869  1530      632.3895      964.2598    64925   52.48%x_ENSMUSP0000008 D     22     21     14
+     23    25      961.4031  1852      632.3895      964.2598    65150   52.48%x_ENSMUSP0000003 D     23     22     15
+
+Zero-half cuts applied:  1399
+Lift and project cuts applied:  7
+User cuts applied:  17982
+
+Root node processing (before b&c):
+  Real time             = 7171.30 sec. (878677.28 ticks)
+Sequential b&c:
+  Real time             = 4828.95 sec. (1113068.84 ticks)
+                          ------------
+Total (root+branch&cut) = 12000.25 sec. (1991746.12 ticks)
+Solved in 12013.6s
+	Command being timed: "timeout 12500s /home/hsoueidan/xheinz/build/xHeinz_recomb -n1 72h/mouse_MA_scores_0.1_corrected_ensp_induced_ens59.tsv -n2 72h/human_MA_scores_0.1_corrected_ensp_induced_ens59.tsv -e1 72h/mouse_string_induced_network_0.1_ens59.tsv -e2 72h/human_string_induced_network_0.1_ens59.tsv -t 12000 -rt 4000 -cog temp_data/ensembl_cog_ALL_ens59.tsv -a 0.8"
+	User time (seconds): 11982.86
+	System time (seconds): 97.75
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:20:24
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 56660992
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2240949
+	Voluntary context switches: 15843
+	Involuntary context switches: 30236
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

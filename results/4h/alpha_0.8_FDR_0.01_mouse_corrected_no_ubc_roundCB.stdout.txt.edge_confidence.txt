@@ -1,4 +1,0 @@
-alpha time_point specie tag fdr_thr src tgt score
-0.8 4h hsa  0.01 PTPN1 STAT3 800
-0.8 4h mmus  0.01 Il21 Stat3 800
-0.8 4h mmus  0.01 Ptpn1 Stat3 800
