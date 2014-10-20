@@ -1,0 +1,77 @@
+intEpsilon: 1e-05
+cutEpsilon: 1e-05
+Warning: Control callbacks may disable some MIP features.
+Lazy constraint(s) or lazy constraint callback is present.
+    Disabling dual reductions (CPX_PARAM_REDUCE) in presolve.
+Clique table members: 29821.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.67 sec. (162.71 ticks)
+Lazy DEBUG Label, root: ENSMUSP00000018315   y value: 1
+Lazy DEBUG Label, root: ENSP00000286639   y value: 1
+Lazy DEBUG Label, root: ENSMUSP00000018315   y value: 1
+Lazy DEBUG Label, root: ENSP00000286639   y value: 1
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0       17.0118     5                     19.6636       40         
+*     0+    0                           10.9622       17.0118       40   55.19%
+      0     0       16.9241     6       10.9622 UserPurge1: 14       45   54.39%
+      0     0       16.7031    11       10.9622 UserPurge1: 14       51   52.37%
+      0     0       16.6874    16       10.9622 UserPurge1: 13       54   52.23%
+      0     0       16.6587    12       10.9622 UserPurge1: 16       62   51.97%
+      0     0       16.6405    16       10.9622 UserPurge1: 13       65   51.80%
+      0     0       16.5922    17       10.9622 UserPurge1: 15       72   51.36%
+      0     0       16.5626    17       10.9622 UserPurge1: 16       77   51.09%
+      0     0       16.5543     7       10.9622 UserPurge1: 15       80   51.01%
+*     0+    0                           13.1294       16.5543       80   26.09%
+      0     0       16.5489    20       13.1294 UserPurge1: 12       82   26.05%
+      0     0       16.5329    21       13.1294 UserPurge1: 15       86   25.92%
+      0     0       16.5228    19       13.1294 UserPurge1: 10       88   25.85%
+      0     0       16.5186    13       13.1294 UserPurge1: 11       92   25.81%
+      0     0       16.5003     7       13.1294 UserPurge1: 18       97   25.67%
+      0     0       16.4598    15       13.1294 UserPurge1: 12      109   25.37%
+      0     0       16.3986     8       13.1294 UserPurge1: 14      114   24.90%
+      0     0       16.3904     8       13.1294 UserPurge1: 12      117   24.84%
+      0     0       16.3544    27       13.1294 UserPurge1: 12      123   24.56%
+      0     0       16.3322    19       13.1294 UserPurge1: 10      126   24.39%
+      0     0       16.2522     8       13.1294 UserPurge1: 25      145   23.79%
+      0     0       16.1948     6       13.1294 UserPurge1: 16      159   23.35%
+*     0     0      integral     0       16.1936 UserPurge1: 8      160    0.00%
+      0     0        cutoff             16.1936       16.1936      160    0.00%                        0             0
+Elapsed time = 26.53 sec. (4591.03 ticks, tree = 0.00 MB, solutions = 3)
+
+User cuts applied:  64
+
+Root node processing (before b&c):
+  Real time             =   26.55 sec. (4592.92 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =   26.55 sec. (4592.92 ticks)
+Solved in 40.634s
+	Command being timed: "timeout 12500s /home/hsoueidan/xheinz/build/xHeinz_recomb -n1 4h/mouse_MA_scores_0.1_corrected_ensp_induced_ens59.tsv -n2 4h/human_MA_scores_0.1_corrected_ensp_induced_ens59.tsv -e1 4h/mouse_string_induced_network_0.1_ens59.tsv -e2 4h/human_string_induced_network_0.1_ens59.tsv -t 24000 -rt 4000 -cog temp_data/ensembl_cog_ALL_ens59.tsv -a 0.0"
+	User time (seconds): 50.09
+	System time (seconds): 1.31
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:51.23
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 12780304
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 203471
+	Voluntary context switches: 114
+	Involuntary context switches: 292
+	Swaps: 0
+	File system inputs: 2632
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

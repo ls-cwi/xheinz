@@ -1,0 +1,639 @@
+intEpsilon: 1e-05
+cutEpsilon: 1e-05
+Warning: Control callbacks may disable some MIP features.
+Lazy constraint(s) or lazy constraint callback is present.
+    Disabling dual reductions (CPX_PARAM_REDUCE) in presolve.
+Clique table members: 140647.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 106.96 sec. (20766.18 ticks)
+Lazy DEBUG Label, root: ENSMUSP00000000642   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0      492.9365    10                    504.0165    14115         
+*     0+    0                          463.1888      492.9365    14115    6.42%
+      0     0      492.7142    10      463.1888   ZeroHalf: 5    14128    6.37%
+*     0+    0                          471.5889      492.7142    14128    4.48%
+      0     0      492.5771     6      471.5889   ZeroHalf: 1    14134    4.45%
+      0     0      492.4972    10      471.5889 UserPurge1: 88    14139    4.43%
+      0     0      492.4777    12      471.5889   ZeroHalf: 1    14141    4.43%
+      0     0      492.4192     6      471.5889   ZeroHalf: 1    14142    4.42%
+      0     0      492.3988    11      471.5889 UserPurge1: 5    14143    4.41%
+      0     0      492.2444     9      471.5889 UserPurge1: 93    14148    4.38%
+      0     0      492.1459     9      471.5889 UserPurge1: 92    14157    4.36%
+      0     0      492.1020    24      471.5889 UserPurge1: 93    14173    4.35%
+      0     0      492.0759    16      471.5889 UserPurge1: 95    14178    4.34%
+      0     0      492.0385    14      471.5889 UserPurge1: 97    14184    4.34%
+      0     0      492.0340    21      471.5889 UserPurge1: 96    14190    4.34%
+      0     0      492.0139     6      471.5889 UserPurge1: 100    14196    4.33%
+      0     0      492.0089    26      471.5889 UserPurge1: 91    14200    4.33%
+      0     0      492.0070    28      471.5889 UserPurge1: 82    14201    4.33%
+      0     0      492.0036    30      471.5889 UserPurge1: 82    14203    4.33%
+      0     0      491.9902    29      471.5889 UserPurge1: 91    14210    4.33%
+      0     0      491.9898    33      471.5889 UserPurge1: 82    14211    4.33%
+      0     0      491.9888    23      471.5889 UserPurge1: 82    14212    4.33%
+      0     0      491.9604    28      471.5889 UserPurge1: 104    14225    4.32%
+      0     0      491.9581    32      471.5889 UserPurge1: 83    14228    4.32%
+      0     0      491.9580    27      471.5889 UserPurge1: 83    14230    4.32%
+      0     0      491.9580    34      471.5889 UserPurge1: 83    14231    4.32%
+      0     0      491.9553    32      471.5889 UserPurge1: 84    14236    4.32%
+      0     0      491.9535    36      471.5889 UserPurge1: 83    14239    4.32%
+      0     0      491.9520    31      471.5889 UserPurge1: 84    14240    4.32%
+      0     0      491.9518    30      471.5889 UserPurge1: 83    14241    4.32%
+      0     0      491.9509    37      471.5889 UserPurge1: 83    14245    4.32%
+      0     0      491.9480    29      471.5889 UserPurge1: 84    14252    4.32%
+      0     0      491.9478    37      471.5889 UserPurge1: 83    14254    4.32%
+      0     0      491.9471    29      471.5889 UserPurge1: 84    14258    4.32%
+      0     0      491.9469    34      471.5889 UserPurge1: 81    14259    4.32%
+      0     0      491.9462    30      471.5889 UserPurge1: 81    14260    4.32%
+      0     0      491.9461    30      471.5889 UserPurge1: 81    14261    4.32%
+      0     0      491.9460    36      471.5889 UserPurge1: 81    14262    4.32%
+      0     0      491.9445    32      471.5889 UserPurge1: 81    14266    4.32%
+      0     0      491.9444    35      471.5889 UserPurge1: 81    14267    4.32%
+      0     0      491.9443    33      471.5889 UserPurge1: 81    14268    4.32%
+      0     0      491.9442    36      471.5889 UserPurge1: 81    14269    4.32%
+      0     0      491.9438    33      471.5889 UserPurge1: 81    14270    4.32%
+      0     0      491.9437    34      471.5889 UserPurge1: 81    14271    4.32%
+      0     0      491.9435    14      471.5889 UserPurge1: 81    14272    4.32%
+      0     0      491.9428    38      471.5889 UserPurge1: 97    14276    4.32%
+      0     0      491.9409    37      471.5889 UserPurge1: 81    14280    4.32%
+      0     0      491.9408    39      471.5889 UserPurge1: 81    14282    4.32%
+      0     0      491.9399    38      471.5889 UserPurge1: 82    14284    4.32%
+      0     0      491.9394    38      471.5889 UserPurge1: 81    14285    4.32%
+      0     0      491.9392    37      471.5889 UserPurge1: 80    14286    4.32%
+      0     0      491.9388    38      471.5889 UserPurge1: 82    14288    4.32%
+      0     0      491.9384    41      471.5889 UserPurge1: 81    14290    4.32%
+      0     0      491.9372    32      471.5889 UserPurge1: 82    14293    4.31%
+      0     0      491.9370    34      471.5889 UserPurge1: 82    14294    4.31%
+      0     0      491.9366    33      471.5889 UserPurge1: 81    14297    4.31%
+      0     0      491.9365    33      471.5889 UserPurge1: 82    14298    4.31%
+      0     0      491.9365    35      471.5889 UserPurge1: 82    14299    4.31%
+      0     0      491.9364    33      471.5889 UserPurge1: 82    14300    4.31%
+      0     0      491.9364    33      471.5889 UserPurge1: 82    14302    4.31%
+      0     0      491.9364    35      471.5889 UserPurge1: 82    14304    4.31%
+      0     0      491.9363    34      471.5889 UserPurge1: 82    14306    4.31%
+      0     0      491.9363    34      471.5889 UserPurge1: 82    14307    4.31%
+      0     0      491.9363    36      471.5889 UserPurge1: 82    14308    4.31%
+      0     0      491.9362    22      471.5889 UserPurge1: 82    14310    4.31%
+      0     0      491.9331    33      471.5889 UserPurge1: 101    14316    4.31%
+      0     0      491.9330    38      471.5889 UserPurge1: 82    14317    4.31%
+      0     0      491.9324    27      471.5889 UserPurge1: 83    14320    4.31%
+      0     0      491.9323    36      471.5889 UserPurge1: 81    14323    4.31%
+      0     0      491.9316    39      471.5889 UserPurge1: 83    14329    4.31%
+      0     0      491.9313    38      471.5889 UserPurge1: 83    14335    4.31%
+      0     0      491.9312    42      471.5889 UserPurge1: 83    14345    4.31%
+      0     0      491.9300    38      471.5889 UserPurge1: 83    14355    4.31%
+      0     0      491.9293    40      471.5889 UserPurge1: 83    14357    4.31%
+      0     0      491.9287    38      471.5889 UserPurge1: 82    14362    4.31%
+      0     0      491.9285    41      471.5889 UserPurge1: 83    14365    4.31%
+      0     0      491.9282    41      471.5889 UserPurge1: 83    14368    4.31%
+      0     0      491.9279    38      471.5889 UserPurge1: 82    14372    4.31%
+      0     0      491.9278    41      471.5889 UserPurge1: 81    14373    4.31%
+      0     0      491.9274    31      471.5889 UserPurge1: 81    14375    4.31%
+      0     0      491.9273    38      471.5889 UserPurge1: 83    14376    4.31%
+      0     0      491.9272    41      471.5889 UserPurge1: 83    14381    4.31%
+      0     0      491.9271    41      471.5889 UserPurge1: 83    14385    4.31%
+      0     0      491.9270    44      471.5889 UserPurge1: 82    14387    4.31%
+      0     0      491.9267    43      471.5889 UserPurge1: 82    14393    4.31%
+      0     0      491.9267    17      471.5889 UserPurge1: 83    14397    4.31%
+      0     0      491.9259    31      471.5889 UserPurge1: 99    14405    4.31%
+      0     2      491.9259    31      471.5889      491.9253    14405    4.31%                        0             0
+Elapsed time = 691.61 sec. (169466.14 ticks, tree = 0.00 MB, solutions = 2)
+      1     3      491.8950    27      471.5889      491.9253    14431    4.31%x_ENSP0000033410 D      1      0      1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+      2     4      491.5194    12      471.5889      491.9253    14441    4.31%x_ENSP0000026416 U      2      1      2
+      3     5      491.6545    45      471.5889      491.9253    14563    4.31%x_ENSP0000026416 N      3      1      2
+      4     6      491.6138    38      471.5889      491.9253    14580    4.31%x_ENSP0000021583 D      4      3      3
+      5     7      491.5600    32      471.5889      491.9253    14587    4.31%x_ENSP0000030008 D      5      4      4
+      6     8      491.1809    33      471.5889      491.9253    14851    4.31%x_ENSP0000025103 N      6      5      5
+      7     9      491.1655    35      471.5889      491.9253    14877    4.31%x_ENSP0000030400 D      7      6      6
+      8    10      490.6673    13      471.5889      491.9253    14905    4.31%x_ENSP0000033161 U      8      7      7
+      9    11      491.1269    22      471.5889      491.9253    14929    4.31%x_ENSP0000033161 D      9      7      7
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     10    12      491.0092    23      471.5889      491.9253    14968    4.31%x_ENSP0000036014 N     10      9      8
+Elapsed time = 845.73 sec. (205783.89 ticks, tree = 3.31 MB, solutions = 2)
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+*    11+   11                          475.1828      491.9253    14977    3.52%
+     12    14      491.0068    25      475.1828      491.9253    14982    3.52%x_ENSP0000031299 D     12     10      9
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+*    13+   13                          479.4510      491.9253    14993    2.60%
+     13    15      490.8283     5      479.4510      491.9253    14993    2.60%x_ENSP0000027229 U     13     11     10
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+*    14+   14                          482.0633      491.9253    14994    2.05%
+     14    16      490.6921     8      482.0633      491.9253    14994    2.05%x_ENSP0000024126 U     14     13     11
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     15    17      490.6752     9      482.0633      491.9253    14996    2.05%x_ENSP0000035413 D     15     14     12
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     16    18      490.3451     6      482.0633      491.9253    15005    2.05%x_ENSP0000030989 U     16     15     13
+*    17+   17                          482.3380      491.9253    15006    1.99%
+     18    20      490.6112     4      482.3380      491.9253    15014    1.99%x_ENSP0000033150 D     18     17     14
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     19    21      487.5560     5      482.3380      491.9253    15023    1.99%x_ENSP0000033715 U     19     18     15
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     20    22      487.4671     4      482.3380      491.9253    15027    1.99%x_ENSP0000036398 D     20     19     16
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     22    24      486.8465     4      482.3380      491.9253    15031    1.99%x_ENSP0000026134 D     22     21     17
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     23    25      486.6562     4      482.3380      491.9253    15032    1.99%x_ENSP0000025248 D     23     22     18
+Elapsed time = 948.52 sec. (228396.02 ticks, tree = 4.00 MB, solutions = 6)
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     24    26      486.6388     8      482.3380      491.9253    15033    1.99%x_ENSP0000036308 D     24     23     19
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     25    27      486.5242     5      482.3380      491.9253    15382    1.99%x_ENSP0000029430 N     25     24     20
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     26    28      486.1985     5      482.3380      491.9253    15383    1.99%x_ENSP0000024691 U     26     25     21
+     27    29      486.5236     3      482.3380      491.9253    15386    1.99%x_ENSP0000024691 D     27     25     21
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     28    30      486.1974     5      482.3380      491.9253    15387    1.99%x_ENSP0000033743 U     28     27     22
+     29    31      486.5024     4      482.3380      491.9253    15389    1.99%x_ENSP0000033743 D     29     27     22
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     30    32      486.2960     5      482.3380      491.9253    15391    1.99%x_ENSP0000034863 D     30     29     23
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     31    33      486.1550     5      482.3380      491.9253    15392    1.99%x_ENSP0000025647 D     31     30     24
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     32    34      485.9904     5      482.3380      491.9253    15395    1.99%x_ENSP0000025647 U     32     30     24
+     33    35      486.0718     5      482.3380      491.9253    15398    1.99%x_ENSP0000037215 D     33     31     25
+Elapsed time = 1092.75 sec. (259859.03 ticks, tree = 4.53 MB, solutions = 6)
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     34    36      486.0364     5      482.3380      491.9253    15400    1.99%x_ENSP0000029751 D     34     33     26
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     35    37      484.3597     7      482.3380      491.9253    15414    1.99%x_ENSP0000034342 U     35     34     27
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     37    39      485.9426     5      482.3380      491.9253    15420    1.99%x_ENSP0000039242 D     37     36     28
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     38    40      482.7875     4      482.3380      491.9253    15422    1.99%x_ENSP0000029602 U     38     37     29
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     39    41      482.6258     4      482.3380      491.9253    15423    1.99%x_ENSP0000026502 D     39     38     30
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     40    40        cutoff            482.3380      491.9253    15433    1.99%x_ENSP0000026502 U     40     38     30
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     41    41      482.6148     4      482.3380      491.9253    15434    1.99%x_ENSP0000031513 U     41     39     31
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     42    40        cutoff            482.3380      491.9253    15436    1.99%x_ENSP0000024334 U     42     41     32
+     43    41      482.6016     4      482.3380      491.9253    15438    1.99%x_ENSP0000024334 D     43     41     32
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     44    40        cutoff            482.3380      491.9253    15441    1.99%x_ENSP0000036401 U     44     43     33
+Elapsed time = 1217.66 sec. (287350.39 ticks, tree = 4.85 MB, solutions = 6)
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     45    41      482.4588    10      482.3380      491.9253    15451    1.99%x_ENSP0000036401 N     45     43     33
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     46    40        cutoff            482.3380      491.9253    15454    1.99%x_ENSP0000022230 U     46     45     34
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     48    41      482.4072     5      482.3380      491.9253    15461    1.99%x_ENSP0000026232 D     48     47     35
+     50    40        cutoff            482.3380      491.9253    15464    1.99%x_ENSP0000024271 U     50     49     37
+     51    41      491.7955    17      482.3380      491.7883    15508    1.96%x_ENSP0000033410 U     51      0      1
+     53    43      491.1313     8      482.3380      491.7479    15521    1.95%x_ENSP0000030008 U     53     51      2
+     55    45      490.8701    21      482.3380      491.6130    15660    1.92%x_ENSP0000025103 N     55     54      4
+     57    47      490.8151    13      482.3380      491.6130    15672    1.92%x_ENSP0000027229 U     57     56      6
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     58    48      490.6481     6      482.3380      491.6130    15683    1.92%x_ENSP0000036341 D     58     57      7
+     60    50      490.8021    16      482.3380      491.6130    15691    1.92%x_ENSP0000035512 U     60     59      8
+Elapsed time = 1446.73 sec. (339400.16 ticks, tree = 16.81 MB, solutions = 6)
+     62    52      490.7273    13      482.3380      491.6130    15698    1.92%x_ENSP0000035878 D     62     61     10
+     63    53      490.6094    15      482.3380      491.6130    16134    1.92%x_ENSP0000026600 U     63     62     11
+     64    54      490.1038    25      482.3380      491.6130    18319    1.92%x_ENSP0000036014 N     64     63     12
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     65    55      488.4616     7      482.3380      491.6130    19320    1.92%x_ENSP0000036014 U     65     63     12
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     66    56      488.3572     5      482.3380      491.6130    19324    1.92%x_ENSP0000038766 U     66     65     13
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     67    57      488.2319     8      482.3380      491.6130    19326    1.92%x_ENSP0000024126 U     67     66     14
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     68    58      488.0640     8      482.3380      491.6130    19327    1.92%x_ENSP0000024126 D     68     66     14
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     69    59      487.9383     8      482.3380      491.6130    19333    1.92%x_ENSP0000026416 U     69     67     15
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     71    61      488.1684     8      482.3380      491.6130    19337    1.92%x_ENSP0000033150 D     71     70     16
+     73    63      488.1184     4      482.3380      491.6130    19341    1.92%x_ENSP0000035413 D     73     72     18
+Elapsed time = 1827.54 sec. (426266.40 ticks, tree = 20.40 MB, solutions = 6)
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     74    64      488.1066     5      482.3380      491.6130    19342    1.92%x_ENSP0000026456 D     74     73     19
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     75    65      487.8328     4      482.3380      491.6130    19347    1.92%x_ENSP0000034435 D     75     74     20
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     76    66      487.8023     3      482.3380      491.6130    19348    1.92%x_ENSP0000022476 D     76     75     21
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     77    67      487.7350     5      482.3380      491.6130    19349    1.92%x_ENSP0000026134 D     77     76     22
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     78    68      487.6496     9      482.3380      491.6130    19352    1.92%x_ENSP0000020594 D     78     77     23
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     79    69      487.6257     4      482.3380      491.6130    19353    1.92%x_ENSP0000025164 D     79     78     24
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     80    70      484.7117     5      482.3380      491.6130    19363    1.92%x_ENSP0000035339 U     80     79     25
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     81    69        cutoff            482.3380      491.6130    19365    1.92%x_ENSP0000036648 U     81     80     26
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     82    70      484.3452     3      482.3380      491.6130    19367    1.92%x_ENSP0000036648 D     82     80     26
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     84    72      484.2641     6      482.3380      491.6130    19370    1.92%x_ENSP0000036921 D     84     83     28
+Elapsed time = 2039.29 sec. (466310.62 ticks, tree = 20.84 MB, solutions = 6)
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     85    73      483.9074     6      482.3380      491.6130    19375    1.92%x_ENSP0000036921 U     85     83     28
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     86    74      484.2509     6      482.3380      491.6130    19376    1.92%x_ENSP0000024334 D     86     84     29
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     88    76      484.1720     4      482.3380      491.6130    19379    1.92%x_ENSP0000021588 D     88     87     31
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     89    75        cutoff            482.3380      491.6130    19387    1.92%x_ENSP0000021809 U     89     88     32
+     90    76      484.1659     4      482.3380      491.6130    19388    1.92%x_ENSP0000021809 D     90     88     32
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     91    77      483.4461     3      482.3380      491.6130    19389    1.92%x_ENSP0000033496 U     91     90     33
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     92    78      482.7109     3      482.3380      491.6130    19390    1.92%x_ENSP0000028319 U     92     91     34
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     93    77        cutoff            482.3380      491.6130    19391    1.92%x_ENSP0000001380 U     93     92     35
+     94    78      482.7025     8      482.3380      491.6130    19392    1.92%x_ENSP0000001380 D     94     92     35
+     95    79      482.6955     3      482.3380      491.6130    19393    1.92%x_ENSP0000029092 D     95     94     36
+Elapsed time = 2301.49 sec. (511681.54 ticks, tree = 21.28 MB, solutions = 6)
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     96    78        cutoff            482.3380      491.6130    19394    1.92%x_ENSP0000004679 U     96     95     37
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     97    79      482.5767     3      482.3380      491.6130    19399    1.92%x_ENSP0000004679 N     97     95     37
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+     98    78        cutoff            482.3380      491.6130    19400    1.92%x_ENSP0000034612 U     98     97     38
+     99    78      482.5627     5      482.3380      491.6130    19404    1.92%x_ENSP0000034612 D     99     97     38
+    100    79      482.5605     3      482.3380      491.6130    19405    1.92%x_ENSP0000030821 D    100     99     39
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    101    78        cutoff            482.3380      491.6130    19408    1.92%x_ENSP0000029951 U    101    100     40
+    102    79      482.5582     3      482.3380      491.6130    19409    1.92%x_ENSP0000029951 D    102    100     40
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    103    78        cutoff            482.3380      491.6130    19412    1.92%x_ENSP0000033963 U    103    102     41
+    104    79      482.5526     5      482.3380      491.6130    19417    1.92%x_ENSP0000033963 D    104    102     41
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    105    78        cutoff            482.3380      491.6130    19421    1.92%x_ENSP0000016422 U    105    104     42
+Elapsed time = 2523.58 sec. (550110.93 ticks, tree = 21.28 MB, solutions = 6)
+    106    79      482.5512     3      482.3380      491.6130    19425    1.92%x_ENSP0000016422 D    106    104     42
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    107    78        cutoff            482.3380      491.6130    19428    1.92%x_ENSP0000030136 U    107    106     43
+    108    79      482.5396     3      482.3380      491.6130    19431    1.92%x_ENSP0000030136 D    108    106     43
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    109    78        cutoff            482.3380      491.6130    19437    1.92%x_ENSP0000032474 U    109    108     44
+    110    79      482.5363     3      482.3380      491.6130    19438    1.92%x_ENSP0000032474 D    110    108     44
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    111    79      482.4753     6      482.3380      491.6130    19439    1.92%x_ENSP0000031513 U    111    110     45
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    112    79      482.4488    11      482.3380      491.6130    19440    1.92%x_ENSP0000022598 D    112    111     46
+    113    79      482.4042    10      482.3380      491.6130    19443    1.92%x_ENSP0000036905 D    113    112     47
+    114    79      482.3922     6      482.3380      491.6130    19444    1.92%x_ENSP0000039004 D    114    113     48
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    115    78      482.3394     6      482.3380      491.6130    19449    1.92%x_ENSP0000036913 N    115    114     49
+Elapsed time = 2904.14 sec. (607127.64 ticks, tree = 21.28 MB, solutions = 6)
+    118    81      490.7033     6      482.3380      491.4566    19498    1.89%x_ENSP0000036014 D    118    117      6
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    120    83      488.8797     3      482.3380      491.4566    19526    1.89%x_ENSP0000033161 D    120    119      8
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    121    84      488.5244    12      482.3380      491.4566    19527    1.89%x_ENSP0000026134 D    121    120      9
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    123    86      488.4453     9      482.3380      491.4566    19529    1.89%x_ENSP0000022189 D    123    122     11
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    125    88      488.4018     5      482.3380      491.4566    19533    1.89%x_ENSP0000036931 D    125    124     13
+    126    89      488.3815     8      482.3380      491.4566    19535    1.89%x_ENSP0000027229 U    126    125     14
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    128    91      488.3326     5      482.3380      491.4566    19543    1.89%x_ENSP0000034435 D    128    127     16
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    130    93      488.2459     7      482.3380      491.4566    19546    1.89%x_ENSP0000025248 D    130    129     18
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    131    94      488.2278     5      482.3380      491.4566    19547    1.89%x_ENSP0000029430 U    131    130     19
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    133    96      488.0276     4      482.3380      491.4566    19550    1.89%x_ENSP0000026232 D    133    132     21
+Elapsed time = 3339.49 sec. (661552.47 ticks, tree = 28.19 MB, solutions = 6)
+    135    98      487.4477    16      482.3380      491.4566    19679    1.89%x_ENSP0000038242 N    135    134     23
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    136    99      485.5769     5      482.3380      491.4566    19716    1.89%x_ENSP0000034779 U    136    135     24
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    137   100      485.4275     7      482.3380      491.4566    19717    1.89%x_ENSP0000038092 U    137    136     25
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    138   101      485.4133     7      482.3380      491.4566    19718    1.89%x_ENSP0000036606 D    138    137     26
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    139   102      482.9125     9      482.3380      491.4566    19736    1.89%x_ENSP0000031998 U    139    138     27
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    142   105      482.6092     4      482.3380      491.4566    19744    1.89%x_ENSP0000028498 D    142    141     30
+    144   106      482.4823     6      482.3380      491.4566    19750    1.89%x_ENSP0000035886 D    144    143     32
+    147   107      482.4040     5      482.3380      491.4566    19760    1.89%x_ENSP0000030836 D    147    146     35
+    150   108      490.3813    10      482.3380      491.3573    19801    1.87%x_ENSP0000033161 U    150    149      4
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    152   110      490.0595    12      482.3380      491.3573    19824    1.87%x_ENSP0000024899 D    152    151      6
+Elapsed time = 4191.99 sec. (782702.56 ticks, tree = 28.97 MB, solutions = 6)
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    154   112      489.9804     9      482.3380      491.3573    19827    1.87%x_ENSP0000035512 U    154    153      8
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    155   113      489.8307    14      482.3380      491.3573    19845    1.87%x_ENSP0000035878 N    155    154      9
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    157   115      489.7857    12      482.3380      491.3573    19850    1.87%x_ENSP0000024126 U    157    156     11
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    159   117      489.6454    11      482.3380      491.3573    19856    1.87%x_ENSP0000038500 U    159    158     13
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    160   118      489.6298    12      482.3380      491.3573    19857    1.87%x_ENSP0000036606 D    160    159     14
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    161   119      487.3759     4      482.3380      491.3573    19871    1.87%x_ENSP0000022631 U    161    160     15
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    163   121      487.1958     6      482.3380      491.3573    19876    1.87%x_ENSP0000038133 D    163    162     17
+    166   124      487.0507     6      482.3380      491.3573    19884    1.87%x_ENSP0000032881 D    166    165     20
+    169   127      486.9394     6      482.3380      491.3573    19888    1.87%x_ENSP0000028498 D    169    168     23
+    171   129      486.9078    12      482.3380      491.3573    19895    1.87%x_ENSP0000031998 D    171    170     25
+Elapsed time = 4899.22 sec. (918238.16 ticks, tree = 30.03 MB, solutions = 6)
+    173   131      486.4816    17      482.3380      491.3573    20015    1.87%x_ENSP0000024655 N    173    172     27
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    174   132      484.5780     5      482.3380      491.3573    20041    1.87%x_ENSP0000030332 U    174    173     28
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    176   134      483.2429    10      482.3380      491.3573    20046    1.87%x_ENSP0000036921 D    176    175     30
+    177   134      483.1959    11      482.3380      491.3573    20047    1.87%x_ENSP0000036580 D    177    176     31
+    180   137      483.1896    13      482.3380      491.3573    20052    1.87%x_ENSP0000028764 D    180    179     34
+    181   137      483.1722    11      482.3380      491.3573    20053    1.87%x_ENSP0000038728 D    181    180     35
+    183   138      483.1623    11      482.3380      491.3573    20056    1.87%x_ENSP0000038766 D    183    182     37
+    185   138      483.1582    11      482.3380      491.3573    20058    1.87%x_ENSP0000031030 D    185    184     39
+    187   138      483.1444    10      482.3380      491.3573    20060    1.87%x_ENSP0000023437 D    187    186     41
+    189   138      483.1419    11      482.3380      491.3573    20062    1.87%x_ENSP0000036166 D    189    188     43
+Elapsed time = 5739.13 sec. (1031658.66 ticks, tree = 30.59 MB, solutions = 6)
+    190   138      482.9274     8      482.3380      491.3573    20256    1.87%x_ENSP0000026557 N    190    189     44
+    191   138      482.9274    26      482.3380      491.3573    20269    1.87%x_ENSP0000032351 D    191    190     45
+    192   138      482.9231    17      482.3380      491.3573    20277    1.87%x_ENSP0000024598 D    192    191     46
+    193   138      482.9228    22      482.3380      491.3573    20282    1.87%x_ENSP0000036114 D    193    192     47
+    194   138      482.9227    22      482.3380      491.3573    20284    1.87%x_ENSP0000031963 D    194    193     48
+    196   139      482.9212    19      482.3380      491.3573    20287    1.87%x_ENSP0000028180 D    196    195     50
+    198   140      482.9128     8      482.3380      491.3573    20302    1.87%x_ENSP0000033444 D    198    197     52
+    199   140      482.9087     8      482.3380      491.3573    20315    1.87%x_ENSP0000030476 D    199    198     53
+    200   140      482.9087    14      482.3380      491.3573    20326    1.87%x_ENSP0000025601 D    200    199     54
+    201   140      482.9050    19      482.3380      491.3573    20339    1.87%x_ENSP0000029230 D    201    200     55
+Elapsed time = 6548.82 sec. (1156968.62 ticks, tree = 30.70 MB, solutions = 6)
+    202   140      482.9046    26      482.3380      491.3573    20343    1.87%x_ENSP0000036793 D    202    201     56
+    203   140      482.9043     8      482.3380      491.3573    20344    1.87%x_ENSP0000026421 D    203    202     57
+    205   141      482.8748    39      482.3380      491.3573    20424    1.87%x_ENSP0000039004 N    205    204     59
+    206   142      482.8743    28      482.3380      491.3573    20434    1.87%x_ENSP0000030744 D    206    205     60
+    209   145      482.8692    22      482.3380      491.3573    20440    1.87%x_ENSP0000024611 D    209    208     63
+    211   146      482.8631    20      482.3380      491.3573    20444    1.87%x_ENSP0000030345 D    211    210     65
+    212   146      482.8554    20      482.3380      491.3573    20445    1.87%x_ENSP0000030197 D    212    211     66
+    213   146      482.8551    19      482.3380      491.3573    20446    1.87%x_ENSP0000026737 D    213    212     67
+    214   146      482.8454    20      482.3380      491.3573    20447    1.87%x_ENSP0000026295 D    214    213     68
+    215   146      482.8454    20      482.3380      491.3573    20449    1.87%x_ENSP0000034435 D    215    214     69
+Elapsed time = 7026.50 sec. (1236916.39 ticks, tree = 31.04 MB, solutions = 6)
+    217   147      482.8370    20      482.3380      491.3573    20451    1.87%x_ENSP0000021730 D    217    216     71
+    218   147      482.8366    20      482.3380      491.3573    20452    1.87%x_ENSP0000029972 D    218    217     72
+    219   147      482.8359    20      482.3380      491.3573    20454    1.87%x_ENSP0000025685 D    219    218     73
+    220   147      482.8333    20      482.3380      491.3573    20455    1.87%x_ENSP0000032424 D    220    219     74
+    221   147      482.6278    24      482.3380      491.3573    20746    1.87%x_ENSP0000030981 N    221    220     75
+    222   147      482.6276    24      482.3380      491.3573    20750    1.87%x_ENSP0000024215 D    222    221     76
+    223   147      482.6260    24      482.3380      491.3573    20751    1.87%x_ENSP0000036240 D    223    222     77
+    224   147      482.6260    25      482.3380      491.3573    20757    1.87%x_ENSP0000035873 D    224    223     78
+    225   147      482.6254    24      482.3380      491.3573    20760    1.87%x_ENSP0000035485 D    225    224     79
+    227   148      482.6224    24      482.3380      491.3573    20778    1.87%x_ENSP0000036905 D    227    226     81
+Elapsed time = 7799.89 sec. (1398766.82 ticks, tree = 31.15 MB, solutions = 6)
+    229   149      482.6206    25      482.3380      491.3573    20790    1.87%x_ENSP0000026502 D    229    228     83
+    230   149      482.6206    23      482.3380      491.3573    20792    1.87%x_ENSP0000025690 D    230    229     84
+    232   150      482.6184    26      482.3380      491.3573    20799    1.87%x_ENSP0000000525 D    232    231     86
+    233   150      482.6170    26      482.3380      491.3573    20802    1.87%x_ENSP0000026357 D    233    232     87
+    234   150      482.6166    25      482.3380      491.3573    20806    1.87%x_ENSP0000035964 D    234    233     88
+    236   150      482.5932    30      482.3380      491.3573    20831    1.87%x_ENSP0000030624 D    236    235     90
+    238   149        cutoff            482.3380      491.3573    20925    1.87%x_ENSP0000035461 N    238    237     92
+    240   151      489.6560    18      482.3380      491.1851    20969    1.83%x_ENSP0000033161 D    240    239      4
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    243   154      488.9973    12      482.3380      491.1851    20992    1.83%x_ENSP0000024899 D    243    242      7
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    245   156      488.9182     9      482.3380      491.1851    20995    1.83%x_ENSP0000035512 U    245    244      9
+Elapsed time = 8416.52 sec. (1497818.00 ticks, tree = 34.68 MB, solutions = 6)
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    247   158      488.8746     5      482.3380      491.1851    20999    1.83%x_ENSP0000036931 D    247    246     11
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    249   160      488.8461     7      482.3380      491.1851    21006    1.83%x_ENSP0000030281 D    249    248     13
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    251   162      488.7187     7      482.3380      491.1851    21014    1.83%x_ENSP0000025248 D    251    250     15
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    252   163      488.7006     5      482.3380      491.1851    21015    1.83%x_ENSP0000029430 U    252    251     16
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    253   164      488.6673     8      482.3380      491.1851    21017    1.83%x_ENSP0000024126 U    253    252     17
+    255   166      488.5004     4      482.3380      491.1851    21032    1.83%x_ENSP0000026232 D    255    254     19
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    257   168      488.1058     4      482.3380      491.1851    21034    1.83%x_ENSP0000036308 D    257    256     21
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    258   169      488.0485     4      482.3380      491.1851    21035    1.83%x_ENSP0000026074 D    258    257     22
+    259   170      488.0348     5      482.3380      491.1851    21036    1.83%x_ENSP0000033150 D    259    258     23
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    260   171      487.7572    13      482.3380      491.1851    21038    1.83%x_ENSP0000038242 D    260    259     24
+Elapsed time = 9111.39 sec. (1563737.75 ticks, tree = 41.80 MB, solutions = 6)
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    262   173      487.7300     8      482.3380      491.1851    21042    1.83%x_ENSP0000030368 D    262    261     26
+    263   174      487.6986    10      482.3380      491.1851    21046    1.83%x_ENSP0000028498 U    263    262     27
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    264   175      485.1317    10      482.3380      491.1851    21051    1.83%x_ENSP0000026173 U    264    263     28
+    267   178      485.1045     9      482.3380      491.1851    21059    1.83%x_ENSP0000035413 D    267    266     31
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    268   179      484.3338     6      482.3380      491.1851    21072    1.83%x_ENSP0000026214 U    268    267     32
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    269   180      483.5108     5      482.3380      491.1851    21073    1.83%x_ENSP0000029092 D    269    268     33
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    270   181      483.3666     8      482.3380      491.1851    21078    1.83%x_ENSP0000026460 D    270    269     34
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    271   182      483.2222    10      482.3380      491.1851    21952    1.83%x_ENSP0000021583 D    271    270     35
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    272   183      483.1972     4      482.3380      491.1851    21953    1.83%x_ENSP0000026136 D    272    271     36
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    273   184      482.9947     5      482.3380      491.1851    21954    1.83%x_ENSP0000036345 D    273    272     37
+Elapsed time = 9910.56 sec. (1667893.76 ticks, tree = 42.54 MB, solutions = 6)
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    274   185      482.7949     6      482.3380      491.1851    21955    1.83%x_ENSP0000020594 D    274    273     38
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    275   184        cutoff            482.3380      491.1851    21962    1.83%x_ENSP0000030816 U    275    274     39
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    276   185      482.6994     9      482.3380      491.1851    21965    1.83%x_ENSP0000030816 N    276    274     39
+    277   186      482.6975     4      482.3380      491.1851    21966    1.83%x_ENSP0000035339 D    277    276     40
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    278   185        cutoff            482.3380      491.1851    21967    1.83%x_ENSP0000030245 U    278    277     41
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    281   188      482.6582     4      482.3380      491.1851    21971    1.83%x_ENSP0000036921 D    281    280     43
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    282   189      482.6552    10      482.3380      491.1851    21972    1.83%x_ENSP0000032417 D    282    281     44
+    283   189      482.6516     4      482.3380      491.1851    21975    1.83%z_ENSMUSP0000001 D    283    282     45
+    284   190      482.6497     4      482.3380      491.1851    21976    1.83%x_ENSP0000029778 D    284    283     46
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    285   189        cutoff            482.3380      491.1851    21978    1.83%x_ENSP0000036538 U    285    284     47
+Elapsed time = 10564.96 sec. (1744242.69 ticks, tree = 46.06 MB, solutions = 6)
+    286   189      482.6486     6      482.3380      491.1851    21979    1.83%x_ENSP0000036538 D    286    284     47
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    288   189      482.3496     6      482.3380      491.1851    21983    1.83%x_ENSP0000026922 D    288    287     49
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    289   189      482.6184     4      482.3380      491.1851    21984    1.83%x_ENSP0000026922 U    289    287     49
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    291   190      482.5949     3      482.3380      491.1851    21986    1.83%x_ENSP0000023324 D    291    290     51
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    292   191      482.5620     7      482.3380      491.1851    21987    1.83%x_ENSP0000035447 D    292    291     52
+    293   191      482.5486     3      482.3380      491.1851    21990    1.83%x_ENSP0000040596 U    293    292     53
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    294   191      482.5342     4      482.3380      491.1851    21991    1.83%x_ENSP0000038025 D    294    293     54
+    297   194      482.5131     6      482.3380      491.1851    21995    1.83%x_ENSP0000022230 D    297    296     57
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    298   195      482.4964     4      482.3380      491.1851    21997    1.83%x_ENSP0000036401 D    298    297     58
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    299   194        cutoff            482.3380      491.1851    21999    1.83%x_ENSP0000033038 U    299    298     59
+Elapsed time = 11244.09 sec. (1836054.26 ticks, tree = 46.34 MB, solutions = 6)
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    301   194      482.3411     7      482.3380      491.1851    22001    1.83%x_ENSP0000036913 D    301    300     60
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    303   195      482.4473     4      482.3380      491.1851    22003    1.83%x_ENSP0000024334 D    303    302     61
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    305   196      482.4155     4      482.3380      491.1851    22005    1.83%x_ENSP0000023993 D    305    304     63
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    306   197      482.4075     8      482.3380      491.1851    22006    1.83%x_ENSP0000022979 D    306    305     64
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    308   198      482.3978     8      482.3380      491.1851    22010    1.83%x_ENSP0000028319 D    308    307     66
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    310   199      482.3699     6      482.3380      491.1851    22012    1.83%x_ENSP0000001380 D    310    309     68
+    312   199        cutoff            482.3380      491.1851    22016    1.83%x_ENSP0000033743 U    312    311     70
+Lazy DEBUG Label, root: ENSP00000371471   y value: 1
+    313   198        cutoff            482.3380      491.1851    22017    1.83%x_ENSP0000033743 D    313    311     70
+
+Zero-half cuts applied:  5
+User cuts applied:  40068
+
+Root node processing (before b&c):
+  Real time             =  691.71 sec. (169459.85 ticks)
+Sequential b&c:
+  Real time             = 11315.05 sec. (1750637.83 ticks)
+                          ------------
+Total (root+branch&cut) = 12006.76 sec. (1920097.68 ticks)
+Solved in 12027.9s
+	Command being timed: "timeout 12500s /home/hsoueidan/xheinz/build/xHeinz_recomb -n1 2h/mouse_MA_scores_0.1_corrected_ensp_induced_ens59.tsv -n2 2h/human_MA_scores_0.1_corrected_ensp_induced_ens59.tsv -e1 2h/mouse_string_induced_network_0.1_ens59.tsv -e2 2h/human_string_induced_network_0.1_ens59.tsv -t 12000 -rt 4000 -cog temp_data/ensembl_cog_ALL_ens59.tsv -a 0.1"
+	User time (seconds): 11943.25
+	System time (seconds): 269.71
+	Percent of CPU this job got: 101%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:20:43
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 56835632
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 5451083
+	Voluntary context switches: 243
+	Involuntary context switches: 13488
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

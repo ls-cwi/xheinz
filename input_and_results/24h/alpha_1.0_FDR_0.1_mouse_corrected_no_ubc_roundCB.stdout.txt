@@ -1,0 +1,20 @@
+-- Parsed 24h/mouse_MA_scores_0.1_corrected_ensp_induced_ens59.tsv: |V| = 10745 (116 positive), |E| = 231948, # components = 1
+-- Parsed 24h/human_MA_scores_0.1_corrected_ensp_induced_ens59.tsv: |V| = 13960 (105 positive), |E| = 251996, # components = 1
+-- Parsed temp_data/ensembl_cog_ALL_ens59.tsv: |V_1| = 9216, |V_2| = 9172, |E| = 16308
+-- Solver configuration:
+-- alpha           = 1
+-- omega           = 0 (Sum mapped nodes)
+-- size            = -1
+-- time limit      = 12000
+-- root time limit = 4000
+-- # threads       = 1
+-- # components in link graph: 9045
+-- Solution:
+-- Alpha       = 1
+-- Total Score = 12.5444 (22.0669, -9.52258)
+#0 graph nodes:
+ENSMUSP00000031171	14.9845	*
+ENSMUSP00000071836	7.08248	*
+#1 graph nodes:
+ENSP00000265404	-4.50482	*
+ENSP00000370912	-5.01775	*
