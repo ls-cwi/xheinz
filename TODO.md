@@ -3,6 +3,7 @@ TODO:
 * Back-off functionality (expose in command line + maxIt)
 * Enable zero-half cuts (and maybe others)
 * Investigate why min cut separation is so slow (disabled for now...)
+* Add sample files for small example
 
 Done:
 
