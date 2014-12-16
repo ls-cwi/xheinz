@@ -22,7 +22,8 @@ namespace solver {
    out << "\n-- size            = " << config.size
        << "\n-- time limit      = " << config.timeLimit
        << "\n-- root time limit = " << config.rootTimeLimit
-       << "\n-- # threads       = " << config.numThreads;
+       << "\n-- # threads       = " << config.numThreads
+       << "\n-- gap objective   = " << config.gapObjective;
    return out;
  }
 

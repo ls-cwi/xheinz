@@ -36,7 +36,7 @@ int main( int argc, char * argv[] ) {
     .refOption( "a", "Conservation ratio threshold (default: 0.6)"
               , config.connectivityPercentage, false
               )
-    .synonym("alpha", "a" )
+    .synonym( "alpha", "a" )
 #if 0
     .refOption( "b1", "Graph 1: positive node ratio threshold (default: 0.0) TODO"
               , config.positivePercentage[0], false
@@ -47,6 +47,9 @@ int main( int argc, char * argv[] ) {
               )
     .synonym("beta2", "b2" )
 #endif
+    .refOption( "gap", "Specifies the target gap (in [0, 1] or < 0 for disabled, default: -1)"
+              , config.gapObjective, false
+              )
     .refOption( "w", "Specifies the type of mapping weighting:\n"
                      "         0 - Sum mapped nodes (default)\n"
                      "         1 - Sum mapped node weights\n"
@@ -112,6 +115,11 @@ int main( int argc, char * argv[] ) {
   }
   config.connectivityType =
     static_cast< solver::Config::ConnectivityType >(connectivityType);
+
+  if ( config.gapObjective > 1 ) {
+    cerr << "Invalid omega (mapping weighting)" << endl;
+    return 1;
+  }
 
   if ( ap.given( "version" ) ) {
     cout << "Version number: " << XHEINZ_VERSION << endl;

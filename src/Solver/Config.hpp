@@ -23,6 +23,7 @@ namespace solver {
    int maxCutIterations;
    double timeLimit;
    double rootTimeLimit;
+   double gapObjective;
 
    Config( double cp = 0.6
          , std::array< double, 2 > pp = std::array< double, 2 >{ 0.0, 0.0 }
@@ -32,6 +33,7 @@ namespace solver {
          , int mi = 20
          , double tl = std::numeric_limits< double >::infinity()
          , double rtl = std::numeric_limits< double >::infinity()
+         , double go = -1
          )
      : connectivityPercentage{ cp }
      , positivePercentage( pp )
@@ -40,7 +42,8 @@ namespace solver {
      , size{ s }
      , maxCutIterations{ mi }
      , timeLimit{ tl }
-     , rootTimeLimit{ rtl } {
+     , rootTimeLimit{ rtl }
+     , gapObjective{ go } {
    }
 
    friend std::ostream & operator<<( std::ostream & out, Config const & conf );

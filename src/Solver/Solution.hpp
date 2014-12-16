@@ -16,6 +16,7 @@ namespace solver {
    using SolutionSet   = std::vector< NodeBoolPair >;
    using GraphSolution = std::tuple< SolutionSet, WeightScore, AlphaScore >;
 
+   WeightScore upperBound;
    WeightScore weight;
    AlphaScore  alpha;
    std::vector< GraphSolution > graphsSolutions;

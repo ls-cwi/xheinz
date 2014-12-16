@@ -85,6 +85,7 @@ namespace xHeinz {
                                           );
 
    OutputSolution sol;
+   sol.upperBound = cplex.getBestObjValue();
    sol.weight = score1 + score2;
    sol.alpha  = get< 0 >( alphas );
    sol.graphsSolutions.emplace_back( move( sol1 ), score1, get< 1 >( alphas ) );
@@ -652,6 +653,11 @@ namespace xHeinz {
    if ( config.numThreads > 1 ) {
      cplex.setParam( IloCplex::ParallelMode, -1 );
      cplex.setParam( IloCplex::Threads, config.numThreads );
+   }
+
+   if ( config.gapObjective >= 0 ) {
+     cplex.setParam( IloCplex::EpGap, config.gapObjective );
+     cplex.setParam( IloCplex::MIPEmphasis, 1 );
    }
 
    cplex.setParam( IloCplex::HeurFreq      , -1 );

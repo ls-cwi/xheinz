@@ -33,6 +33,7 @@ namespace solver {
      out << get< 1 >( gs );
    });
    out << ")";
+   out << "\n-- Objective UpperBound = " << sol.upperBound;
 
    for ( int i = 0, e = sol.graphsSolutions.size(); i != e; ++i ) {
      auto const & graphSol = sol.graphsSolutions[i];
