@@ -1,1 +1,0 @@
-python annotate_module.py -r --HUMANNETWORK /Users/hayssam/xheinz/data/Th17/newSTRING/9606.9.1-actions-filtered-noHub.txt --MOUSENETWORK /Users/hayssam/xheinz/data/Th17/newSTRING/10090.9.1-actions-filtered-noHub.txt --MOUSEMAPPING temp_data/ensembl_mouse_ensp2ensg_ens59.tsv --HUMANMAPPING temp_data/ensembl_human_ensp2ensg_ens59.tsv --COGFILE temp_data/ensembl_cog_ALL_ens59.tsv
