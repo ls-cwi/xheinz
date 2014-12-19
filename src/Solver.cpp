@@ -682,7 +682,7 @@ namespace xHeinz {
    IloCplex::Callback userCallback( new (env) UserCutCallback( env, config, graphs, BackOff( BackOff::LinearWaiting ) ) );
    IloCplex::Callback heuristicCallback( new (env) HeuristicCallback( env, config, graphs ) );
 
-   if ( config.noConnectivity ) {
+   if ( !config.noConnectivity ) {
      cplex.use( lazyCallback );
      cplex.use( userCallback );
      cplex.use( heuristicCallback );
