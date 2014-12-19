@@ -47,6 +47,9 @@ int main( int argc, char * argv[] ) {
               )
     .synonym("beta2", "b2" )
 #endif
+    .refOption( "noConnectivity", "Disable connectivity constraint to find upper bound"
+              , config.noConnectivity, false
+              )
     .refOption( "gap", "Specifies the target gap (in [0, 1] or < 0 for disabled, default: -1)"
               , config.gapObjective, false
               )
