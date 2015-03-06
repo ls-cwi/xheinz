@@ -1,3 +1,16 @@
+Software description
+====================
+
+**xHeinz** is a software solver for our mathematical model for finding *active subnetwork modules* that are conserved between two species.
+It uses a branch-and-cut algorithm that finds provably optimal or near-optimal solutions.
+
+*Active subnetwork modules* are sets of genes, one for each species, which:
+- induce a connected subnetwork in a species-specific interaction network,
+- show overall differential behavior, and
+- contain a large number of orthologous genes.
+
+
+
 Compilation instructions
 ========================
 
