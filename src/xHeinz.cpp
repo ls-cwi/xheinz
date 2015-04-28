@@ -53,6 +53,9 @@ int main( int argc, char * argv[] ) {
     .refOption( "gap", "Specifies the target gap (in [0, 1] or < 0 for disabled, default: -1)"
               , config.gapObjective, false
               )
+    .refOption( "cutLo", "Specifies target objective (for significance, < 0 for disabled, default: -1)"
+              , config.cutLo, false
+              )
     .refOption( "w", "Specifies the type of mapping weighting:\n"
                      "         0 - Sum mapped nodes (default)\n"
                      "         1 - Sum mapped node weights\n"

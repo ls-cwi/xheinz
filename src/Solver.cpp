@@ -660,6 +660,10 @@ namespace xHeinz {
      cplex.setParam( IloCplex::MIPEmphasis, 1 );
    }
 
+   if ( config.cutLo >= 0 ) {
+     cplex.setParam( IloCplex::CutLo, config.cutLo );
+   }
+
    cplex.setParam( IloCplex::HeurFreq      , -1 );
    cplex.setParam( IloCplex::Cliques       , -1 );
    cplex.setParam( IloCplex::Covers        , -1 );

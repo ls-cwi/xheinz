@@ -24,6 +24,7 @@ namespace solver {
    double timeLimit;
    double rootTimeLimit;
    double gapObjective;
+   double cutLo;
    bool noConnectivity;
 
    Config( double cp = 0.6
@@ -35,6 +36,7 @@ namespace solver {
          , double tl = std::numeric_limits< double >::infinity()
          , double rtl = std::numeric_limits< double >::infinity()
          , double go = -1
+         , double cl = -1
          , bool nc = false
          )
      : connectivityPercentage{ cp }
@@ -46,6 +48,7 @@ namespace solver {
      , timeLimit{ tl }
      , rootTimeLimit{ rtl }
      , gapObjective{ go }
+     , cutLo{ cl }
      , noConnectivity{ nc } {
    }
 

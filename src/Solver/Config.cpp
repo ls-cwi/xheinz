@@ -23,7 +23,8 @@ namespace solver {
        << "\n-- time limit      = " << config.timeLimit
        << "\n-- root time limit = " << config.rootTimeLimit
        << "\n-- # threads       = " << config.numThreads
-       << "\n-- gap objective   = " << config.gapObjective;
+       << "\n-- gap objective   = " << config.gapObjective
+       << "\n-- cut lower bound = " << config.cutLo;
    return out;
  }
 
