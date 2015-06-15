@@ -77,8 +77,8 @@ namespace solver {
 
    for ( const NodeSet& S : nonZeroNodesComponents ) {
      // only consider the non-zero components that don't contain the root
-     if ( S.find( root ) == S.end() )
-     {
+     auto it = S.find( root );
+     if ( it == S.end() || it->componentIndex() != root.componentIndex() ) {
        // determine dS
        NodeSet dS;
        for ( Graph::Node i : S ) {
