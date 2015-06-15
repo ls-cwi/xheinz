@@ -1,3 +1,16 @@
+Software description
+====================
+
+**xHeinz** is a software solver that searches for *active subnetwork modules* that are conserved between two species.
+It uses a branch-and-cut algorithm that finds provably optimal or near-optimal solutions.
+
+*Active subnetwork modules* are sets of genes, one for each species, which:
+- induce a connected subnetwork in a species-specific interaction network,
+- show overall differential behavior, and
+- contain a large number of orthologous genes.
+
+
+
 Compilation instructions
 ========================
 
@@ -42,6 +55,8 @@ In which case it's enough to re-run `brew update`.
 Now LEMON 1.3 can be installed via:
 
     wget http://lemon.cs.elte.hu/pub/sources/lemon-1.3.tar.gz
+    tar xzvf lemon-1.3.tar.gz
+    cd lemon-1.3
     cmake -DCMAKE_INSTALL_PREFIX=~/lemon -DCMAKE_CXX_COMPILER=/usr/local/bin/g++-4.8 -DCMAKE_C_COMPILER=/usr/local/bin/gcc-4.8
     make install
 
